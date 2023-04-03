@@ -1,0 +1,264 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2022-09-22, 08:38:28
+    Author     : Christine
+*/
+body.login {
+  background-color: #1B4053;
+  font-family: "aktiv-grotesk", sans-serif; }
+  body.login #login_error,
+  body.login .message,
+  body.login .success {
+    border-left: none;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    box-shadow: none;
+    word-wrap: break-word;
+    text-align: center;
+    color: white; }
+    body.login #login_error a,
+    body.login .message a,
+    body.login .success a {
+      color: #1B4053;
+      text-decoration: none; }
+      body.login #login_error a:hover, body.login #login_error a:active, body.login #login_error a:focus,
+      body.login .message a:hover,
+      body.login .message a:active,
+      body.login .message a:focus,
+      body.login .success a:hover,
+      body.login .success a:active,
+      body.login .success a:focus {
+        color: #d60d1c; }
+  body.login #login {
+    position: relative;
+    z-index: 9;
+    width: 435px;
+    max-width: 90%; }
+    body.login #login h1 a {
+      background-image: url(../images/fafmrq-logo.png);
+      height: 93px;
+      width: 330px;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    body.login #login #loginform:before {
+      font-family: "aktiv-grotesk-extended", sans-serif;
+      content: 'Se connecter';
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 25px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #1B4053; }
+    body.login #login #loginform,
+    body.login #login #lostpasswordform,
+    body.login #login #resetpassform {
+      border: none;
+      box-shadow: none;
+      overflow: visible;
+      border-radius: 30px; }
+      body.login #login #loginform label,
+      body.login #login #lostpasswordform label,
+      body.login #login #resetpassform label {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin: 0 0 5px 0;
+        color: #9494a2;
+        text-align: center;
+        width: 100%; }
+      body.login #login #loginform .button.wp-hide-pw,
+      body.login #login #lostpasswordform .button.wp-hide-pw,
+      body.login #login #resetpassform .button.wp-hide-pw {
+        min-height: 58px;
+        color: #9494a2; }
+        body.login #login #loginform .button.wp-hide-pw:focus,
+        body.login #login #lostpasswordform .button.wp-hide-pw:focus,
+        body.login #login #resetpassform .button.wp-hide-pw:focus {
+          border: none;
+          box-shadow: none; }
+      body.login #login #loginform input[type=text],
+      body.login #login #loginform input[type=password],
+      body.login #login #lostpasswordform input[type=text],
+      body.login #login #lostpasswordform input[type=password],
+      body.login #login #resetpassform input[type=text],
+      body.login #login #resetpassform input[type=password] {
+        color: #1B4053;
+        border: 2px solid #EAEEF0;
+        padding: 17px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        font-weight: 400;
+        font-size: 17px; }
+        body.login #login #loginform input[type=text]:focus,
+        body.login #login #loginform input[type=password]:focus,
+        body.login #login #lostpasswordform input[type=text]:focus,
+        body.login #login #lostpasswordform input[type=password]:focus,
+        body.login #login #resetpassform input[type=text]:focus,
+        body.login #login #resetpassform input[type=password]:focus {
+          box-shadow: none;
+          outline: none; }
+        body.login #login #loginform input[type=text]::placeholder,
+        body.login #login #loginform input[type=password]::placeholder,
+        body.login #login #lostpasswordform input[type=text]::placeholder,
+        body.login #login #lostpasswordform input[type=password]::placeholder,
+        body.login #login #resetpassform input[type=text]::placeholder,
+        body.login #login #resetpassform input[type=password]::placeholder {
+          color: #3c3c4e;
+          opacity: 1; }
+        body.login #login #loginform input[type=text]:-ms-input-placeholder,
+        body.login #login #loginform input[type=password]:-ms-input-placeholder,
+        body.login #login #lostpasswordform input[type=text]:-ms-input-placeholder,
+        body.login #login #lostpasswordform input[type=password]:-ms-input-placeholder,
+        body.login #login #resetpassform input[type=text]:-ms-input-placeholder,
+        body.login #login #resetpassform input[type=password]:-ms-input-placeholder {
+          color: #3c3c4e; }
+        body.login #login #loginform input[type=text]::-ms-input-placeholder,
+        body.login #login #loginform input[type=password]::-ms-input-placeholder,
+        body.login #login #lostpasswordform input[type=text]::-ms-input-placeholder,
+        body.login #login #lostpasswordform input[type=password]::-ms-input-placeholder,
+        body.login #login #resetpassform input[type=text]::-ms-input-placeholder,
+        body.login #login #resetpassform input[type=password]::-ms-input-placeholder {
+          color: #3c3c4e; }
+      body.login #login #loginform input[type=submit],
+      body.login #login #lostpasswordform input[type=submit],
+      body.login #login #resetpassform input[type=submit] {
+        font-family: "aktiv-grotesk", Sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 20px;
+        letter-spacing: 0.14px;
+        background-color: #1B4053;
+        border-radius: 30px 30px 30px 30px;
+        padding: 20px 40px 20px 40px; }
+        body.login #login #loginform input[type=submit]:hover,
+        body.login #login #lostpasswordform input[type=submit]:hover,
+        body.login #login #resetpassform input[type=submit]:hover {
+          background-color: #07799D; }
+      body.login #login #loginform .reset-pass-submit button,
+      body.login #login #lostpasswordform .reset-pass-submit button,
+      body.login #login #resetpassform .reset-pass-submit button {
+        color: white;
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 10px;
+        transition: all 400ms;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        margin: 0 2px; }
+        body.login #login #loginform .reset-pass-submit button:hover,
+        body.login #login #lostpasswordform .reset-pass-submit button:hover,
+        body.login #login #resetpassform .reset-pass-submit button:hover {
+          background-color: #d60d1c; }
+      body.login #login #loginform .forgetmenot,
+      body.login #login #lostpasswordform .forgetmenot,
+      body.login #login #resetpassform .forgetmenot {
+        width: 100%;
+        display: block;
+        margin: 0;
+        vertical-align: top;
+        float: none; }
+        body.login #login #loginform .forgetmenot label,
+        body.login #login #lostpasswordform .forgetmenot label,
+        body.login #login #resetpassform .forgetmenot label {
+          padding-left: 30px;
+          max-width: calc(100% - 110px);
+          line-height: 1;
+          vertical-align: middle;
+          margin: 0;
+          text-transform: none;
+          position: relative;
+          text-align: left; }
+          body.login #login #loginform .forgetmenot label:before,
+          body.login #login #lostpasswordform .forgetmenot label:before,
+          body.login #login #resetpassform .forgetmenot label:before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            margin-left: -52px;
+            margin-right: 18px;
+            vertical-align: middle;
+            transition: all 400ms;
+            border: 2px solid #EAEEF0;
+            background-color: #ffffff; }
+          body.login #login #loginform .forgetmenot label:after,
+          body.login #login #lostpasswordform .forgetmenot label:after,
+          body.login #login #resetpassform .forgetmenot label:after {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 7px;
+            background-color: transparent;
+            border-left: 3px solid #1B4053;
+            border-bottom: 3px solid #1B4053;
+            transform: rotate(-45deg);
+            margin-left: -20px;
+            margin-right: 0;
+            vertical-align: top;
+            transition: all 400ms;
+            position: absolute;
+            top: 6px;
+            left: 3px;
+            opacity: 0; }
+        body.login #login #loginform .forgetmenot input[type=checkbox],
+        body.login #login #lostpasswordform .forgetmenot input[type=checkbox],
+        body.login #login #resetpassform .forgetmenot input[type=checkbox] {
+          visibility: hidden; }
+          body.login #login #loginform .forgetmenot input[type=checkbox]:hover,
+          body.login #login #lostpasswordform .forgetmenot input[type=checkbox]:hover,
+          body.login #login #resetpassform .forgetmenot input[type=checkbox]:hover {
+            cursor: pointer; }
+          body.login #login #loginform .forgetmenot input[type=checkbox]:checked + label:after,
+          body.login #login #lostpasswordform .forgetmenot input[type=checkbox]:checked + label:after,
+          body.login #login #resetpassform .forgetmenot input[type=checkbox]:checked + label:after {
+            opacity: 1; }
+      body.login #login #loginform p.submit,
+      body.login #login #lostpasswordform p.submit,
+      body.login #login #resetpassform p.submit {
+        display: block;
+        text-align: center;
+        float: none;
+        margin-top: 25px; }
+        body.login #login #loginform p.submit input[type=submit],
+        body.login #login #lostpasswordform p.submit input[type=submit],
+        body.login #login #resetpassform p.submit input[type=submit] {
+          float: none; }
+    body.login #login #backtoblog {
+      display: none; }
+    body.login #login #nav a {
+      color: #9494a2;
+      transition: all 400ms; }
+      body.login #login #nav a:hover {
+        color: white; }
+    body.login #login .privacy-policy-page-link {
+      display: none; }
+  body.login.login-action-lostpassword #login #nav {
+    bottom: 65px; }
+  body.login .language-switcher {
+    display: none; }
+
+@media (max-width: 1024px) {
+  body.login:after {
+    padding: 25px 0; } }
+@media (max-width: 1024px) and (max-width: 768px) {
+  body.login #login #nav {
+    position: relative;
+    padding: 0;
+    margin: 20px 0 0;
+    right: 0;
+    bottom: auto;
+    text-align: center; } }
+
+/*# sourceMappingURL=login.css.map */

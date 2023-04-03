@@ -1,0 +1,28 @@
+.box-sizing(@sizing: border-box) {
+  -ms-box-sizing: @sizing;
+  -moz-box-sizing: @sizing;
+  -webkit-box-sizing: @sizing;
+  box-sizing: @sizing;
+  *behavior: url(/css/boxsizing.htc);/*Require absolute path from html*/
+}
+
+.border-radius(@radius: 5px){
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+.border-right-radius(@radius: 5px){
+    border-top-right-radius:@radius;
+    border-bottom-right-radius:@radius;
+    -moz-border-top-right-radius:@radius;
+    -moz-border-bottom-right-radius:@radius;
+    -webkit-border-top-right-radius:@radius;
+    -webkit-border-bottom-right-radius:@radius;
+}
+
+.drop-shadow(){
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.39);
+	-moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.39);
+	-webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.39);
+}

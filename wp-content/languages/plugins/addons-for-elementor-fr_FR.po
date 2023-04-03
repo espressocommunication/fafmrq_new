@@ -1,0 +1,3412 @@
+# Translation of Plugins - Livemesh Addons for Elementor - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Livemesh Addons for Elementor - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-08-09 05:37:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Livemesh Addons for Elementor - Stable (latest release)\n"
+
+#: includes/widgets/posts-gridbox-slider.php:197
+#: includes/widgets/posts-multislider.php:202
+#: includes/widgets/posts-slider.php:196
+msgid "Provide a comma separated list of Post IDs to exclude in the slider."
+msgstr "Fournir une liste des ID de publication, séparés par une virgule, à exclure du diaporama."
+
+#: includes/widgets/posts-carousel.php:202
+msgid "Provide a comma separated list of Post IDs to exclude in the carousel."
+msgstr "Fournir une liste des ID de publication, séparés par une virgule, à exclure du carrousel."
+
+#: includes/widgets/portfolio.php:201
+msgid "Provide a comma separated list of Post IDs to exclude in the grid."
+msgstr "Fournir une liste des ID de publication, séparés par une virgule, à exclure de la grille."
+
+#: includes/widgets/portfolio.php:200 includes/widgets/posts-carousel.php:201
+#: includes/widgets/posts-gridbox-slider.php:196
+#: includes/widgets/posts-multislider.php:201
+#: includes/widgets/posts-slider.php:195
+msgid "Exclude Posts"
+msgstr "Exclure des publications"
+
+#: includes/widgets/message-box.php:341
+msgid "Close Icon"
+msgstr "Icône de fermeture"
+
+#: includes/widgets/marquee-text.php:403 includes/widgets/message-box.php:332
+msgid "Bottom"
+msgstr "En bas"
+
+#: includes/widgets/marquee-text.php:402 includes/widgets/message-box.php:331
+msgid "Top"
+msgstr "En haut"
+
+#: includes/widgets/marquee-text.php:399 includes/widgets/message-box.php:328
+msgid "Choose Alignment"
+msgstr "Choisir l’alignement"
+
+#: includes/widgets/message-box.php:310
+msgid "Margin"
+msgstr "Marges externes"
+
+#: includes/widgets/message-box.php:246
+msgid "Margin Top"
+msgstr "Marge supérieure"
+
+#: includes/widgets/message-box.php:242
+msgid "Message Text"
+msgstr "Texte du message"
+
+#: includes/widgets/message-box.php:203
+msgid "Custom Padding"
+msgstr "Marges intérieures personnalisées"
+
+#: includes/widgets/message-box.php:195 includes/widgets/timeline.php:650
+msgid "Border Radius"
+msgstr "Rayon de bordure"
+
+#: includes/widgets/message-box.php:180
+msgid "Contain"
+msgstr "Contient"
+
+#: includes/widgets/message-box.php:179
+msgid "Cover"
+msgstr "Couvrir"
+
+#: includes/widgets/message-box.php:175
+msgid "Background Size"
+msgstr "Taille de l’arrière-plan"
+
+#: includes/widgets/message-box.php:168
+msgid "Background Image"
+msgstr "Image d’arrière-plan"
+
+#: includes/widgets/message-box.php:138 includes/widgets/message-box.php:277
+msgid "Message Icon"
+msgstr "Icône du message"
+
+#: includes/widgets/message-box.php:124
+msgid "Message Image"
+msgstr "Image du message"
+
+#: includes/widgets/message-box.php:107
+msgid "Message text goes here"
+msgstr "Texte du message ici"
+
+#: includes/widgets/message-box.php:105
+msgid "Message text"
+msgstr "Texte du message"
+
+#: includes/widgets/message-box.php:99
+msgid "My message title"
+msgstr "Titre du message"
+
+#: includes/widgets/message-box.php:96 includes/widgets/message-box.php:212
+msgid "Message Title"
+msgstr "Titre du message"
+
+#: includes/widgets/message-box.php:43 includes/widgets/message-box.php:93
+#: includes/widgets/message-box.php:157
+msgid "Message Box"
+msgstr "Boîte de message"
+
+#: admin/views/settings.php:514
+msgid "Deactivate the message box element."
+msgstr "Désactivez l’élément de boîte de message."
+
+#: admin/views/settings.php:511
+msgid "Deactivate Message Box"
+msgstr "Désactiver la boîte de message"
+
+#: templates/post-meta/comments-link.php:20
+#: templates/post-meta/comments-number.php:16
+msgid "%1$s Comments"
+msgstr "%1$s commentaires"
+
+#: templates/post-meta/comments-link.php:18
+#: templates/post-meta/comments-number.php:14
+msgid "%1$s Comment"
+msgstr "%1$s commentaire"
+
+#: templates/post-meta/comments-link.php:16
+#: templates/post-meta/comments-number.php:12
+msgid "No Comments"
+msgstr "Pas de commentaires"
+
+#: templates/post-meta/comments-link.php:16
+#: templates/post-meta/comments-link.php:18
+#: templates/post-meta/comments-link.php:20
+msgid "Comment on %1$s"
+msgstr "Commentaire sur %1$s"
+
+#: templates/post-meta/comments-link.php:13
+#: templates/post-meta/comments-number.php:9
+msgid "Comments Disabled"
+msgstr "Commentaires désactivés"
+
+#: templates/post-content/entry-title.php:9
+msgid "(Untitled)"
+msgstr "(sans titre)"
+
+#: templates/addons/team-members/social-profile.php:97
+msgid "View Dribbble Portfolio"
+msgstr "Voir le portfolio Dribble"
+
+#: templates/addons/team-members/social-profile.php:88
+msgid "Subscribe to Pinterest Feed"
+msgstr "S’abonner à Pinterest"
+
+#: templates/addons/team-members/social-profile.php:78
+msgid "View Instagram Feed"
+msgstr "Voir le flux Instagram"
+
+#: templates/addons/team-members/social-profile.php:68
+msgid "Follow on Google Plus"
+msgstr "Suivez-nous sur Google Plus"
+
+#: templates/addons/team-members/social-profile.php:56
+msgid "View LinkedIn Profile"
+msgstr "Voir le profil LinkedIn"
+
+#: templates/addons/team-members/social-profile.php:46
+msgid "Subscribe to Twitter Feed"
+msgstr "Abonnez-vous à notre fil Twitter"
+
+#: templates/addons/team-members/social-profile.php:37
+msgid "Follow on Facebook"
+msgstr "Nous suivre sur Facebook"
+
+#: templates/addons/posts-carousel/custom-skin.php:21
+msgid "Choose a custom skin template for the carousel item"
+msgstr "Choisir un aspect personnalisé pour l’élément de carrousel"
+
+#: plugin.php:48 plugin.php:58
+msgid "Cheatin&#8217; huh?"
+msgstr "Alors on triche ?"
+
+#: includes/widgets/testimonials.php:611
+msgid "Border Width"
+msgstr "Largeur de bordure"
+
+#: includes/widgets/testimonials.php:601
+msgid "Border Color"
+msgstr "Couleur de bordure"
+
+#: includes/widgets/testimonials.php:562
+msgid "Text Padding"
+msgstr "Marge interne de texte"
+
+#: includes/widgets/testimonials.php:538
+msgid "Thumbnail Size"
+msgstr "Taille de la vignette"
+
+#: includes/widgets/testimonials.php:201
+msgid "Style 4 (List)"
+msgstr "Style N°4 (liste)"
+
+#: includes/widgets/testimonials.php:113
+msgid "The details of the client/customer like company name, credential held, company URL etc. HTML accepted."
+msgstr "Les détails du client·te comme le nom de la société, les titres de compétences détenus, l’URL de la société etc. HTML accepté."
+
+#: includes/widgets/testimonials-slider.php:385
+msgid "Quote Icon"
+msgstr "Icône citation"
+
+#: includes/widgets/testimonials-slider.php:377
+#: includes/widgets/testimonials.php:690
+msgid "Highlight Color"
+msgstr "Couleur de surlignage"
+
+#: includes/widgets/marquee-text.php:321
+#: includes/widgets/testimonials-slider.php:370
+#: includes/widgets/testimonials.php:683
+msgid "Default Color"
+msgstr "Couleur par défaut"
+
+#: includes/widgets/testimonials-slider.php:365
+#: includes/widgets/testimonials.php:678
+msgid "Author Star Rating"
+msgstr "Classement par étoiles de l’auteur"
+
+#: includes/widgets/testimonials-slider.php:349
+#: includes/widgets/testimonials.php:662
+msgid "Author Credentials"
+msgstr "Informations d’identification de l’auteur"
+
+#: includes/widgets/testimonials-slider.php:319
+#: includes/widgets/testimonials.php:632
+msgid "Author Name"
+msgstr "Nom de l’auteur"
+
+#: includes/widgets/testimonials-slider.php:303
+#: includes/widgets/testimonials.php:558
+msgid "Author Testimonial"
+msgstr "Témoignage de l’auteur"
+
+#: includes/widgets/testimonials-slider.php:284
+msgid "Author Thumbnail Size"
+msgstr "Author Thumbnail Size"
+
+#: includes/widgets/testimonials-slider.php:276
+msgid "Author Thumbnail Border Radius"
+msgstr "Auteur vignette rayon de bordure"
+
+#: includes/widgets/testimonials-slider.php:271
+#: includes/widgets/testimonials.php:525
+msgid "Author Thumbnail"
+msgstr "Miniature de l’auteur"
+
+#: includes/widgets/testimonials-slider.php:254
+msgid "Should the slider have navigation controls?"
+msgstr "Le diaporama doit-il afficher des contrôles de navigation ?"
+
+#: includes/widgets/testimonials-slider.php:253
+msgid "Navigation Controls?"
+msgstr "Contrôles de navigation ?"
+
+#: includes/widgets/testimonials-slider.php:245
+msgid "Should the slider have direction navigation?"
+msgstr "Le diaporama doit-il avoir une direction de navigation ?"
+
+#: includes/widgets/testimonials-slider.php:244
+msgid "Direction Navigation?"
+msgstr "Direction de la navigation ?"
+
+#: includes/widgets/testimonials-slider.php:235
+msgid "Animate the height of the slider smoothly for slides of varying height."
+msgstr "Changer la hauteur du diaporama de façon fluide dans le cas de diapositives de différentes hauteurs."
+
+#: includes/widgets/testimonials-slider.php:234
+msgid "Smooth Height?"
+msgstr "Hauteur lissée ?"
+
+#: includes/widgets/testimonials-slider.php:226
+msgid "Should the slideshow pause once user initiates an action using navigation/direction controls."
+msgstr "Le diaporama doit-il s’arrêter si l’internaute utilise les commandes de navigation/direction."
+
+#: includes/widgets/testimonials-slider.php:217
+msgid "Should the slider pause on mouse hover over the slider."
+msgstr "Si le diaporama doit s’arrêter au survol de la souris."
+
+#: includes/widgets/testimonials-slider.php:205
+msgid "Animation Speed"
+msgstr "La vitesse d’animation"
+
+#: includes/widgets/testimonials-slider.php:200
+msgid "Slideshow Speed"
+msgstr "Vitesse du diaporama"
+
+#: includes/widgets/device-slider.php:164
+#: includes/widgets/testimonials-slider.php:187
+msgid "Fade"
+msgstr "Fondu"
+
+#: includes/widgets/device-slider.php:163
+#: includes/widgets/testimonials-slider.php:186
+msgid "Slide"
+msgstr "Diapositive"
+
+#: includes/widgets/testimonials-slider.php:182
+msgid "Animation"
+msgstr "Animation"
+
+#: includes/widgets/testimonials-slider.php:164
+#: includes/widgets/testimonials.php:176
+msgid "Store Manager, Walmart Inc"
+msgstr "Gérant de magasin, Walmart Inc"
+
+#: includes/widgets/testimonials-slider.php:163
+#: includes/widgets/testimonials.php:175
+msgid "Customer #3"
+msgstr "#3 client"
+
+#: includes/widgets/testimonials-slider.php:159
+#: includes/widgets/testimonials.php:171
+msgid "Lead Developer, Automattic Inc"
+msgstr "Développeur principal, Automattic Inc"
+
+#: includes/widgets/testimonials-slider.php:158
+#: includes/widgets/testimonials.php:170
+msgid "Customer #2"
+msgstr "#2 client"
+
+#: includes/widgets/testimonials-slider.php:156
+#: includes/widgets/testimonials-slider.php:161
+#: includes/widgets/testimonials-slider.php:166
+#: includes/widgets/testimonials.php:168 includes/widgets/testimonials.php:173
+#: includes/widgets/testimonials.php:178
+msgid "I am testimonial text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr "Je suis un texte de témoignage. Cliquez sur le bouton modifier pour modifier ce texte. Ipsum dolor sit amet, consectetur adipiscing elit. UT Elit Tellus, luctus NEC ullamcorper mat, pulvinar dapibus Leo."
+
+#: includes/widgets/testimonials-slider.php:154
+#: includes/widgets/testimonials.php:166
+msgid "CEO, Invision Inc."
+msgstr "PDG, Invision Inc."
+
+#: includes/widgets/testimonials-slider.php:153
+#: includes/widgets/testimonials.php:165
+msgid "Customer #1"
+msgstr "#1 client"
+
+#: includes/widgets/testimonials-slider.php:150
+#: includes/widgets/testimonials.php:42 includes/widgets/testimonials.php:98
+#: includes/widgets/testimonials.php:161
+msgid "Testimonials"
+msgstr "Témoignages"
+
+#: includes/widgets/testimonials-slider.php:143
+#: includes/widgets/testimonials.php:145
+msgid "What your customer/client had to say"
+msgstr "Ce que votre client·te avait à dire"
+
+#: includes/widgets/testimonials-slider.php:141
+#: includes/widgets/testimonials.php:143
+msgid "Testimonials Text"
+msgstr "Témoignages texte"
+
+#: includes/widgets/testimonials-slider.php:130
+#: includes/widgets/testimonials.php:132
+msgid "Customer/Client Image"
+msgstr "Image client·te"
+
+#: includes/widgets/testimonials-slider.php:126
+#: includes/widgets/testimonials.php:128
+msgid "5"
+msgstr "5"
+
+#: includes/widgets/testimonials-slider.php:125
+#: includes/widgets/testimonials.php:127
+msgid "4"
+msgstr "4"
+
+#: includes/widgets/testimonials-slider.php:124
+#: includes/widgets/testimonials.php:126
+msgid "3"
+msgstr "3"
+
+#: includes/widgets/testimonials-slider.php:123
+#: includes/widgets/testimonials.php:125
+msgid "2"
+msgstr "2"
+
+#: includes/widgets/testimonials-slider.php:122
+#: includes/widgets/testimonials.php:124
+msgid "1"
+msgstr "1"
+
+#: includes/widgets/testimonials-slider.php:117
+#: includes/widgets/testimonials.php:119
+msgid "Rating"
+msgstr "Notation"
+
+#: includes/widgets/testimonials-slider.php:111
+msgid "The details of the client/customer like company name, position held, company URL etc. HTML accepted."
+msgstr "Les détails du client·te comme le nom de la société, le poste tenu, l’URL de la société, etc. HTML accepté."
+
+#: includes/widgets/testimonials-slider.php:109
+#: includes/widgets/testimonials.php:111
+msgid "Client Details"
+msgstr "Détails du client"
+
+#: includes/widgets/testimonials-slider.php:103
+#: includes/widgets/testimonials.php:105
+msgid "The client or customer name for the testimonial"
+msgstr "Le nom du client ou du client pour le témoignage"
+
+#: includes/widgets/testimonials-slider.php:100
+#: includes/widgets/testimonials.php:102
+msgid "Name"
+msgstr "Entrée"
+
+#: includes/widgets/testimonials-slider.php:41
+#: includes/widgets/testimonials-slider.php:96
+msgid "Testimonials Slider"
+msgstr "Diaporama de témoignages"
+
+#: includes/widgets/team-members.php:713
+msgid "Space between icons."
+msgstr "Espace entre les icônes."
+
+#: includes/widgets/team-members.php:712
+msgid "Spacing"
+msgstr "Espacement"
+
+#: includes/widgets/team-members.php:698
+#: includes/widgets/testimonials-slider.php:389
+msgid "Icon size in pixels"
+msgstr "Taille de l’icône en pixel"
+
+#: includes/widgets/team-members.php:694
+msgid "Social Icons"
+msgstr "Icônes sociaux"
+
+#: includes/widgets/team-members.php:678
+msgid "Member Details"
+msgstr "Détails du membre"
+
+#: includes/widgets/team-members.php:662
+msgid "Member Position"
+msgstr "Poste du membre"
+
+#: includes/widgets/team-members.php:625
+msgid "Member Title"
+msgstr "Titre du membre"
+
+#: includes/widgets/team-members.php:616 includes/widgets/testimonials.php:530
+msgid "Thumbnail Border Radius"
+msgstr "Rayon de bordure miniature"
+
+#: includes/widgets/team-members.php:599
+msgid "Thumbnail Hover Brightness (%)"
+msgstr "Luminosité de survol des miniatures (%)"
+
+#: includes/widgets/team-members.php:587
+msgid "Team Member Spacing"
+msgstr "Espacement des membres de l’équipe"
+
+#: includes/widgets/team-members.php:291
+msgid "Team Member Image Size"
+msgstr "Taille de l’image membre de l’équipe"
+
+#: includes/widgets/team-members.php:270
+msgid "Choose Team Style"
+msgstr "Choisir le style d’équipe"
+
+#: includes/widgets/team-members.php:252
+msgid "Finance Manager"
+msgstr "Directeur financier"
+
+#: includes/widgets/team-members.php:251
+msgid "Team Member #3"
+msgstr "Membre de l’équipe N°3"
+
+#: includes/widgets/team-members.php:248
+msgid "Lead Developer"
+msgstr "Développeur principal"
+
+#: includes/widgets/team-members.php:247
+msgid "Team Member #2"
+msgstr "Membre de l’équipe N°2"
+
+#: includes/widgets/team-members.php:245 includes/widgets/team-members.php:249
+#: includes/widgets/team-members.php:253
+msgid "I am member details. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr "Je suis un détail de membre. Cliquez sur le bouton modifier pour modifier ce texte. Ipsum dolor sit amet, consectetur adipiscing elit. UT Elit Tellus, luctus NEC ullamcorper mat, pulvinar dapibus Leo."
+
+#: includes/widgets/team-members.php:244
+msgid "CEO"
+msgstr "CEO"
+
+#: includes/widgets/team-members.php:243
+msgid "Team Member #1"
+msgstr "Membre de l’équipe N°1"
+
+#: includes/widgets/team-members.php:225
+msgid "URL of the Instagram feed for the team member."
+msgstr "URL du flux Instagram pour le membre de l’équipe."
+
+#: includes/widgets/team-members.php:224
+msgid "Instagram Page URL"
+msgstr "URL de la page Instagram"
+
+#: includes/widgets/team-members.php:216
+msgid "URL of the Google Plus page of the team member."
+msgstr "URL de la page Google plus du membre de l’équipe."
+
+#: includes/widgets/team-members.php:215
+msgid "GooglePlus Page URL"
+msgstr "URL de la page GooglePlus"
+
+#: includes/widgets/team-members.php:207
+msgid "URL of the Dribbble profile of the team member."
+msgstr "URL du profil dribbble du membre de l’équipe."
+
+#: includes/widgets/team-members.php:206
+msgid "Dribbble Profile URL"
+msgstr "URL du Profil Dribble"
+
+#: includes/widgets/team-members.php:198
+msgid "URL of the Pinterest page for the team member."
+msgstr "URL de la page Pinter pour le membre de l’équipe."
+
+#: includes/widgets/team-members.php:197
+msgid "Pinterest Page URL"
+msgstr "URL de la page Pinterest"
+
+#: includes/widgets/team-members.php:189
+msgid "URL of the LinkedIn profile of the team member."
+msgstr "URL du profil LinkedIn du membre de l’équipe."
+
+#: includes/widgets/team-members.php:188
+msgid "LinkedIn Page URL"
+msgstr "URL de la page LinkedIn"
+
+#: includes/widgets/team-members.php:180
+msgid "URL of the Twitter page of the team member."
+msgstr "URL de la page Twitter du membre de l’équipe."
+
+#: includes/widgets/team-members.php:179
+msgid "Twitter Profile URL"
+msgstr "URL du profil Twitter"
+
+#: includes/widgets/team-members.php:171
+msgid "URL of the Facebook page of the team member."
+msgstr "URL de la page Facebook du membre de l’équipe."
+
+#: includes/widgets/team-members.php:170
+msgid "Facebook Page URL"
+msgstr "URL de la page Facebook"
+
+#: includes/widgets/team-members.php:162
+msgid "Enter the email address of the team member."
+msgstr "Saisissez l’adresse e-mail du membre de l’équipe."
+
+#: includes/widgets/team-members.php:161
+msgid "Email Address"
+msgstr "Adresse e-mail"
+
+#: includes/widgets/team-members.php:155
+msgid "Social Profile"
+msgstr "Profil social"
+
+#: includes/widgets/team-members.php:148
+msgid "Provide a short writeup for the team member"
+msgstr "Fournir un court writeup pour le membre de l’équipe"
+
+#: includes/widgets/team-members.php:147
+msgid "Details about team member"
+msgstr "Détails sur le membre de l’équipe"
+
+#: includes/widgets/team-members.php:145
+msgid "Team Member details"
+msgstr "Détails des membres de l’équipe"
+
+#: includes/widgets/team-members.php:139
+msgid "http://member-link.com"
+msgstr "http://member-link.com"
+
+#: includes/widgets/team-members.php:132
+msgid "The link for the page describing the team member."
+msgstr "Le lien pour la page décrivant le membre de l’équipe."
+
+#: includes/widgets/team-members.php:131
+msgid "Team Member URL"
+msgstr "URL du membre d’équipe"
+
+#: includes/widgets/team-members.php:120
+msgid "Team Member Image"
+msgstr "Photo du membre de l’équipe"
+
+#: includes/widgets/team-members.php:112
+msgid "Position"
+msgstr "Position"
+
+#: includes/widgets/team-members.php:106
+msgid "My team member name"
+msgstr "Nom du membre de l’équipe"
+
+#: includes/widgets/team-members.php:104
+msgid "Member Name"
+msgstr "Nom du membre"
+
+#: includes/widgets/team-members.php:100
+msgid "Team"
+msgstr "Équipe"
+
+#: includes/widgets/team-members.php:44 includes/widgets/team-members.php:239
+msgid "Team Members"
+msgstr "Membres de l’équipe"
+
+#: includes/widgets/tab-slider.php:375
+msgid "Hover Tab Icon Color"
+msgstr "Couleur de l’icône de l’onglet au survol"
+
+#: includes/widgets/tab-slider.php:367
+msgid "Active Tab Icon Color"
+msgstr "Couleur active d’icône d’étiquette"
+
+#: includes/widgets/tab-slider.php:315
+msgid "Tab Content Padding"
+msgstr "Marges internes du contenu"
+
+#: includes/widgets/tab-slider.php:297
+msgid "Tab Title Padding"
+msgstr "Marges internes du titre de l’onglet"
+
+#: includes/widgets/tab-slider.php:285
+msgid "Tab highlight Border color"
+msgstr "Couleur de bordure de surbrillance Tab"
+
+#: includes/widgets/tab-slider.php:278
+msgid "Tab Title Hover Color"
+msgstr "Couleur du titre de l’onglet au survol"
+
+#: includes/widgets/tab-slider.php:271
+msgid "Active Tab Title Color"
+msgstr "Couleur active de titre d’étiquette"
+
+#: includes/widgets/tab-slider.php:243
+msgid "Enables adaptive height when tabs are of different heights."
+msgstr "Active la hauteur adaptative lorsque les onglets sont de différentes hauteurs."
+
+#: includes/widgets/tab-slider.php:234
+msgid "Infinite Looping?"
+msgstr "Boucle infinie ?"
+
+#: includes/widgets/tab-slider.php:210
+msgid "Pause on Focus?"
+msgstr "Pause au Focus ?"
+
+#: includes/widgets/tab-slider.php:191
+msgid "Should the tabs autoplay as in a slideshow."
+msgstr "Si les onglets défilent automatiquement."
+
+#: includes/widgets/tab-slider.php:169
+msgid "I am tabbed content 3. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr "Je suis un contenu de l’onglet N°3. Cliquer sur le bouton Modifier pour modifier ce texte."
+
+#: includes/widgets/tab-slider.php:168
+msgid "Tab #3"
+msgstr "Onglet N°3"
+
+#: includes/widgets/tab-slider.php:166
+msgid "I am tabbed content 2. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr "Je suis un contenu de l’onglet N°2. Cliquer sur le bouton Modifier pour modifier ce texte."
+
+#: includes/widgets/tab-slider.php:165
+msgid "Tab #2"
+msgstr "Onglet N°2"
+
+#: includes/widgets/tab-slider.php:163
+msgid "I am tabbed content 1. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+msgstr "Je suis un contenu de l’onglet N°1. Cliquer sur le bouton Modifier pour modifier ce texte."
+
+#: includes/widgets/tab-slider.php:162
+msgid "Tab #1"
+msgstr "Onglet N°1"
+
+#: includes/widgets/tab-slider.php:158
+msgid "Tab Panes"
+msgstr "Volets de tabulation"
+
+#: includes/widgets/tab-slider.php:149 includes/widgets/tab-slider.php:151
+#: includes/widgets/tab-slider.php:311
+msgid "Tab Content"
+msgstr "Contenu de l’onglet"
+
+#: includes/widgets/tab-slider.php:142 includes/widgets/tab-slider.php:260
+msgid "Tab Title"
+msgstr "Titre de l’onglet"
+
+#: includes/widgets/tab-slider.php:140
+msgid "Tab Title & Content"
+msgstr "Titre et contenu de l’onglet"
+
+#: includes/widgets/tab-slider.php:127
+msgid "Tab Icon"
+msgstr "Icône de l’onglet"
+
+#: includes/widgets/tab-slider.php:116
+msgid "Tab Image"
+msgstr "Image de l’onglet"
+
+#: includes/widgets/tab-slider.php:106
+msgid "Tab Icon Type"
+msgstr "Type d’icône de l’onglet"
+
+#: includes/widgets/tab-slider.php:101
+msgid "Tab Style 3"
+msgstr "Style d’onglet N°3"
+
+#: includes/widgets/tab-slider.php:100
+msgid "Tab Style 2"
+msgstr "Style d’onglet N°2"
+
+#: includes/widgets/tab-slider.php:99
+msgid "Tab Style 1"
+msgstr "Style d’onglet N°1"
+
+#: includes/widgets/tab-slider.php:92
+msgid "Tabs"
+msgstr "Onglets"
+
+#: includes/widgets/tab-slider.php:42
+msgid "Tab Slider"
+msgstr "Tableau à onglets défilants"
+
+#: includes/widgets/stats-bars.php:198
+msgid "Stats Bar Border Radius"
+msgstr "Rayon de bordure de la barre"
+
+#: includes/widgets/stats-bars.php:180
+msgid "Stats Bar Height"
+msgstr "Hauteur de barre"
+
+#: includes/widgets/stats-bars.php:163
+msgid "Stats Bar Spacing"
+msgstr "Espacement des barres"
+
+#: includes/widgets/stats-bars.php:156
+msgid "Stats Bar Background Color"
+msgstr "Couleur d’arrière-plan de la barre"
+
+#: includes/widgets/stats-bars.php:152
+msgid "Stats Bar"
+msgstr "Barres de progression"
+
+#: includes/widgets/stats-bars.php:113
+msgid "Bar Color"
+msgstr "Couleur de la barre"
+
+#: includes/widgets/stats-bars.php:97
+msgid "The title for the stats bar"
+msgstr "Le titre de la barre de progression"
+
+#: includes/widgets/stats-bars.php:41 includes/widgets/stats-bars.php:91
+msgid "Stats Bars"
+msgstr "Barres de progression"
+
+#: includes/widgets/services.php:608 includes/widgets/team-members.php:737
+#: includes/widgets/timeline.php:513
+msgid "Icon Hover Color"
+msgstr "Couleur de l’icône au survol"
+
+#: includes/widgets/marquee-text.php:384 includes/widgets/message-box.php:300
+#: includes/widgets/message-box.php:359 includes/widgets/services.php:601
+msgid "Icon Custom Color"
+msgstr "Couleur d’icône personnalisée"
+
+#: includes/widgets/services.php:582
+msgid "Service Icons"
+msgstr "Icônes de service"
+
+#: includes/widgets/services.php:566
+msgid "Service Text"
+msgstr "Texte Service"
+
+#: includes/widgets/services.php:554 includes/widgets/team-members.php:650
+msgid "Hover Color for Link"
+msgstr "Couleur du lien au survol"
+
+#: includes/widgets/services.php:241
+msgid "Size of icon image if chosen for display"
+msgstr "Taille de l’image d’icône si choisi pour l’affichage"
+
+#: includes/widgets/services.php:240
+msgid "Icon Image Size"
+msgstr "Taille d’image d’icône"
+
+#: includes/widgets/services.php:166
+msgid "Service description goes here"
+msgstr "Description de service va ici"
+
+#: includes/widgets/services.php:164
+msgid "Service description"
+msgstr "Description du service"
+
+#: includes/widgets/services.php:158
+msgid "http://service-link.com"
+msgstr "http://service-link.com"
+
+#: includes/widgets/services.php:151
+msgid "The link for the page describing the service."
+msgstr "Le lien pour la page décrivant le service."
+
+#: includes/widgets/services.php:150
+msgid "Service URL"
+msgstr "URL du service"
+
+#: includes/widgets/services.php:137
+msgid "Service Icon"
+msgstr "Icône du Service"
+
+#: includes/widgets/services.php:123
+msgid "Service Image"
+msgstr "Service Image"
+
+#: includes/widgets/message-box.php:114 includes/widgets/services.php:113
+msgid "Icon Type"
+msgstr "Type d’icône"
+
+#: includes/widgets/services.php:107
+msgid "My service title"
+msgstr "Mon titre de service"
+
+#: includes/widgets/services.php:104 includes/widgets/services.php:529
+msgid "Service Title"
+msgstr "Titre du service"
+
+#: includes/widgets/services.php:44 includes/widgets/services.php:100
+msgid "Services"
+msgstr "Services"
+
+#: includes/widgets/pricing-table.php:455 includes/widgets/timeline.php:588
+msgid "Label Color"
+msgstr "Couleur du libellé"
+
+#: includes/widgets/pricing-table.php:447
+msgid "Button Hover Color"
+msgstr "Couleur du bouton au survol"
+
+#: includes/widgets/pricing-table.php:439
+msgid "Button Color"
+msgstr "Color del botó"
+
+#: includes/widgets/pricing-table.php:423
+msgid "Button Size"
+msgstr "Taille du bouton"
+
+#: includes/widgets/pricing-table.php:408
+msgid "Button Spacing"
+msgstr "Espacement du bouton"
+
+#: includes/widgets/pricing-table.php:404
+msgid "Purchase Button"
+msgstr "Bouton achat"
+
+#: includes/widgets/pricing-table.php:388
+msgid "Pricing Item Value"
+msgstr "Valeur de l’article de tarification"
+
+#: includes/widgets/pricing-table.php:372
+msgid "Pricing Item Title"
+msgstr "Prix titre de l’article"
+
+#: includes/widgets/pricing-table.php:342
+msgid "Plan Price"
+msgstr "Plan Price"
+
+#: includes/widgets/pricing-table.php:326
+msgid "Plan Tagline"
+msgstr "Slogan du plan"
+
+#: includes/widgets/pricing-table.php:300
+#: includes/widgets/pricing-table.php:346
+msgid "HTML Tag"
+msgstr "Balise HTML"
+
+#: includes/widgets/pricing-table.php:296
+msgid "Plan Name"
+msgstr "Nom du plan"
+
+#: includes/widgets/pricing-table.php:242
+msgid "Pricing plans in a row"
+msgstr "Plans de tarification d’affilée"
+
+#: includes/widgets/pricing-table.php:182
+msgid "Pricing Plan Details"
+msgstr "Détails du plan de tarification"
+
+#: includes/widgets/pricing-table.php:173
+msgid "Highlight Pricing Plan"
+msgstr "Mettre en évidence le plan de tarification"
+
+#: includes/widgets/pricing-table.php:167 includes/widgets/timeline.php:177
+msgid "http://your-link.com"
+msgstr "http://votre-lien.com"
+
+#: includes/widgets/pricing-table.php:160
+msgid "URL for the Pricing link/button"
+msgstr "URL du lien de tarification/bouton"
+
+#: includes/widgets/pricing-table.php:154
+msgid "Text for Pricing Link/Button"
+msgstr "Texte pour la tarification lien/bouton"
+
+#: includes/widgets/pricing-table.php:147
+msgid "Enter the price tag for the pricing plan. HTML is accepted."
+msgstr "Saisir l’étiquette de prix pour la tarification. HTML accepté."
+
+#: includes/widgets/pricing-table.php:146
+msgid "Price Tag"
+msgstr "Balise du prix"
+
+#: includes/widgets/pricing-table.php:134
+msgid "Pricing Image"
+msgstr "Image de tarification"
+
+#: includes/widgets/pricing-table.php:127
+msgid "Tagline Text"
+msgstr "Texte de Slogan"
+
+#: includes/widgets/pricing-table.php:119
+msgid "My pricing plan title"
+msgstr "Mon titre de plan de tarification"
+
+#: includes/widgets/pricing-table.php:118
+msgid "Pricing Plan Title"
+msgstr "Titre du plan de tarification"
+
+#: includes/widgets/pricing-table.php:112
+msgid "Pricing Plans"
+msgstr "Tarifs"
+
+#: includes/widgets/pricing-table.php:59 includes/widgets/pricing-table.php:109
+msgid "Pricing Table"
+msgstr "Tableau des prix"
+
+#: includes/widgets/posts-slider.php:408
+msgid "Enables adaptive height for single slide horizontal sliders."
+msgstr "Active la hauteur adaptative pour le diaporama horizontal à une seule diapositive."
+
+#: includes/widgets/posts-slider.php:40
+msgid "Posts Slider"
+msgstr "Diaporama de publications"
+
+#: includes/widgets/posts-multislider.php:376
+msgid "Align Right"
+msgstr "Aligner à droite"
+
+#: includes/widgets/posts-multislider.php:375
+msgid "Align Center"
+msgstr "Aligner au centre"
+
+#: includes/widgets/posts-multislider.php:374
+msgid "Align Left"
+msgstr "Aligner à gauche"
+
+#: includes/widgets/posts-multislider.php:372
+msgid "Choose Bottom Text Alignment"
+msgstr "Choisir l’alignement du texte du bas"
+
+#: includes/widgets/posts-multislider.php:337
+msgid "Multislider Settings"
+msgstr "Réglages du diaporama multiple"
+
+#: includes/widgets/posts-multislider.php:41
+msgid "Posts Multislider"
+msgstr "Diaporama multiple de publications"
+
+#: includes/widgets/posts-gridbox-slider.php:673
+msgid "Entry Title"
+msgstr "Saisir le titre"
+
+#: includes/widgets/posts-gridbox-slider.php:662
+msgid "Entry Terms Hover Color"
+msgstr "Couleur au survol des entrées de termes"
+
+#: includes/widgets/posts-gridbox-slider.php:655
+msgid "Entry Terms Color"
+msgstr "Couleur des entrée de termes"
+
+#: includes/widgets/posts-gridbox-slider.php:650
+msgid "Entry Terms"
+msgstr "Entrée de termes"
+
+#: includes/widgets/posts-gridbox-slider.php:643
+msgid "Bottom Entry Text"
+msgstr "Texte d’entrée en bas"
+
+#: includes/widgets/posts-gridbox-slider.php:631
+#: includes/widgets/posts-multislider.php:742
+#: includes/widgets/posts-slider.php:596
+msgid "Read More Hover Text Color"
+msgstr "Couleur au survol du texte Lire la suite"
+
+#: includes/widgets/posts-gridbox-slider.php:624
+#: includes/widgets/posts-multislider.php:735
+#: includes/widgets/posts-slider.php:589
+msgid "Read More Text Color"
+msgstr "Couleur du texte Lire la suite"
+
+#: includes/widgets/posts-gridbox-slider.php:578
+#: includes/widgets/posts-gridbox-slider.php:715
+#: includes/widgets/posts-multislider.php:689
+#: includes/widgets/posts-slider.php:543
+msgid "Entry Meta Link Hover Color"
+msgstr "Couleur au survol du lien de méta"
+
+#: includes/widgets/posts-gridbox-slider.php:500
+#: includes/widgets/posts-multislider.php:611
+#: includes/widgets/posts-slider.php:465
+msgid "Post Taxonomy Terms"
+msgstr "Termes de taxonomie de publication"
+
+#: includes/widgets/device-slider.php:333
+#: includes/widgets/posts-gridbox-slider.php:493
+#: includes/widgets/posts-multislider.php:524
+#: includes/widgets/posts-slider.php:458
+msgid "Show on Hover"
+msgstr "Afficher au survol"
+
+#: includes/widgets/device-slider.php:332
+#: includes/widgets/posts-gridbox-slider.php:492
+#: includes/widgets/posts-multislider.php:523
+#: includes/widgets/posts-slider.php:457
+msgid "Show Always"
+msgstr "Toujours afficher"
+
+#: includes/widgets/device-slider.php:330
+#: includes/widgets/posts-gridbox-slider.php:490
+#: includes/widgets/posts-multislider.php:521
+#: includes/widgets/posts-slider.php:455
+msgid "Visibility"
+msgstr "Visibilité"
+
+#: includes/widgets/device-slider.php:319
+#: includes/widgets/posts-gridbox-slider.php:483
+#: includes/widgets/posts-multislider.php:514
+#: includes/widgets/posts-slider.php:448
+msgid "Light"
+msgstr "Clair"
+
+#: includes/widgets/device-slider.php:318
+#: includes/widgets/posts-gridbox-slider.php:482
+#: includes/widgets/posts-multislider.php:513
+#: includes/widgets/posts-slider.php:447
+msgid "Dark"
+msgstr "Sombre"
+
+#: includes/widgets/device-slider.php:305
+#: includes/widgets/posts-gridbox-slider.php:473
+#: includes/widgets/posts-multislider.php:504
+#: includes/widgets/posts-slider.php:438
+msgid "Circle"
+msgstr "Cercle"
+
+#: includes/widgets/device-slider.php:304
+#: includes/widgets/posts-gridbox-slider.php:472
+#: includes/widgets/posts-multislider.php:503
+#: includes/widgets/posts-slider.php:437
+msgid "Square with Rounded Corners"
+msgstr "Carré avec coins arrondis"
+
+#: includes/widgets/device-slider.php:303
+#: includes/widgets/posts-gridbox-slider.php:471
+#: includes/widgets/posts-multislider.php:502
+#: includes/widgets/posts-slider.php:436
+msgid "Square"
+msgstr "Carré"
+
+#: includes/widgets/device-slider.php:301
+#: includes/widgets/posts-gridbox-slider.php:469
+#: includes/widgets/posts-multislider.php:500
+#: includes/widgets/posts-slider.php:434
+msgid "Shape"
+msgstr "Forme"
+
+#: includes/widgets/device-slider.php:283
+#: includes/widgets/posts-gridbox-slider.php:455
+#: includes/widgets/posts-multislider.php:486
+#: includes/widgets/posts-slider.php:420
+msgid "Placement"
+msgstr "Positionnement"
+
+#: includes/widgets/device-slider.php:271
+#: includes/widgets/posts-gridbox-slider.php:447
+#: includes/widgets/posts-multislider.php:478
+#: includes/widgets/posts-slider.php:412
+msgid "Slider Arrow Settings"
+msgstr "Réglages des flèches du diaporama"
+
+#: includes/widgets/posts-gridbox-slider.php:377
+#: includes/widgets/posts-multislider.php:402
+msgid "Image height"
+msgstr "Hauteur de l’image"
+
+#: includes/widgets/posts-gridbox-slider.php:362
+#: includes/widgets/posts-slider.php:336
+msgid "Slider height"
+msgstr "Hauteur du diaporama"
+
+#: includes/widgets/device-slider.php:290
+#: includes/widgets/posts-gridbox-slider.php:357
+#: includes/widgets/posts-gridbox-slider.php:462
+#: includes/widgets/posts-multislider.php:363
+#: includes/widgets/posts-multislider.php:493
+#: includes/widgets/posts-slider.php:427
+msgid "Bottom Right"
+msgstr "En bas et à droite"
+
+#: includes/widgets/posts-gridbox-slider.php:356
+#: includes/widgets/posts-multislider.php:362
+msgid "Middle Right"
+msgstr "Au milieu à droite"
+
+#: includes/widgets/device-slider.php:288
+#: includes/widgets/posts-gridbox-slider.php:355
+#: includes/widgets/posts-gridbox-slider.php:460
+#: includes/widgets/posts-multislider.php:361
+#: includes/widgets/posts-multislider.php:491
+#: includes/widgets/posts-slider.php:425
+msgid "Top Right"
+msgstr "En haut à droite"
+
+#: includes/widgets/device-slider.php:286
+#: includes/widgets/posts-gridbox-slider.php:354
+#: includes/widgets/posts-gridbox-slider.php:458
+#: includes/widgets/posts-multislider.php:360
+#: includes/widgets/posts-multislider.php:489
+#: includes/widgets/posts-slider.php:423
+msgid "Bottom Center"
+msgstr "En bas au centre"
+
+#: includes/widgets/device-slider.php:285
+#: includes/widgets/posts-gridbox-slider.php:353
+#: includes/widgets/posts-gridbox-slider.php:457
+#: includes/widgets/posts-multislider.php:359
+#: includes/widgets/posts-multislider.php:488
+#: includes/widgets/posts-slider.php:422
+msgid "Middle Center"
+msgstr "Au milieu au centre"
+
+#: includes/widgets/posts-gridbox-slider.php:352
+#: includes/widgets/posts-multislider.php:358
+msgid "Top Center"
+msgstr "En haut au centre"
+
+#: includes/widgets/device-slider.php:289
+#: includes/widgets/posts-gridbox-slider.php:351
+#: includes/widgets/posts-gridbox-slider.php:461
+#: includes/widgets/posts-multislider.php:357
+#: includes/widgets/posts-multislider.php:492
+#: includes/widgets/posts-slider.php:426
+msgid "Bottom Left"
+msgstr "En bas à gauche"
+
+#: includes/widgets/posts-gridbox-slider.php:350
+#: includes/widgets/posts-multislider.php:356
+msgid "Middle Left"
+msgstr "Au milieu à gauche"
+
+#: includes/widgets/device-slider.php:287
+#: includes/widgets/posts-gridbox-slider.php:349
+#: includes/widgets/posts-gridbox-slider.php:459
+#: includes/widgets/posts-multislider.php:355
+#: includes/widgets/posts-multislider.php:490
+#: includes/widgets/posts-slider.php:424
+msgid "Top Left"
+msgstr "En haut à gauche"
+
+#: includes/widgets/posts-gridbox-slider.php:347
+#: includes/widgets/posts-multislider.php:353
+msgid "Choose Text Alignment"
+msgstr "Choisir l’alignement du texte"
+
+#: includes/widgets/posts-gridbox-slider.php:341
+#: includes/widgets/posts-multislider.php:347
+#: includes/widgets/posts-slider.php:331
+msgid "Choose Slider Style"
+msgstr "Choisir le style de diaporama"
+
+#: includes/widgets/posts-gridbox-slider.php:337
+#: includes/widgets/posts-multislider.php:343
+msgid "Slider Style 3"
+msgstr "Style de diaporama N°3"
+
+#: includes/widgets/posts-gridbox-slider.php:336
+#: includes/widgets/posts-multislider.php:342
+#: includes/widgets/posts-slider.php:327
+msgid "Slider Style 2"
+msgstr "Style de diaporama N°2"
+
+#: includes/widgets/posts-gridbox-slider.php:335
+#: includes/widgets/posts-multislider.php:341
+#: includes/widgets/posts-slider.php:326
+msgid "Slider Style 1"
+msgstr "Style de diaporama N°1"
+
+#: includes/widgets/device-slider.php:152
+#: includes/widgets/posts-gridbox-slider.php:331
+#: includes/widgets/posts-slider.php:322 includes/widgets/tab-slider.php:181
+#: includes/widgets/testimonials-slider.php:178
+msgid "Slider Settings"
+msgstr "Réglages du diaporama"
+
+#: includes/widgets/posts-gridbox-slider.php:297
+#: includes/widgets/posts-multislider.php:303
+#: includes/widgets/posts-slider.php:288
+msgid "Display post comments?"
+msgstr "Afficher les commentaires de publication ?"
+
+#: includes/widgets/posts-gridbox-slider.php:41
+msgid "Posts Grid Box Slider"
+msgstr "Diaporama de grille de publications"
+
+#: includes/widgets/posts-carousel.php:668
+#: includes/widgets/posts-gridbox-slider.php:560
+#: includes/widgets/posts-multislider.php:671
+#: includes/widgets/posts-slider.php:525
+msgid "Post Entry Meta"
+msgstr "Méta de la publication"
+
+#: includes/widgets/posts-carousel.php:649
+#: includes/widgets/posts-gridbox-slider.php:590
+#: includes/widgets/posts-multislider.php:701
+#: includes/widgets/posts-slider.php:555
+msgid "Post Entry Summary"
+msgstr "Résumé de la publication"
+
+#: includes/widgets/posts-carousel.php:616
+#: includes/widgets/posts-gridbox-slider.php:523
+#: includes/widgets/posts-multislider.php:634
+#: includes/widgets/posts-slider.php:488
+msgid "Post Entry Title"
+msgstr "Titre de la publication"
+
+#: includes/widgets/posts-carousel.php:555
+msgid "Post Thumbnail"
+msgstr "Miniature de la publication"
+
+#: includes/widgets/posts-carousel.php:510
+msgid "Mobile Gutter"
+msgstr "Gouttière mobile"
+
+#: includes/widgets/posts-carousel.php:421
+msgid "Enables adaptive height for single slide horizontal carousels."
+msgstr "Active la hauteur adaptative pour les carrousels horizontaux."
+
+#: includes/widgets/posts-carousel.php:352
+#: includes/widgets/posts-gridbox-slider.php:273
+#: includes/widgets/posts-multislider.php:279
+#: includes/widgets/posts-slider.php:264
+msgid "Display taxonomy info?"
+msgstr "Afficher les infos de taxonomie ?"
+
+#: includes/widgets/posts-carousel.php:344
+#: includes/widgets/posts-gridbox-slider.php:289
+#: includes/widgets/posts-multislider.php:295
+#: includes/widgets/posts-slider.php:280
+msgid "Display post date info?"
+msgstr "Afficher la date de publication ?"
+
+#: includes/widgets/posts-carousel.php:336
+#: includes/widgets/posts-gridbox-slider.php:281
+#: includes/widgets/posts-multislider.php:287
+#: includes/widgets/posts-slider.php:272
+msgid "Display post author info?"
+msgstr "Afficher les informations d’auteur ?"
+
+#: includes/widgets/posts-carousel.php:328
+#: includes/widgets/posts-gridbox-slider.php:305
+#: includes/widgets/posts-multislider.php:311
+#: includes/widgets/posts-slider.php:296
+msgid "Display post excerpt/summary?"
+msgstr "Afficher l’extrait de la publication ?"
+
+#: includes/widgets/posts-carousel.php:320
+#: includes/widgets/posts-gridbox-slider.php:265
+#: includes/widgets/posts-multislider.php:271
+#: includes/widgets/posts-slider.php:256
+msgid "Display posts title?"
+msgstr "Afficher le titre de publication ?"
+
+#: includes/widgets/posts-carousel.php:263
+#: includes/widgets/posts-gridbox-slider.php:230
+#: includes/widgets/posts-multislider.php:235
+#: includes/widgets/posts-slider.php:229
+msgid "Display post thumbnail?"
+msgstr "Afficher la miniature ?"
+
+#: includes/widgets/posts-carousel.php:256
+#: includes/widgets/posts-gridbox-slider.php:223
+#: includes/widgets/posts-multislider.php:228
+#: includes/widgets/posts-slider.php:222
+msgid "Choose the taxonomy to use for display of taxonomy information for posts/custom post types."
+msgstr "Choisir la taxonomie à utiliser pour afficher les informations de taxonomie pour les publications/types de publications personnalisés."
+
+#: includes/widgets/posts-carousel.php:255
+#: includes/widgets/posts-gridbox-slider.php:222
+#: includes/widgets/posts-multislider.php:227
+#: includes/widgets/posts-slider.php:221
+msgid "Choose the taxonomy to display info."
+msgstr "Choisir la taxonomie pour afficher les informations."
+
+#: includes/widgets/posts-carousel.php:237
+msgid "Select the custom skin template for the carousel item"
+msgstr "Choisir l’aspect personnalisé pour widget de carrousel"
+
+#: includes/widgets/posts-carousel.php:228
+msgid "The \"Classic Skin\" is the built-in styling provided for the carousel items. Choose \"Custom Skin\" if you want to use theme builder template for the carousel items."
+msgstr "L’aspect « classique » est le style fourni pour les éléments du carrousel. Choisir « aspect personnalisé » si pour utiliser un modèle du constructeur de thème pour le carrousel."
+
+#: includes/widgets/posts-carousel.php:227
+msgid "Choose Carousel Skin"
+msgstr "Choisir l’aspect du carrousel"
+
+#: includes/widgets/posts-carousel.php:224
+msgid "Carousel Skin"
+msgstr "Aspect du carrousel"
+
+#: includes/widgets/posts-carousel.php:96
+#: includes/widgets/posts-gridbox-slider.php:91
+#: includes/widgets/posts-multislider.php:96
+#: includes/widgets/posts-slider.php:90
+msgid "Posts Query"
+msgstr "Requête de publications"
+
+#: includes/widgets/posts-carousel.php:41
+msgid "Posts Carousel"
+msgstr "Carrousel de publication"
+
+#: includes/widgets/portfolio.php:929
+msgid "Choose a custom skin template for the grid item"
+msgstr "Choisir un aspect personnalisé pour l’élément de grille"
+
+#: includes/widgets/portfolio.php:858
+msgid "Choose a custom template for the grid"
+msgstr "Choisir un modèle personnalisé pour la grille"
+
+#: includes/widgets/portfolio.php:738 includes/widgets/portfolio.php:751
+#: templates/addons/posts-carousel/custom-skin.php:10
+msgid "Custom skin requires Elementor Pro but the plugin is not installed/active"
+msgstr "L’aspect personnalisé nécessite Elementor PRO mais l’extension n’est pas installée/active"
+
+#: includes/widgets/portfolio.php:720 includes/widgets/posts-carousel.php:722
+#: includes/widgets/posts-gridbox-slider.php:617
+#: includes/widgets/posts-multislider.php:728
+#: includes/widgets/posts-slider.php:582
+msgid "Read More Hover Color"
+msgstr "Lire plus couleur Hover"
+
+#: includes/widgets/portfolio.php:713 includes/widgets/posts-carousel.php:715
+#: includes/widgets/posts-gridbox-slider.php:610
+#: includes/widgets/posts-multislider.php:721
+#: includes/widgets/posts-slider.php:575
+msgid "Read More Color"
+msgstr "Lire plus couleur"
+
+#: includes/widgets/portfolio.php:694 includes/widgets/posts-carousel.php:696
+#: includes/widgets/posts-gridbox-slider.php:571
+#: includes/widgets/posts-gridbox-slider.php:708
+#: includes/widgets/posts-multislider.php:682
+#: includes/widgets/posts-slider.php:536
+msgid "Entry Meta Link Color"
+msgstr "Couleur du lien de méta"
+
+#: includes/widgets/portfolio.php:689 includes/widgets/posts-carousel.php:691
+msgid "Entry Meta Link"
+msgstr "Lien de méta"
+
+#: includes/widgets/portfolio.php:678 includes/widgets/posts-carousel.php:680
+#: includes/widgets/posts-gridbox-slider.php:564
+#: includes/widgets/posts-gridbox-slider.php:701
+#: includes/widgets/posts-multislider.php:675
+#: includes/widgets/posts-slider.php:529
+msgid "Entry Meta Color"
+msgstr "Couleur de méta"
+
+#: includes/widgets/portfolio.php:673 includes/widgets/posts-carousel.php:675
+#: includes/widgets/posts-gridbox-slider.php:696
+msgid "Entry Meta"
+msgstr "Saisir les Meta"
+
+#: includes/widgets/portfolio.php:666
+msgid "Grid Item Entry Meta"
+msgstr "Méta entrée d’élément de grille"
+
+#: includes/widgets/portfolio.php:654 includes/widgets/posts-carousel.php:656
+#: includes/widgets/posts-gridbox-slider.php:594
+#: includes/widgets/posts-multislider.php:705
+#: includes/widgets/posts-slider.php:559
+msgid "Entry Summary Color"
+msgstr "Couleur de résumé d’entrée"
+
+#: includes/widgets/portfolio.php:650
+msgid "Grid Item Entry Summary"
+msgstr "Résumé de l’écriture article de grille"
+
+#: includes/widgets/portfolio.php:638
+#: includes/widgets/posts-gridbox-slider.php:548
+#: includes/widgets/posts-gridbox-slider.php:685
+#: includes/widgets/posts-multislider.php:659
+#: includes/widgets/posts-slider.php:513
+msgid "Entry Title Hover Color"
+msgstr "Couleur du titre au survol"
+
+#: includes/widgets/portfolio.php:631 includes/widgets/posts-carousel.php:637
+#: includes/widgets/posts-gridbox-slider.php:541
+#: includes/widgets/posts-gridbox-slider.php:678
+#: includes/widgets/posts-multislider.php:652
+#: includes/widgets/posts-slider.php:506
+msgid "Entry Title Color"
+msgstr "Couleur du titre d’entrée"
+
+#: includes/widgets/portfolio.php:617 includes/widgets/posts-carousel.php:623
+#: includes/widgets/posts-gridbox-slider.php:527
+#: includes/widgets/posts-multislider.php:638
+#: includes/widgets/posts-slider.php:492
+msgid "Entry Title HTML Tag"
+msgstr "Balise du titre"
+
+#: includes/widgets/portfolio.php:610
+msgid "Grid Item Entry Title"
+msgstr "Titre de l’article de grille"
+
+#: includes/widgets/portfolio.php:598
+#: includes/widgets/posts-gridbox-slider.php:511
+#: includes/widgets/posts-multislider.php:622
+#: includes/widgets/posts-slider.php:476
+msgid "Taxonomy Terms Hover Color"
+msgstr "Termes de taxonomie Hover Color"
+
+#: includes/widgets/portfolio.php:591 includes/widgets/posts-carousel.php:604
+#: includes/widgets/posts-gridbox-slider.php:504
+#: includes/widgets/posts-multislider.php:615
+#: includes/widgets/posts-slider.php:469
+msgid "Taxonomy Terms Color"
+msgstr "Termes de taxonomie couleur"
+
+#: includes/widgets/portfolio.php:586 includes/widgets/posts-carousel.php:599
+msgid "Thumbnail Info Taxonomy Terms"
+msgstr "Info-vignette termes taxonomie"
+
+#: includes/widgets/portfolio.php:575 includes/widgets/posts-carousel.php:588
+msgid "Title Hover Border Color"
+msgstr "Titre Hover couleur de bordure"
+
+#: includes/widgets/portfolio.php:568 includes/widgets/posts-carousel.php:581
+#: includes/widgets/timeline.php:702
+msgid "Title Color"
+msgstr "Couleur du titre"
+
+#: includes/widgets/portfolio.php:549 includes/widgets/posts-carousel.php:562
+msgid "Thumbnail Info Entry Title"
+msgstr "Vignette info titre de l’entrée"
+
+#: includes/widgets/portfolio.php:542
+msgid "Grid Thumbnail"
+msgstr "Miniature de la grille"
+
+#: includes/widgets/portfolio.php:530
+msgid "Active Filter Border Color"
+msgstr "Couleur de bordure de filtre Active"
+
+#: includes/widgets/portfolio.php:523
+msgid "Filter Hover Color"
+msgstr "Couleur de survol du filtre"
+
+#: includes/widgets/portfolio.php:516
+msgid "Filter Color"
+msgstr "Jeu de couleurs du filtre"
+
+#: includes/widgets/portfolio.php:512
+msgid "Grid Filters"
+msgstr "Filtre de grille"
+
+#: includes/widgets/portfolio.php:486
+msgid "Heading HTML Tag"
+msgstr "Balise de titrage"
+
+#: includes/widgets/portfolio.php:482
+msgid "Grid Heading"
+msgstr "En-tête de la grille"
+
+#: includes/widgets/portfolio.php:444 includes/widgets/portfolio.php:459
+#: includes/widgets/posts-carousel.php:445
+#: includes/widgets/posts-carousel.php:475
+#: includes/widgets/posts-carousel.php:511 includes/widgets/timeline.php:366
+#: includes/widgets/timeline.php:413 includes/widgets/timeline.php:469
+msgid "Space between columns."
+msgstr "Espace entre les colonnes."
+
+#: includes/widgets/portfolio.php:429
+msgid "Space between columns in the grid."
+msgstr "Espace entre les colonnes de la grille."
+
+#: includes/widgets/portfolio.php:428 includes/widgets/portfolio.php:443
+#: includes/widgets/portfolio.php:458 includes/widgets/posts-carousel.php:444
+#: includes/widgets/posts-carousel.php:474 includes/widgets/timeline.php:365
+#: includes/widgets/timeline.php:412 includes/widgets/timeline.php:468
+msgid "Gutter"
+msgstr "Gouttière"
+
+#: includes/widgets/portfolio.php:419
+msgid "Gutter Options"
+msgstr "Options de gouttière"
+
+#: includes/widgets/portfolio.php:413
+msgid "Masonry"
+msgstr "Maçonnerie"
+
+#: includes/widgets/portfolio.php:412
+msgid "Fit Rows"
+msgstr "Ajuster les lignes"
+
+#: includes/widgets/portfolio.php:410
+msgid "Choose a layout for the grid"
+msgstr "Choisir une mise en page pour la grille"
+
+#: includes/widgets/portfolio.php:388
+msgid "Choose the taxonomy information to display for posts/portfolio and the taxonomy that is used to filter the portfolio/post. Takes effect only if no taxonomy filters are specified when building query."
+msgstr "Choisir les informations de taxonomie à afficher pour les publications/portfolio et la taxonomie qui est utilisée pour filtrer le portfolio/publication. Ne prend effet que si aucun filtre de taxonomie n’est spécifié lors de la génération de requête."
+
+#: includes/widgets/portfolio.php:386
+msgid "Choose the taxonomy to display and filter on."
+msgstr "Choisir la taxonomie à afficher et filtrer."
+
+#: includes/widgets/portfolio.php:374
+msgid "Filterable?"
+msgstr "Filtrable ?"
+
+#: includes/widgets/portfolio.php:367 includes/widgets/portfolio.php:368
+msgid "My Posts"
+msgstr "Mes publications"
+
+#: includes/widgets/portfolio.php:365
+msgid "Heading for the grid"
+msgstr "Titrage de la grille"
+
+#: includes/widgets/portfolio.php:354 includes/widgets/portfolio.php:706
+#: includes/widgets/posts-carousel.php:371
+#: includes/widgets/posts-carousel.php:708
+#: includes/widgets/posts-gridbox-slider.php:324
+#: includes/widgets/posts-gridbox-slider.php:606
+#: includes/widgets/posts-multislider.php:330
+#: includes/widgets/posts-multislider.php:717
+#: includes/widgets/posts-slider.php:315 includes/widgets/posts-slider.php:571
+msgid "Read More"
+msgstr "Lire la suite"
+
+#: includes/widgets/portfolio.php:353 includes/widgets/posts-carousel.php:370
+#: includes/widgets/posts-gridbox-slider.php:323
+#: includes/widgets/posts-multislider.php:329
+#: includes/widgets/posts-slider.php:314
+msgid "Specify the text for the read more link/button"
+msgstr "Saisir le texte du lien/bouton Lire plus"
+
+#: includes/widgets/portfolio.php:351 includes/widgets/posts-carousel.php:368
+#: includes/widgets/posts-gridbox-slider.php:321
+#: includes/widgets/posts-multislider.php:327
+#: includes/widgets/posts-slider.php:312
+msgid "Read more text"
+msgstr "Texte Lire la suite"
+
+#: includes/widgets/portfolio.php:343 includes/widgets/posts-carousel.php:360
+#: includes/widgets/posts-gridbox-slider.php:313
+#: includes/widgets/posts-multislider.php:319
+#: includes/widgets/posts-slider.php:304
+msgid "Display read more link to the post/portfolio?"
+msgstr "Afficher lire la suite ?"
+
+#: includes/widgets/portfolio.php:335
+msgid "Display taxonomy info for the post item?"
+msgstr "Afficher la taxonomie ?"
+
+#: includes/widgets/portfolio.php:327
+msgid "Display post date info for the post item?"
+msgstr "Afficher la date ?"
+
+#: includes/widgets/portfolio.php:319
+msgid "Display post author info for the post/portfolio item?"
+msgstr "Afficher l’auteur ?"
+
+#: includes/widgets/portfolio.php:311
+msgid "Display post excerpt/summary for the post/portfolio item?"
+msgstr "Afficher l’extrait ?"
+
+#: includes/widgets/portfolio.php:303
+msgid "Display posts title for the post/portfolio item?"
+msgstr "Afficher le titre ?"
+
+#: includes/widgets/portfolio.php:295 includes/widgets/posts-carousel.php:309
+msgid "Display taxonomy info on post/project thumbnail?"
+msgstr "Afficher la taxonomie au survol ?"
+
+#: includes/widgets/portfolio.php:287 includes/widgets/posts-carousel.php:298
+msgid "Display posts title on the post/portfolio thumbnail?"
+msgstr "Afficher le titre au survol ?"
+
+#: includes/widgets/portfolio.php:279 includes/widgets/posts-carousel.php:290
+#: includes/widgets/posts-gridbox-slider.php:257
+#: includes/widgets/posts-multislider.php:263
+#: includes/widgets/posts-slider.php:248
+msgid "Open post links in new window?"
+msgstr "Ouvrir les liens dans la nouvelle fenêtre ?"
+
+#: includes/widgets/portfolio.php:267 includes/widgets/posts-carousel.php:272
+#: includes/widgets/posts-gridbox-slider.php:239
+#: includes/widgets/posts-multislider.php:244
+msgid "Image Size"
+msgstr "Taille de l’image"
+
+#: includes/widgets/portfolio.php:260 includes/widgets/posts-carousel.php:249
+#: includes/widgets/posts-gridbox-slider.php:219
+#: includes/widgets/posts-multislider.php:224
+#: includes/widgets/posts-slider.php:218
+msgid "Post Content"
+msgstr "Contenu de la publication"
+
+#: includes/widgets/portfolio.php:249
+msgid "Create/Edit the Grid Builder Templates"
+msgstr "Créer/modifier les modèles du constructeur de grilles"
+
+#: includes/widgets/portfolio.php:248
+msgid "Select the custom grid template for the grid item"
+msgstr "Choisir le modèle personnalisé pour widget de grille"
+
+#: includes/widgets/portfolio.php:232
+msgid "Custom Grid"
+msgstr "Grille personnalisée"
+
+#: includes/widgets/portfolio.php:231 includes/widgets/posts-carousel.php:232
+msgid "Custom Skin"
+msgstr "Personnalisé"
+
+#: includes/widgets/portfolio.php:230 includes/widgets/posts-carousel.php:231
+msgid "Classic Skin"
+msgstr "Aspect classique"
+
+#: includes/widgets/portfolio.php:227
+msgid "The \"Classic Skin\" is the built-in styling provided for the grid items. Choose \"Custom Skin\" if you want to use theme builder template for the grid item. The option \"Custom Grid\" is the most flexible one that lets you use a theme builder template for the grid layout with choice of custom template for one or more of its items."
+msgstr "L’aspect « classique » est le style fourni pour les éléments de la grille. Choisir « aspect personnalisé » pour utiliser uun modèle du constructeur de thème pour la grille.. L’option « grille personnalisée » vous permet d’utiliser un modèle du constructeur de thème pour la disposition de la grille avec le choix d’un modèle personnalisé pour un ou plusieurs de ses éléments."
+
+#: includes/widgets/portfolio.php:226
+msgid "Choose Grid Skin"
+msgstr "Choisir un aspect de grille"
+
+#: includes/widgets/portfolio.php:223
+msgid "Grid Skin"
+msgstr "Aspect de la grille"
+
+#: includes/widgets/portfolio.php:209 includes/widgets/posts-carousel.php:210
+#: includes/widgets/posts-gridbox-slider.php:205
+#: includes/widgets/posts-multislider.php:210
+#: includes/widgets/posts-slider.php:204
+msgid "Number of posts to skip or pass over."
+msgstr "Décalage de publications."
+
+#: includes/widgets/portfolio.php:208 includes/widgets/posts-carousel.php:209
+#: includes/widgets/posts-gridbox-slider.php:204
+#: includes/widgets/posts-multislider.php:209
+#: includes/widgets/posts-slider.php:203
+msgid "Offset"
+msgstr "Décalage"
+
+#: includes/widgets/portfolio.php:192 includes/widgets/posts-carousel.php:193
+#: includes/widgets/posts-gridbox-slider.php:188
+#: includes/widgets/posts-multislider.php:193
+#: includes/widgets/posts-slider.php:187
+msgid "Descending"
+msgstr "Descendant"
+
+#: includes/widgets/portfolio.php:191 includes/widgets/posts-carousel.php:192
+#: includes/widgets/posts-gridbox-slider.php:187
+#: includes/widgets/posts-multislider.php:192
+#: includes/widgets/posts-slider.php:186
+msgid "Ascending"
+msgstr "Ascendant"
+
+#: includes/widgets/portfolio.php:188 includes/widgets/posts-carousel.php:189
+#: includes/widgets/posts-gridbox-slider.php:184
+#: includes/widgets/posts-multislider.php:189
+#: includes/widgets/posts-slider.php:183
+msgid "Order"
+msgstr "Ordre"
+
+#: includes/widgets/portfolio.php:180 includes/widgets/posts-carousel.php:181
+#: includes/widgets/posts-gridbox-slider.php:176
+#: includes/widgets/posts-multislider.php:181
+#: includes/widgets/posts-slider.php:175
+msgid "By include order"
+msgstr "Par ordre inclus"
+
+#: includes/widgets/portfolio.php:179 includes/widgets/posts-carousel.php:180
+#: includes/widgets/posts-gridbox-slider.php:175
+#: includes/widgets/posts-multislider.php:180
+#: includes/widgets/posts-slider.php:174
+msgid "Menu order"
+msgstr "Ordre du menu"
+
+#: includes/widgets/portfolio.php:178 includes/widgets/posts-carousel.php:179
+#: includes/widgets/posts-gridbox-slider.php:174
+#: includes/widgets/posts-multislider.php:179
+#: includes/widgets/posts-slider.php:173
+msgid "Comment count"
+msgstr "Nombre de commentaires"
+
+#: includes/widgets/portfolio.php:177 includes/widgets/posts-carousel.php:178
+#: includes/widgets/posts-gridbox-slider.php:173
+#: includes/widgets/posts-multislider.php:178
+#: includes/widgets/posts-slider.php:172
+msgid "Random order"
+msgstr "Ordre aléatoire"
+
+#: includes/widgets/portfolio.php:176 includes/widgets/posts-carousel.php:177
+#: includes/widgets/posts-gridbox-slider.php:172
+#: includes/widgets/posts-multislider.php:177
+#: includes/widgets/posts-slider.php:171
+msgid "By parent"
+msgstr "Par parent"
+
+#: includes/widgets/portfolio.php:175 includes/widgets/posts-carousel.php:176
+#: includes/widgets/posts-gridbox-slider.php:171
+#: includes/widgets/posts-multislider.php:176
+#: includes/widgets/posts-slider.php:170
+msgid "Modified date"
+msgstr "Date de modification"
+
+#: includes/widgets/portfolio.php:174 includes/widgets/posts-carousel.php:175
+#: includes/widgets/posts-gridbox-slider.php:170
+#: includes/widgets/posts-multislider.php:175
+#: includes/widgets/posts-slider.php:169
+msgid "Published date"
+msgstr "Date de publication"
+
+#: includes/widgets/portfolio.php:172 includes/widgets/posts-carousel.php:173
+#: includes/widgets/posts-gridbox-slider.php:168
+#: includes/widgets/posts-multislider.php:173
+#: includes/widgets/posts-slider.php:167
+msgid "Author"
+msgstr "Auteur"
+
+#: includes/widgets/portfolio.php:171 includes/widgets/posts-carousel.php:172
+#: includes/widgets/posts-gridbox-slider.php:167
+#: includes/widgets/posts-multislider.php:172
+#: includes/widgets/posts-slider.php:166
+msgid "Post ID"
+msgstr "ID de la publication"
+
+#: includes/widgets/portfolio.php:170 includes/widgets/posts-carousel.php:171
+#: includes/widgets/posts-gridbox-slider.php:166
+#: includes/widgets/posts-multislider.php:171
+#: includes/widgets/posts-slider.php:165
+msgid "No order"
+msgstr "Pas de tri"
+
+#: includes/widgets/portfolio.php:167 includes/widgets/posts-carousel.php:168
+#: includes/widgets/posts-gridbox-slider.php:163
+#: includes/widgets/posts-multislider.php:168
+#: includes/widgets/posts-slider.php:162
+msgid "Order By"
+msgstr "Trié par"
+
+#: includes/widgets/portfolio.php:160 includes/widgets/posts-carousel.php:161
+#: includes/widgets/posts-gridbox-slider.php:156
+#: includes/widgets/posts-multislider.php:161
+#: includes/widgets/posts-slider.php:155
+msgid "Advanced"
+msgstr "Avancé"
+
+#: includes/widgets/portfolio.php:149 includes/widgets/posts-carousel.php:150
+#: includes/widgets/posts-gridbox-slider.php:145
+#: includes/widgets/posts-multislider.php:150
+#: includes/widgets/posts-slider.php:144
+msgid "Posts Per Page"
+msgstr "Publications par page"
+
+#: includes/widgets/portfolio.php:141 includes/widgets/posts-carousel.php:142
+#: includes/widgets/posts-gridbox-slider.php:137
+#: includes/widgets/posts-multislider.php:142
+#: includes/widgets/posts-slider.php:136
+msgid "Provide a comma separated list of Post IDs to display in the grid."
+msgstr "Fournir une liste d’ID de publication à afficher séparés par une virgule."
+
+#: includes/widgets/portfolio.php:140 includes/widgets/posts-carousel.php:141
+#: includes/widgets/posts-gridbox-slider.php:136
+#: includes/widgets/posts-multislider.php:141
+#: includes/widgets/posts-slider.php:135
+msgid "Post In"
+msgstr "Publié dans"
+
+#: includes/widgets/portfolio.php:130 includes/widgets/posts-carousel.php:131
+#: includes/widgets/posts-gridbox-slider.php:126
+#: includes/widgets/posts-multislider.php:131
+#: includes/widgets/posts-slider.php:125
+msgid "Taxonomies"
+msgstr "Taxonomies"
+
+#: includes/widgets/portfolio.php:121 includes/widgets/posts-carousel.php:122
+#: includes/widgets/posts-gridbox-slider.php:117
+#: includes/widgets/posts-multislider.php:122
+#: includes/widgets/posts-slider.php:116
+msgid "Choose the taxonomies to be used for displaying posts related to current post, page or custom post type."
+msgstr "Choisir les taxonomies à utiliser pour afficher les publications liées à la publication actuelle, à la page ou au type de publication personnalisé."
+
+#: includes/widgets/portfolio.php:119 includes/widgets/posts-carousel.php:120
+#: includes/widgets/posts-gridbox-slider.php:115
+#: includes/widgets/posts-multislider.php:120
+#: includes/widgets/posts-slider.php:114
+msgid "Choose the taxonomies to display related posts."
+msgstr "Choisir les taxonomies pour les publications en relations."
+
+#: includes/widgets/portfolio.php:108 includes/widgets/posts-carousel.php:109
+#: includes/widgets/posts-gridbox-slider.php:104
+#: includes/widgets/posts-multislider.php:109
+#: includes/widgets/posts-slider.php:103
+msgid "Post Types"
+msgstr "Types de publication"
+
+#: includes/widgets/portfolio.php:103 includes/widgets/posts-carousel.php:104
+#: includes/widgets/posts-gridbox-slider.php:99
+#: includes/widgets/posts-multislider.php:104
+#: includes/widgets/posts-slider.php:98
+msgid "Related"
+msgstr "Similaire"
+
+#: includes/widgets/portfolio.php:102 includes/widgets/posts-carousel.php:103
+#: includes/widgets/posts-gridbox-slider.php:98
+#: includes/widgets/posts-multislider.php:103
+#: includes/widgets/posts-slider.php:97
+msgid "Current Query"
+msgstr "Requête actuelle"
+
+#: includes/widgets/portfolio.php:101 includes/widgets/posts-carousel.php:102
+#: includes/widgets/posts-gridbox-slider.php:97
+#: includes/widgets/posts-multislider.php:102
+#: includes/widgets/posts-slider.php:96
+msgid "Custom Query"
+msgstr "Utiliser une requête personnalisée"
+
+#: includes/widgets/portfolio.php:98 includes/widgets/posts-carousel.php:99
+#: includes/widgets/posts-gridbox-slider.php:94
+#: includes/widgets/posts-multislider.php:99
+#: includes/widgets/posts-slider.php:93
+msgid "Source"
+msgstr "Source"
+
+#: includes/widgets/portfolio.php:95
+msgid "Post Query"
+msgstr "Requête de publication"
+
+#: includes/widgets/portfolio.php:40
+msgid "Posts Grid"
+msgstr "Grille de publication"
+
+#: includes/widgets/piecharts.php:330
+msgid "Stats Percentage Symbol"
+msgstr "Symbole de pourcentage"
+
+#: includes/widgets/piecharts.php:314 includes/widgets/stats-bars.php:223
+msgid "Stats Percentage"
+msgstr "Pourcentage de la barre"
+
+#: includes/widgets/piecharts.php:292
+msgid "Track color"
+msgstr "Couleur de la piste"
+
+#: includes/widgets/piecharts.php:287
+msgid "Bar color"
+msgstr "Couleur de la barre"
+
+#: includes/widgets/piecharts.php:257
+msgid "Piechart Styling"
+msgstr "Styles du camembert"
+
+#: includes/widgets/piecharts.php:181
+msgid "Piecharts per row"
+msgstr "Camemberts par rangée"
+
+#: includes/widgets/piecharts.php:133 includes/widgets/services.php:197
+#: includes/widgets/stats-bars.php:126
+msgid "Brand Marketing"
+msgstr "Marque"
+
+#: includes/widgets/piecharts.php:129
+msgid "WordPress Development"
+msgstr "Développement WordPress"
+
+#: includes/widgets/piecharts.php:125 includes/widgets/services.php:189
+#: includes/widgets/stats-bars.php:123
+msgid "SEO Services"
+msgstr "Services SEO"
+
+#: includes/widgets/piecharts.php:121 includes/widgets/services.php:181
+#: includes/widgets/stats-bars.php:120
+msgid "Web Design"
+msgstr "Conception web"
+
+#: includes/widgets/piecharts.php:115 includes/widgets/stats-bars.php:110
+msgid "The percentage value for the stats."
+msgstr "Valeur en % de la barre de progression."
+
+#: includes/widgets/piecharts.php:109 includes/widgets/stats-bars.php:104
+msgid "Percentage Value"
+msgstr "Valeur en pourcentage"
+
+#: includes/widgets/piecharts.php:103
+msgid "The title for the piechart"
+msgstr "Le titre du camembert"
+
+#: includes/widgets/piecharts.php:41 includes/widgets/piecharts.php:96
+msgid "Piecharts"
+msgstr "Camemberts"
+
+#: includes/widgets/odometers.php:383 includes/widgets/tab-slider.php:359
+#: includes/widgets/team-members.php:729
+#: includes/widgets/testimonials-slider.php:403
+#: includes/widgets/timeline.php:502
+msgid "Icon Color"
+msgstr "Couleur de l’icône"
+
+#: includes/widgets/message-box.php:284 includes/widgets/message-box.php:345
+#: includes/widgets/odometers.php:368 includes/widgets/services.php:586
+#: includes/widgets/tab-slider.php:343
+msgid "Icon or Icon Image size in pixels"
+msgstr "Taille d’image d’icône ou d’icône en pixels"
+
+#: includes/widgets/odometers.php:364 includes/widgets/tab-slider.php:336
+msgid "Icons"
+msgstr "Icônes"
+
+#: includes/widgets/odometers.php:330
+msgid "Stats Prefix and Suffix"
+msgstr "PréFixe et suffixe de la barre"
+
+#: includes/widgets/odometers.php:314
+msgid "Stats Number"
+msgstr "Nombre de la barre"
+
+#: includes/widgets/odometers.php:247
+msgid "Odometers per row"
+msgstr "Compteur par rangée"
+
+#: includes/widgets/odometers.php:196
+msgid "Product Revenue"
+msgstr "Revenus"
+
+#: includes/widgets/odometers.php:189
+msgid "Support Tickets"
+msgstr "Tickets de support"
+
+#: includes/widgets/odometers.php:182
+msgid "Hours Worked"
+msgstr "Heures travaillées"
+
+#: includes/widgets/odometers.php:175
+msgid "No of Customers"
+msgstr "Nbre de clients"
+
+#: includes/widgets/odometers.php:164
+msgid "The suffix string like hr for hours or m for million."
+msgstr "La chaîne de suffixe comme HR pendant des heures ou m pour million."
+
+#: includes/widgets/odometers.php:162
+msgid "Suffix"
+msgstr "Suffixe"
+
+#: includes/widgets/odometers.php:155
+msgid "The prefix string like currency symbols like $ to indicate a monetary value."
+msgstr "La chaîne de préfixe comme les symboles monétaires comme $ pour indiquer une valeur monétaire."
+
+#: includes/widgets/odometers.php:153
+msgid "Prefix"
+msgstr "Préfixe"
+
+#: includes/widgets/odometers.php:144
+msgid "Stats Icon"
+msgstr "Icône de la barre"
+
+#: includes/widgets/odometers.php:130
+msgid "Stats Image"
+msgstr "Image de la barre"
+
+#: includes/widgets/marquee-text.php:209 includes/widgets/message-box.php:120
+#: includes/widgets/odometers.php:126 includes/widgets/services.php:119
+#: includes/widgets/tab-slider.php:112
+msgid "Icon Image"
+msgstr "Image d’icône"
+
+#: includes/widgets/marquee-text.php:208 includes/widgets/message-box.php:119
+#: includes/widgets/odometers.php:125 includes/widgets/services.php:118
+#: includes/widgets/tab-slider.php:111
+msgid "Icon"
+msgstr "Icône"
+
+#: includes/widgets/odometers.php:121
+msgid "Choose Icon Type"
+msgstr "Choisir le type d’icône"
+
+#: includes/widgets/odometers.php:116
+msgid "Stop Value"
+msgstr "Valeur d’arrêt"
+
+#: includes/widgets/odometers.php:111
+msgid "Start Value"
+msgstr "Valeur de départ"
+
+#: includes/widgets/odometers.php:103 includes/widgets/piecharts.php:102
+#: includes/widgets/stats-bars.php:98
+msgid "My stats title"
+msgstr "Titre des statistiques"
+
+#: includes/widgets/odometers.php:102 includes/widgets/odometers.php:346
+#: includes/widgets/piecharts.php:100 includes/widgets/piecharts.php:298
+#: includes/widgets/stats-bars.php:95 includes/widgets/stats-bars.php:207
+msgid "Stats Title"
+msgstr "Titre de la barre"
+
+#: includes/widgets/odometers.php:43 includes/widgets/odometers.php:98
+#: includes/widgets/odometers.php:171
+msgid "Odometers"
+msgstr "Compteur"
+
+#: includes/widgets/heading.php:221
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+#: includes/widgets/heading.php:216 includes/widgets/odometers.php:359
+msgid "Typography"
+msgstr "Typographie"
+
+#: includes/widgets/heading.php:207 includes/widgets/portfolio.php:500
+msgid "Heading Color"
+msgstr "Couleur de titrage"
+
+#: includes/widgets/heading.php:202 includes/widgets/message-box.php:225
+#: includes/widgets/portfolio.php:495 includes/widgets/portfolio.php:563
+#: includes/widgets/portfolio.php:626 includes/widgets/posts-carousel.php:576
+#: includes/widgets/posts-carousel.php:632
+#: includes/widgets/posts-gridbox-slider.php:536
+#: includes/widgets/posts-multislider.php:647
+#: includes/widgets/posts-slider.php:501 includes/widgets/pricing-table.php:309
+#: includes/widgets/pricing-table.php:355 includes/widgets/services.php:542
+#: includes/widgets/team-members.php:638
+#: includes/widgets/testimonials-slider.php:332
+#: includes/widgets/testimonials.php:645 includes/widgets/timeline.php:693
+msgid "div"
+msgstr "div"
+
+#: includes/widgets/heading.php:201 includes/widgets/message-box.php:224
+#: includes/widgets/portfolio.php:494 includes/widgets/portfolio.php:562
+#: includes/widgets/portfolio.php:625 includes/widgets/posts-carousel.php:575
+#: includes/widgets/posts-carousel.php:631
+#: includes/widgets/posts-gridbox-slider.php:535
+#: includes/widgets/posts-multislider.php:646
+#: includes/widgets/posts-slider.php:500 includes/widgets/pricing-table.php:308
+#: includes/widgets/pricing-table.php:354 includes/widgets/services.php:541
+#: includes/widgets/team-members.php:637
+#: includes/widgets/testimonials-slider.php:331
+#: includes/widgets/testimonials.php:644 includes/widgets/timeline.php:692
+msgid "H6"
+msgstr "Titre h6"
+
+#: includes/widgets/heading.php:200 includes/widgets/message-box.php:223
+#: includes/widgets/portfolio.php:493 includes/widgets/portfolio.php:561
+#: includes/widgets/portfolio.php:624 includes/widgets/posts-carousel.php:574
+#: includes/widgets/posts-carousel.php:630
+#: includes/widgets/posts-gridbox-slider.php:534
+#: includes/widgets/posts-multislider.php:645
+#: includes/widgets/posts-slider.php:499 includes/widgets/pricing-table.php:307
+#: includes/widgets/pricing-table.php:353 includes/widgets/services.php:540
+#: includes/widgets/team-members.php:636
+#: includes/widgets/testimonials-slider.php:330
+#: includes/widgets/testimonials.php:643 includes/widgets/timeline.php:691
+msgid "H5"
+msgstr "Titre h5"
+
+#: includes/widgets/heading.php:199 includes/widgets/message-box.php:222
+#: includes/widgets/portfolio.php:492 includes/widgets/portfolio.php:560
+#: includes/widgets/portfolio.php:623 includes/widgets/posts-carousel.php:573
+#: includes/widgets/posts-carousel.php:629
+#: includes/widgets/posts-gridbox-slider.php:533
+#: includes/widgets/posts-multislider.php:644
+#: includes/widgets/posts-slider.php:498 includes/widgets/pricing-table.php:306
+#: includes/widgets/pricing-table.php:352 includes/widgets/services.php:539
+#: includes/widgets/team-members.php:635
+#: includes/widgets/testimonials-slider.php:329
+#: includes/widgets/testimonials.php:642 includes/widgets/timeline.php:690
+msgid "H4"
+msgstr "Titre h4"
+
+#: includes/widgets/heading.php:198 includes/widgets/message-box.php:221
+#: includes/widgets/portfolio.php:491 includes/widgets/portfolio.php:559
+#: includes/widgets/portfolio.php:622 includes/widgets/posts-carousel.php:572
+#: includes/widgets/posts-carousel.php:628
+#: includes/widgets/posts-gridbox-slider.php:532
+#: includes/widgets/posts-multislider.php:643
+#: includes/widgets/posts-slider.php:497 includes/widgets/pricing-table.php:305
+#: includes/widgets/pricing-table.php:351 includes/widgets/services.php:538
+#: includes/widgets/team-members.php:634
+#: includes/widgets/testimonials-slider.php:328
+#: includes/widgets/testimonials.php:641 includes/widgets/timeline.php:689
+msgid "H3"
+msgstr "Titre h3"
+
+#: includes/widgets/heading.php:197 includes/widgets/message-box.php:220
+#: includes/widgets/portfolio.php:490 includes/widgets/portfolio.php:558
+#: includes/widgets/portfolio.php:621 includes/widgets/posts-carousel.php:571
+#: includes/widgets/posts-carousel.php:627
+#: includes/widgets/posts-gridbox-slider.php:531
+#: includes/widgets/posts-multislider.php:642
+#: includes/widgets/posts-slider.php:496 includes/widgets/pricing-table.php:304
+#: includes/widgets/pricing-table.php:350 includes/widgets/services.php:537
+#: includes/widgets/team-members.php:633
+#: includes/widgets/testimonials-slider.php:327
+#: includes/widgets/testimonials.php:640 includes/widgets/timeline.php:688
+msgid "H2"
+msgstr "Titre h2"
+
+#: includes/widgets/heading.php:196 includes/widgets/message-box.php:219
+#: includes/widgets/portfolio.php:489 includes/widgets/portfolio.php:557
+#: includes/widgets/portfolio.php:620 includes/widgets/posts-carousel.php:570
+#: includes/widgets/posts-carousel.php:626
+#: includes/widgets/posts-gridbox-slider.php:530
+#: includes/widgets/posts-multislider.php:641
+#: includes/widgets/posts-slider.php:495 includes/widgets/pricing-table.php:303
+#: includes/widgets/pricing-table.php:349 includes/widgets/services.php:536
+#: includes/widgets/team-members.php:632
+#: includes/widgets/testimonials-slider.php:326
+#: includes/widgets/testimonials.php:639 includes/widgets/timeline.php:687
+msgid "H1"
+msgstr "Titre h1"
+
+#: includes/widgets/heading.php:193 includes/widgets/message-box.php:216
+#: includes/widgets/portfolio.php:554 includes/widgets/posts-carousel.php:567
+#: includes/widgets/services.php:533 includes/widgets/team-members.php:629
+#: includes/widgets/testimonials-slider.php:323
+#: includes/widgets/testimonials.php:636 includes/widgets/timeline.php:684
+msgid "Title HTML Tag"
+msgstr "Balise HTML du titre"
+
+#: includes/widgets/heading.php:189 includes/widgets/portfolio.php:173
+#: includes/widgets/posts-carousel.php:174
+#: includes/widgets/posts-gridbox-slider.php:169
+#: includes/widgets/posts-multislider.php:174
+#: includes/widgets/posts-slider.php:168
+msgid "Title"
+msgstr "Titre"
+
+#: includes/widgets/heading.php:157
+msgid "Justified"
+msgstr "Justifié"
+
+#: includes/widgets/animated-text.php:195 includes/widgets/heading.php:153
+msgid "Right"
+msgstr "Droite"
+
+#: includes/widgets/animated-text.php:191 includes/widgets/heading.php:149
+#: includes/widgets/marquee-text.php:404 includes/widgets/message-box.php:333
+msgid "Center"
+msgstr "Au centre"
+
+#: includes/widgets/animated-text.php:187 includes/widgets/heading.php:145
+msgid "Left"
+msgstr "Gauche"
+
+#: includes/widgets/heading.php:141
+msgid "Alignment"
+msgstr "Alignement"
+
+#: includes/widgets/heading.php:127
+msgid "Short text generally displayed below the heading title."
+msgstr "Texte court généralement affiché sous le titre de titre."
+
+#: includes/widgets/heading.php:126 includes/widgets/heading.php:237
+msgid "Short Text"
+msgstr "Texte court"
+
+#: includes/widgets/heading.php:116
+msgid "A subtitle displayed above the title heading."
+msgstr "Sous-titre affiché au-dessus de la rubrique titre."
+
+#: includes/widgets/heading.php:114
+msgid "Subheading"
+msgstr "Sous-titre"
+
+#: includes/widgets/heading.php:104 includes/widgets/heading.php:107
+msgid "Heading Title"
+msgstr "Titre"
+
+#: includes/widgets/heading.php:99 includes/widgets/services.php:221
+#: includes/widgets/testimonials.php:200
+msgid "Style 3"
+msgstr "Style N°3"
+
+#: includes/widgets/heading.php:98 includes/widgets/piecharts.php:245
+#: includes/widgets/services.php:220 includes/widgets/team-members.php:274
+#: includes/widgets/testimonials.php:199
+msgid "Style 2"
+msgstr "Style N°2"
+
+#: includes/widgets/heading.php:97 includes/widgets/piecharts.php:244
+#: includes/widgets/services.php:219 includes/widgets/team-members.php:273
+#: includes/widgets/testimonials.php:198
+msgid "Style 1"
+msgstr "Style N°1"
+
+#: includes/widgets/heading.php:94 includes/widgets/piecharts.php:241
+#: includes/widgets/services.php:225 includes/widgets/tab-slider.php:96
+msgid "Choose Style"
+msgstr "Choisir un style"
+
+#: includes/widgets/heading.php:40 includes/widgets/heading.php:90
+msgid "Heading"
+msgstr "Titrage"
+
+#: includes/widgets/clients.php:513
+msgid "Client Name Hover Color"
+msgstr "Nom du client Hover Color"
+
+#: includes/widgets/clients.php:506
+msgid "Client Name Color"
+msgstr "Couleur du nom du client"
+
+#: includes/widgets/clients.php:493
+msgid "Padding for the client images."
+msgstr "Padding pour les images du client."
+
+#: includes/widgets/clients.php:492
+msgid "Client Padding"
+msgstr "Padding client"
+
+#: includes/widgets/clients.php:475
+msgid "Thumbnail Hover Opacity (%)"
+msgstr "Opacité de survol des miniatures (%)"
+
+#: includes/widgets/clients.php:468
+msgid "Client Hover Color"
+msgstr "Couleur de survol du client"
+
+#: includes/widgets/clients.php:461
+msgid "Client Border Color"
+msgstr "Couleur de bordure du client"
+
+#: includes/widgets/clients.php:456
+msgid "Client Images"
+msgstr "Images client"
+
+#: includes/widgets/clients.php:421 includes/widgets/odometers.php:283
+#: includes/widgets/piecharts.php:217 includes/widgets/pricing-table.php:278
+#: includes/widgets/services.php:498 includes/widgets/team-members.php:551
+#: includes/widgets/testimonials.php:494
+msgid "Row Gap"
+msgstr "Écart de rangée"
+
+#: includes/widgets/clients.php:404 includes/widgets/odometers.php:266
+#: includes/widgets/piecharts.php:200 includes/widgets/pricing-table.php:261
+#: includes/widgets/services.php:481 includes/widgets/team-members.php:534
+#: includes/widgets/testimonials.php:477
+msgid "Column Gap"
+msgstr "Écart entre les colonnes"
+
+#: includes/widgets/clients.php:365 includes/widgets/odometers.php:227
+#: includes/widgets/piecharts.php:161 includes/widgets/pricing-table.php:222
+#: includes/widgets/services.php:442 includes/widgets/team-members.php:495
+#: includes/widgets/testimonials.php:438
+msgid "Minimum Column Size"
+msgstr "Taille minimale de colonne"
+
+#: includes/widgets/clients.php:362 includes/widgets/odometers.php:224
+#: includes/widgets/piecharts.php:158 includes/widgets/pricing-table.php:219
+#: includes/widgets/services.php:439 includes/widgets/team-members.php:492
+#: includes/widgets/testimonials.php:435
+msgid "Set column layout to be <strong>Auto</strong> to let the widget auto calculate number of columns based on minimum column size specified. The option <strong>Custom</strong> lets you explicitly control number of columns based on screen width."
+msgstr "Définir la disposition des colonnes sur <strong>Auto</strong> pour que le widget calcule automatiquement le nombre de colonnes en fonction de la taille minimale de colonne spécifiée. L’option <strong>Personnalisé</strong> vous permet de contrôler explicitement le nombre de colonnes en fonction de la largeur de l’écran."
+
+#: includes/widgets/clients.php:359 includes/widgets/device-slider.php:121
+#: includes/widgets/odometers.php:221 includes/widgets/piecharts.php:155
+#: includes/widgets/pricing-table.php:216 includes/widgets/services.php:436
+#: includes/widgets/team-members.php:489 includes/widgets/testimonials.php:432
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: includes/widgets/clients.php:358 includes/widgets/message-box.php:181
+#: includes/widgets/odometers.php:220 includes/widgets/piecharts.php:154
+#: includes/widgets/pricing-table.php:215 includes/widgets/services.php:435
+#: includes/widgets/team-members.php:488 includes/widgets/testimonials.php:431
+msgid "Auto"
+msgstr "Auto"
+
+#: includes/widgets/clients.php:355 includes/widgets/odometers.php:217
+#: includes/widgets/piecharts.php:151 includes/widgets/pricing-table.php:212
+#: includes/widgets/services.php:432 includes/widgets/team-members.php:485
+#: includes/widgets/testimonials.php:428
+msgid "Column Layout"
+msgstr "Mise en page de la colonne"
+
+#: includes/widgets/clients.php:348 includes/widgets/odometers.php:213
+#: includes/widgets/piecharts.php:147 includes/widgets/pricing-table.php:208
+#: includes/widgets/services.php:425 includes/widgets/team-members.php:477
+#: includes/widgets/testimonials.php:415
+msgid "Grid Settings"
+msgstr "Réglages de la grille"
+
+#: includes/widgets/clients.php:261 includes/widgets/posts-multislider.php:474
+#: includes/widgets/services.php:338 includes/widgets/team-members.php:389
+#: includes/widgets/testimonials.php:322
+msgid "Enables adaptive height for single slide horizontal multisliders."
+msgstr "Active la hauteur adaptative pour le diaporama multiple horizontal à une seule diapositive."
+
+#: includes/widgets/clients.php:260 includes/widgets/posts-carousel.php:420
+#: includes/widgets/posts-multislider.php:473
+#: includes/widgets/posts-slider.php:407 includes/widgets/services.php:337
+#: includes/widgets/tab-slider.php:242 includes/widgets/team-members.php:388
+#: includes/widgets/testimonials.php:321
+msgid "Adaptive Height?"
+msgstr "Hauteur adaptative ?"
+
+#: includes/widgets/clients.php:242 includes/widgets/device-slider.php:242
+#: includes/widgets/posts-gridbox-slider.php:433
+#: includes/widgets/posts-multislider.php:455
+#: includes/widgets/posts-slider.php:389 includes/widgets/services.php:319
+#: includes/widgets/team-members.php:370
+#: includes/widgets/testimonials-slider.php:197
+#: includes/widgets/testimonials.php:303
+msgid "Should the slider autoplay as in a slideshow."
+msgstr "Le diaporama doit-il être lu automatiquement."
+
+#: includes/widgets/clients.php:233 includes/widgets/device-slider.php:229
+#: includes/widgets/posts-gridbox-slider.php:424
+#: includes/widgets/posts-multislider.php:446
+#: includes/widgets/posts-slider.php:380 includes/widgets/services.php:310
+#: includes/widgets/team-members.php:361 includes/widgets/testimonials.php:294
+msgid "Loop"
+msgstr "Boucle"
+
+#: includes/widgets/clients.php:232 includes/widgets/device-slider.php:228
+#: includes/widgets/posts-gridbox-slider.php:423
+#: includes/widgets/posts-multislider.php:445
+#: includes/widgets/posts-slider.php:379 includes/widgets/services.php:309
+#: includes/widgets/team-members.php:360 includes/widgets/testimonials.php:293
+msgid "Should the animation loop?"
+msgstr "L’animation doit-elle boucler ?"
+
+#: includes/widgets/clients.php:224 includes/widgets/device-slider.php:216
+#: includes/widgets/posts-gridbox-slider.php:415
+#: includes/widgets/posts-multislider.php:437
+#: includes/widgets/posts-slider.php:371 includes/widgets/services.php:301
+#: includes/widgets/team-members.php:352 includes/widgets/testimonials.php:285
+msgid "Pause on action?"
+msgstr "Pause sur l’action ?"
+
+#: includes/widgets/clients.php:223 includes/widgets/device-slider.php:215
+#: includes/widgets/posts-gridbox-slider.php:414
+#: includes/widgets/posts-multislider.php:436
+#: includes/widgets/posts-slider.php:370 includes/widgets/services.php:300
+#: includes/widgets/team-members.php:351 includes/widgets/testimonials.php:284
+msgid "Pause the slideshow when interacting with control elements."
+msgstr "Diaporama en pause à l’interaction des éléments de contrôle."
+
+#: includes/widgets/clients.php:163 includes/widgets/heading.php:165
+#: includes/widgets/pricing-table.php:192 includes/widgets/services.php:174
+#: includes/widgets/team-members.php:233 includes/widgets/testimonials.php:153
+msgid "Animation Type"
+msgstr "Type d’animation"
+
+#: includes/widgets/clients.php:157 includes/widgets/services.php:234
+#: includes/widgets/team-members.php:282 includes/widgets/testimonials.php:210
+msgid "Grid"
+msgstr "Grille"
+
+#: includes/widgets/clients.php:154 includes/widgets/services.php:231
+#: includes/widgets/team-members.php:279 includes/widgets/testimonials.php:207
+msgid "Choose Layout"
+msgstr "Choisir la mise en page"
+
+#: includes/widgets/clients.php:149 includes/widgets/services.php:215
+#: includes/widgets/team-members.php:265 includes/widgets/testimonials.php:190
+msgid "General Settings"
+msgstr "Réglages généraux"
+
+#: includes/widgets/clients.php:127
+msgid "The logo image for the client/customer."
+msgstr "L’image du logo pour le client·te."
+
+#: includes/widgets/clients.php:126
+msgid "Client Logo/Image"
+msgstr "Logo du client/image"
+
+#: includes/widgets/clients.php:120
+msgid "http://client-link.com"
+msgstr "http://client-Link.com"
+
+#: includes/widgets/clients.php:113
+msgid "The website of the client/customer."
+msgstr "Le site du client·te."
+
+#: includes/widgets/clients.php:112
+msgid "Client URL"
+msgstr "Client URL"
+
+#: includes/widgets/clients.php:106
+#: includes/widgets/testimonials-slider.php:102
+#: includes/widgets/testimonials.php:104
+msgid "My client name"
+msgstr "Mon nom de client"
+
+#: includes/widgets/clients.php:105
+msgid "The name of the client/customer."
+msgstr "Nom du client·te."
+
+#: includes/widgets/clients.php:103 includes/widgets/clients.php:501
+msgid "Client Name"
+msgstr "Nom du client"
+
+#: includes/widgets/clients.php:42 includes/widgets/clients.php:98
+#: includes/widgets/clients.php:452
+msgid "Clients"
+msgstr "Clients"
+
+#: includes/widgets/carousel.php:351 includes/widgets/message-box.php:161
+msgid "Background Color"
+msgstr "Couleur d’arrière-plan"
+
+#: includes/widgets/carousel.php:326 includes/widgets/clients.php:444
+#: includes/widgets/heading.php:181 includes/widgets/odometers.php:306
+#: includes/widgets/piecharts.php:249 includes/widgets/portfolio.php:474
+#: includes/widgets/posts-carousel.php:547 includes/widgets/services.php:521
+#: includes/widgets/stats-bars.php:144 includes/widgets/tab-slider.php:252
+#: includes/widgets/team-members.php:574
+#: includes/widgets/testimonials-slider.php:263
+#: includes/widgets/testimonials.php:517
+msgid "Dark Mode"
+msgstr "Mode sombre"
+
+#: includes/widgets/animated-text.php:207
+#: includes/widgets/animated-text.php:223
+#: includes/widgets/animated-text.php:239 includes/widgets/carousel.php:344
+#: includes/widgets/device-slider.php:316 includes/widgets/heading.php:225
+#: includes/widgets/heading.php:241 includes/widgets/marquee-text.php:141
+#: includes/widgets/message-box.php:230 includes/widgets/message-box.php:265
+#: includes/widgets/odometers.php:318 includes/widgets/odometers.php:334
+#: includes/widgets/odometers.php:350 includes/widgets/piecharts.php:302
+#: includes/widgets/piecharts.php:318 includes/widgets/piecharts.php:334
+#: includes/widgets/posts-gridbox-slider.php:480
+#: includes/widgets/posts-multislider.php:511
+#: includes/widgets/posts-slider.php:445 includes/widgets/pricing-table.php:314
+#: includes/widgets/pricing-table.php:330
+#: includes/widgets/pricing-table.php:360
+#: includes/widgets/pricing-table.php:376
+#: includes/widgets/pricing-table.php:392 includes/widgets/services.php:547
+#: includes/widgets/services.php:570 includes/widgets/stats-bars.php:211
+#: includes/widgets/stats-bars.php:227 includes/widgets/tab-slider.php:264
+#: includes/widgets/tab-slider.php:324 includes/widgets/team-members.php:643
+#: includes/widgets/team-members.php:666 includes/widgets/team-members.php:682
+#: includes/widgets/testimonials-slider.php:307
+#: includes/widgets/testimonials-slider.php:337
+#: includes/widgets/testimonials-slider.php:353
+#: includes/widgets/testimonials.php:594 includes/widgets/testimonials.php:650
+#: includes/widgets/testimonials.php:666
+msgid "Color"
+msgstr "Couleur"
+
+#: includes/widgets/carousel.php:321 includes/widgets/clients.php:439
+#: includes/widgets/heading.php:176 includes/widgets/odometers.php:301
+#: includes/widgets/piecharts.php:235 includes/widgets/portfolio.php:469
+#: includes/widgets/posts-carousel.php:542 includes/widgets/services.php:516
+#: includes/widgets/stats-bars.php:139 includes/widgets/tab-slider.php:247
+#: includes/widgets/team-members.php:569
+#: includes/widgets/testimonials-slider.php:258
+#: includes/widgets/testimonials.php:512
+msgid "Widget Theme"
+msgstr "Thème des widgets"
+
+#: includes/widgets/carousel.php:315 includes/widgets/clients.php:342
+#: includes/widgets/posts-carousel.php:536
+#: includes/widgets/posts-multislider.php:605 includes/widgets/services.php:419
+#: includes/widgets/team-members.php:471 includes/widgets/testimonials.php:409
+msgid "The resolution to treat as a mobile resolution."
+msgstr "La résolution à traiter comme une résolution de mobile."
+
+#: includes/widgets/carousel.php:314 includes/widgets/clients.php:341
+#: includes/widgets/posts-carousel.php:535
+#: includes/widgets/posts-multislider.php:604 includes/widgets/services.php:418
+#: includes/widgets/team-members.php:470 includes/widgets/testimonials.php:408
+msgid "Mobile Resolution"
+msgstr "Résolution mobile"
+
+#: includes/widgets/carousel.php:293 includes/widgets/clients.php:320
+#: includes/widgets/portfolio.php:453 includes/widgets/posts-carousel.php:505
+#: includes/widgets/posts-multislider.php:583 includes/widgets/services.php:397
+#: includes/widgets/team-members.php:449 includes/widgets/testimonials.php:387
+#: includes/widgets/timeline.php:435
+msgid "Mobile Phone"
+msgstr "Mobile"
+
+#: includes/widgets/carousel.php:288 includes/widgets/clients.php:315
+#: includes/widgets/posts-carousel.php:500
+#: includes/widgets/posts-multislider.php:578 includes/widgets/services.php:392
+#: includes/widgets/team-members.php:444 includes/widgets/testimonials.php:382
+#: includes/widgets/timeline.php:426 includes/widgets/timeline.php:482
+msgid "The resolution to treat as a tablet resolution."
+msgstr "La résolution à traiter comme une résolution de tablette."
+
+#: includes/widgets/carousel.php:287 includes/widgets/clients.php:314
+#: includes/widgets/posts-carousel.php:499
+#: includes/widgets/posts-multislider.php:577 includes/widgets/services.php:391
+#: includes/widgets/team-members.php:443 includes/widgets/testimonials.php:381
+#: includes/widgets/timeline.php:425 includes/widgets/timeline.php:481
+msgid "Tablet Resolution"
+msgstr "Résolution tablette"
+
+#: includes/widgets/carousel.php:266 includes/widgets/clients.php:293
+#: includes/widgets/device-slider.php:119 includes/widgets/portfolio.php:438
+#: includes/widgets/posts-carousel.php:469
+#: includes/widgets/posts-multislider.php:556 includes/widgets/services.php:370
+#: includes/widgets/team-members.php:422 includes/widgets/testimonials.php:360
+#: includes/widgets/timeline.php:379
+msgid "Tablet"
+msgstr "Tablette"
+
+#: includes/widgets/carousel.php:245 includes/widgets/clients.php:272
+#: includes/widgets/portfolio.php:423 includes/widgets/posts-carousel.php:439
+#: includes/widgets/posts-multislider.php:535 includes/widgets/services.php:349
+#: includes/widgets/team-members.php:401 includes/widgets/testimonials.php:339
+#: includes/widgets/timeline.php:330
+msgid "Desktop"
+msgstr "Ordinateur"
+
+#: includes/widgets/carousel.php:241 includes/widgets/clients.php:265
+#: includes/widgets/posts-carousel.php:435
+#: includes/widgets/posts-multislider.php:531 includes/widgets/services.php:342
+#: includes/widgets/team-members.php:393 includes/widgets/testimonials.php:326
+#: includes/widgets/timeline.php:322
+msgid "Responsive Options"
+msgstr "Options responsives"
+
+#: includes/widgets/carousel.php:235 includes/widgets/clients.php:250
+#: includes/widgets/device-slider.php:259
+#: includes/widgets/posts-carousel.php:429
+#: includes/widgets/posts-gridbox-slider.php:441
+#: includes/widgets/posts-multislider.php:463
+#: includes/widgets/posts-slider.php:397 includes/widgets/services.php:327
+#: includes/widgets/tab-slider.php:224 includes/widgets/team-members.php:378
+#: includes/widgets/testimonials.php:311 includes/widgets/timeline.php:311
+msgid "Autoplay animation speed in ms"
+msgstr "Vitesse d’animation automatique (ms)"
+
+#: includes/widgets/carousel.php:230 includes/widgets/clients.php:245
+#: includes/widgets/device-slider.php:249
+#: includes/widgets/posts-carousel.php:424
+#: includes/widgets/posts-gridbox-slider.php:436
+#: includes/widgets/posts-multislider.php:458
+#: includes/widgets/posts-slider.php:392 includes/widgets/services.php:322
+#: includes/widgets/tab-slider.php:216 includes/widgets/team-members.php:373
+#: includes/widgets/testimonials.php:306 includes/widgets/timeline.php:301
+msgid "Autoplay speed in ms"
+msgstr "Vitesse d’exécution automatique (ms)"
+
+#: includes/widgets/carousel.php:258 includes/widgets/carousel.php:279
+#: includes/widgets/carousel.php:306 includes/widgets/clients.php:285
+#: includes/widgets/clients.php:306 includes/widgets/clients.php:333
+#: includes/widgets/posts-carousel.php:461
+#: includes/widgets/posts-carousel.php:491
+#: includes/widgets/posts-carousel.php:527
+#: includes/widgets/posts-multislider.php:548
+#: includes/widgets/posts-multislider.php:569
+#: includes/widgets/posts-multislider.php:596 includes/widgets/services.php:362
+#: includes/widgets/services.php:383 includes/widgets/services.php:410
+#: includes/widgets/team-members.php:414 includes/widgets/team-members.php:435
+#: includes/widgets/team-members.php:462 includes/widgets/testimonials.php:352
+#: includes/widgets/testimonials.php:373 includes/widgets/testimonials.php:400
+#: includes/widgets/timeline.php:352 includes/widgets/timeline.php:400
+#: includes/widgets/timeline.php:456
+msgid "Columns to scroll"
+msgstr "Colonnes à défiler"
+
+#: includes/widgets/carousel.php:250 includes/widgets/carousel.php:271
+#: includes/widgets/carousel.php:298 includes/widgets/clients.php:277
+#: includes/widgets/clients.php:298 includes/widgets/clients.php:325
+#: includes/widgets/clients.php:385 includes/widgets/portfolio.php:393
+#: includes/widgets/posts-carousel.php:453
+#: includes/widgets/posts-carousel.php:483
+#: includes/widgets/posts-carousel.php:519
+#: includes/widgets/posts-multislider.php:540
+#: includes/widgets/posts-multislider.php:561
+#: includes/widgets/posts-multislider.php:588 includes/widgets/services.php:354
+#: includes/widgets/services.php:375 includes/widgets/services.php:402
+#: includes/widgets/services.php:462 includes/widgets/team-members.php:406
+#: includes/widgets/team-members.php:427 includes/widgets/team-members.php:454
+#: includes/widgets/team-members.php:515 includes/widgets/testimonials.php:344
+#: includes/widgets/testimonials.php:365 includes/widgets/testimonials.php:392
+#: includes/widgets/testimonials.php:458 includes/widgets/timeline.php:339
+#: includes/widgets/timeline.php:388 includes/widgets/timeline.php:444
+msgid "Columns per row"
+msgstr "Colonnes par ligne"
+
+#: includes/widgets/carousel.php:227 includes/widgets/posts-carousel.php:412
+#: includes/widgets/timeline.php:294
+msgid "Should the carousel autoplay as in a slideshow."
+msgstr "Le carrousel devrait-il se lancer automatiquement comme un diaporama."
+
+#: includes/widgets/carousel.php:226 includes/widgets/clients.php:241
+#: includes/widgets/device-slider.php:241
+#: includes/widgets/posts-carousel.php:411
+#: includes/widgets/posts-gridbox-slider.php:432
+#: includes/widgets/posts-multislider.php:454
+#: includes/widgets/posts-slider.php:388 includes/widgets/services.php:318
+#: includes/widgets/tab-slider.php:190 includes/widgets/team-members.php:369
+#: includes/widgets/testimonials-slider.php:196
+#: includes/widgets/testimonials.php:302 includes/widgets/timeline.php:293
+msgid "Autoplay?"
+msgstr "Lecture auto ?"
+
+#: includes/widgets/carousel.php:169 includes/widgets/clients.php:145
+#: includes/widgets/heading.php:172 includes/widgets/message-box.php:153
+#: includes/widgets/odometers.php:209 includes/widgets/piecharts.php:143
+#: includes/widgets/portfolio.php:219 includes/widgets/posts-carousel.php:220
+#: includes/widgets/posts-gridbox-slider.php:215
+#: includes/widgets/posts-multislider.php:220
+#: includes/widgets/posts-slider.php:214 includes/widgets/pricing-table.php:204
+#: includes/widgets/services.php:211 includes/widgets/stats-bars.php:135
+#: includes/widgets/tab-slider.php:177 includes/widgets/team-members.php:261
+#: includes/widgets/testimonials-slider.php:174
+#: includes/widgets/testimonials.php:186
+msgid "Go Pro"
+msgstr "Passer à PRO"
+
+#: includes/theme-builder/documents/livemesh-item.php:44
+#: includes/theme-builder/init.php:95
+msgid "Livemesh Item"
+msgstr "Élément Livemesh"
+
+#: includes/theme-builder/documents/livemesh-grid.php:48
+#: includes/theme-builder/documents/livemesh-grid.php:56
+#: includes/theme-builder/init.php:104
+msgid "Livemesh Grid"
+msgstr "Grille Livemesh"
+
+#: includes/helper-functions.php:713
+msgid "Fade In Right"
+msgstr "Fondu entrant vers la droite"
+
+#: includes/helper-functions.php:712
+msgid "Fade In Left"
+msgstr "Fondu entrant vers la gauche"
+
+#: includes/helper-functions.php:711
+msgid "Fade In"
+msgstr "Fondu vers l’avant"
+
+#: includes/helper-functions.php:710 includes/widgets/marquee-text.php:207
+#: includes/widgets/message-box.php:118 includes/widgets/services.php:117
+#: includes/widgets/tab-slider.php:110
+#: includes/widgets/testimonials-slider.php:121
+#: includes/widgets/testimonials.php:123
+msgid "None"
+msgstr "Aucune"
+
+#: includes/helper-functions.php:634
+msgid "View all items filed under "
+msgstr "Voir tous les éléments classés dans "
+
+#: includes/helper-functions.php:631
+msgid "All"
+msgstr "Tout"
+
+#: includes/helper-functions.php:215 templates/post-meta/author.php:5
+msgid "By "
+msgstr "Par "
+
+#: includes/helper-functions.php:205
+msgid "d"
+msgstr "d"
+
+#: includes/helper-functions.php:205
+msgid "m"
+msgstr "m"
+
+#: includes/helper-functions.php:205
+msgid "Y"
+msgstr "Y"
+
+#: includes/helper-functions.php:203 includes/helper-functions.php:205
+#: templates/post-meta/published.php:9
+msgid "l, F, Y, g:i a"
+msgstr "l, j F Y, G\\hi"
+
+#: i18n/wpml/modules/wpml-testimonials.php:41
+msgid "Testimonial: Content"
+msgstr "Témoignage : contenu"
+
+#: i18n/wpml/modules/wpml-testimonials.php:38
+msgid "Testimonial: Credentials"
+msgstr "Informations du témoignage"
+
+#: includes/widgets/carousel.php:197 includes/widgets/carousel.php:205
+#: includes/widgets/carousel.php:214 includes/widgets/carousel.php:222
+#: includes/widgets/clients.php:196 includes/widgets/clients.php:204
+#: includes/widgets/clients.php:212 includes/widgets/clients.php:220
+#: includes/widgets/clients.php:229 includes/widgets/clients.php:238
+#: includes/widgets/clients.php:257 includes/widgets/device-slider.php:175
+#: includes/widgets/device-slider.php:187
+#: includes/widgets/device-slider.php:199
+#: includes/widgets/device-slider.php:212
+#: includes/widgets/device-slider.php:225
+#: includes/widgets/device-slider.php:238 includes/widgets/marquee-text.php:270
+#: includes/widgets/portfolio.php:273 includes/widgets/portfolio.php:281
+#: includes/widgets/portfolio.php:289 includes/widgets/portfolio.php:297
+#: includes/widgets/portfolio.php:305 includes/widgets/portfolio.php:313
+#: includes/widgets/portfolio.php:321 includes/widgets/portfolio.php:329
+#: includes/widgets/portfolio.php:337 includes/widgets/portfolio.php:345
+#: includes/widgets/portfolio.php:376 includes/widgets/posts-carousel.php:265
+#: includes/widgets/posts-carousel.php:281
+#: includes/widgets/posts-carousel.php:292
+#: includes/widgets/posts-carousel.php:300
+#: includes/widgets/posts-carousel.php:311
+#: includes/widgets/posts-carousel.php:322
+#: includes/widgets/posts-carousel.php:330
+#: includes/widgets/posts-carousel.php:338
+#: includes/widgets/posts-carousel.php:346
+#: includes/widgets/posts-carousel.php:354
+#: includes/widgets/posts-carousel.php:362
+#: includes/widgets/posts-carousel.php:384
+#: includes/widgets/posts-carousel.php:392
+#: includes/widgets/posts-carousel.php:400
+#: includes/widgets/posts-carousel.php:408
+#: includes/widgets/posts-carousel.php:417
+#: includes/widgets/posts-gridbox-slider.php:232
+#: includes/widgets/posts-gridbox-slider.php:248
+#: includes/widgets/posts-gridbox-slider.php:259
+#: includes/widgets/posts-gridbox-slider.php:267
+#: includes/widgets/posts-gridbox-slider.php:275
+#: includes/widgets/posts-gridbox-slider.php:283
+#: includes/widgets/posts-gridbox-slider.php:291
+#: includes/widgets/posts-gridbox-slider.php:299
+#: includes/widgets/posts-gridbox-slider.php:307
+#: includes/widgets/posts-gridbox-slider.php:315
+#: includes/widgets/posts-gridbox-slider.php:387
+#: includes/widgets/posts-gridbox-slider.php:395
+#: includes/widgets/posts-gridbox-slider.php:403
+#: includes/widgets/posts-gridbox-slider.php:411
+#: includes/widgets/posts-gridbox-slider.php:420
+#: includes/widgets/posts-gridbox-slider.php:429
+#: includes/widgets/posts-multislider.php:237
+#: includes/widgets/posts-multislider.php:254
+#: includes/widgets/posts-multislider.php:265
+#: includes/widgets/posts-multislider.php:273
+#: includes/widgets/posts-multislider.php:281
+#: includes/widgets/posts-multislider.php:289
+#: includes/widgets/posts-multislider.php:297
+#: includes/widgets/posts-multislider.php:305
+#: includes/widgets/posts-multislider.php:313
+#: includes/widgets/posts-multislider.php:321
+#: includes/widgets/posts-multislider.php:409
+#: includes/widgets/posts-multislider.php:417
+#: includes/widgets/posts-multislider.php:425
+#: includes/widgets/posts-multislider.php:433
+#: includes/widgets/posts-multislider.php:442
+#: includes/widgets/posts-multislider.php:451
+#: includes/widgets/posts-multislider.php:470
+#: includes/widgets/posts-slider.php:231 includes/widgets/posts-slider.php:239
+#: includes/widgets/posts-slider.php:250 includes/widgets/posts-slider.php:258
+#: includes/widgets/posts-slider.php:266 includes/widgets/posts-slider.php:274
+#: includes/widgets/posts-slider.php:282 includes/widgets/posts-slider.php:290
+#: includes/widgets/posts-slider.php:298 includes/widgets/posts-slider.php:306
+#: includes/widgets/posts-slider.php:343 includes/widgets/posts-slider.php:351
+#: includes/widgets/posts-slider.php:359 includes/widgets/posts-slider.php:367
+#: includes/widgets/posts-slider.php:376 includes/widgets/posts-slider.php:385
+#: includes/widgets/posts-slider.php:404 includes/widgets/pricing-table.php:176
+#: includes/widgets/services.php:273 includes/widgets/services.php:281
+#: includes/widgets/services.php:289 includes/widgets/services.php:297
+#: includes/widgets/services.php:306 includes/widgets/services.php:315
+#: includes/widgets/services.php:334 includes/widgets/tab-slider.php:187
+#: includes/widgets/tab-slider.php:196 includes/widgets/tab-slider.php:207
+#: includes/widgets/tab-slider.php:231 includes/widgets/tab-slider.php:239
+#: includes/widgets/team-members.php:324 includes/widgets/team-members.php:332
+#: includes/widgets/team-members.php:340 includes/widgets/team-members.php:348
+#: includes/widgets/team-members.php:357 includes/widgets/team-members.php:366
+#: includes/widgets/team-members.php:385
+#: includes/widgets/testimonials-slider.php:193
+#: includes/widgets/testimonials-slider.php:212
+#: includes/widgets/testimonials-slider.php:222
+#: includes/widgets/testimonials-slider.php:231
+#: includes/widgets/testimonials-slider.php:240
+#: includes/widgets/testimonials-slider.php:250
+#: includes/widgets/testimonials.php:257 includes/widgets/testimonials.php:265
+#: includes/widgets/testimonials.php:273 includes/widgets/testimonials.php:281
+#: includes/widgets/testimonials.php:290 includes/widgets/testimonials.php:299
+#: includes/widgets/testimonials.php:318 includes/widgets/timeline.php:251
+#: includes/widgets/timeline.php:265 includes/widgets/timeline.php:277
+#: includes/widgets/timeline.php:289
+msgid "Yes"
+msgstr "Oui"
+
+#: includes/widgets/carousel.php:177 includes/widgets/clients.php:176
+#: includes/widgets/posts-multislider.php:384 includes/widgets/services.php:253
+#: includes/widgets/team-members.php:304 includes/widgets/testimonials.php:237
+msgid "Spacing between items"
+msgstr "Espace entre les éléments"
+
+#: includes/widgets/carousel.php:173 includes/widgets/clients.php:169
+#: includes/widgets/posts-carousel.php:378 includes/widgets/services.php:246
+#: includes/widgets/team-members.php:296 includes/widgets/testimonials.php:224
+msgid "Carousel Settings"
+msgstr "Réglages du carrousel"
+
+#: includes/widgets/carousel.php:113
+msgid "The HTML content for the element"
+msgstr "Le contenu HTML de l’élément"
+
+#: includes/widgets/carousel.php:111
+msgid "HTML Element Content"
+msgstr "Contenu de l’élément HTML"
+
+#: includes/widgets/carousel.php:108
+msgid "The title to identify the HTML element"
+msgstr "Le titre pour identifier l’élément HTML"
+
+#: includes/widgets/carousel.php:107
+msgid "My element title"
+msgstr "Mon titre d’élément"
+
+#: includes/widgets/carousel.php:106
+msgid "Element Title & HTML Content"
+msgstr "Élément title & contenu HTML"
+
+#: includes/widgets/carousel.php:99
+msgid "HTML Elements"
+msgstr "Éléments HTML"
+
+#: includes/widgets/carousel.php:196 includes/widgets/carousel.php:204
+#: includes/widgets/carousel.php:213 includes/widgets/carousel.php:221
+#: includes/widgets/clients.php:195 includes/widgets/clients.php:203
+#: includes/widgets/clients.php:211 includes/widgets/clients.php:219
+#: includes/widgets/clients.php:228 includes/widgets/clients.php:237
+#: includes/widgets/clients.php:256 includes/widgets/device-slider.php:174
+#: includes/widgets/device-slider.php:186
+#: includes/widgets/device-slider.php:198
+#: includes/widgets/device-slider.php:211
+#: includes/widgets/device-slider.php:224
+#: includes/widgets/device-slider.php:237 includes/widgets/marquee-text.php:269
+#: includes/widgets/portfolio.php:274 includes/widgets/portfolio.php:282
+#: includes/widgets/portfolio.php:290 includes/widgets/portfolio.php:298
+#: includes/widgets/portfolio.php:306 includes/widgets/portfolio.php:314
+#: includes/widgets/portfolio.php:322 includes/widgets/portfolio.php:330
+#: includes/widgets/portfolio.php:338 includes/widgets/portfolio.php:346
+#: includes/widgets/portfolio.php:377 includes/widgets/posts-carousel.php:266
+#: includes/widgets/posts-carousel.php:282
+#: includes/widgets/posts-carousel.php:293
+#: includes/widgets/posts-carousel.php:301
+#: includes/widgets/posts-carousel.php:312
+#: includes/widgets/posts-carousel.php:323
+#: includes/widgets/posts-carousel.php:331
+#: includes/widgets/posts-carousel.php:339
+#: includes/widgets/posts-carousel.php:347
+#: includes/widgets/posts-carousel.php:355
+#: includes/widgets/posts-carousel.php:363
+#: includes/widgets/posts-carousel.php:383
+#: includes/widgets/posts-carousel.php:391
+#: includes/widgets/posts-carousel.php:399
+#: includes/widgets/posts-carousel.php:407
+#: includes/widgets/posts-carousel.php:416
+#: includes/widgets/posts-gridbox-slider.php:233
+#: includes/widgets/posts-gridbox-slider.php:249
+#: includes/widgets/posts-gridbox-slider.php:260
+#: includes/widgets/posts-gridbox-slider.php:268
+#: includes/widgets/posts-gridbox-slider.php:276
+#: includes/widgets/posts-gridbox-slider.php:284
+#: includes/widgets/posts-gridbox-slider.php:292
+#: includes/widgets/posts-gridbox-slider.php:300
+#: includes/widgets/posts-gridbox-slider.php:308
+#: includes/widgets/posts-gridbox-slider.php:316
+#: includes/widgets/posts-gridbox-slider.php:386
+#: includes/widgets/posts-gridbox-slider.php:394
+#: includes/widgets/posts-gridbox-slider.php:402
+#: includes/widgets/posts-gridbox-slider.php:410
+#: includes/widgets/posts-gridbox-slider.php:419
+#: includes/widgets/posts-gridbox-slider.php:428
+#: includes/widgets/posts-multislider.php:238
+#: includes/widgets/posts-multislider.php:255
+#: includes/widgets/posts-multislider.php:266
+#: includes/widgets/posts-multislider.php:274
+#: includes/widgets/posts-multislider.php:282
+#: includes/widgets/posts-multislider.php:290
+#: includes/widgets/posts-multislider.php:298
+#: includes/widgets/posts-multislider.php:306
+#: includes/widgets/posts-multislider.php:314
+#: includes/widgets/posts-multislider.php:322
+#: includes/widgets/posts-multislider.php:408
+#: includes/widgets/posts-multislider.php:416
+#: includes/widgets/posts-multislider.php:424
+#: includes/widgets/posts-multislider.php:432
+#: includes/widgets/posts-multislider.php:441
+#: includes/widgets/posts-multislider.php:450
+#: includes/widgets/posts-multislider.php:469
+#: includes/widgets/posts-slider.php:232 includes/widgets/posts-slider.php:240
+#: includes/widgets/posts-slider.php:251 includes/widgets/posts-slider.php:259
+#: includes/widgets/posts-slider.php:267 includes/widgets/posts-slider.php:275
+#: includes/widgets/posts-slider.php:283 includes/widgets/posts-slider.php:291
+#: includes/widgets/posts-slider.php:299 includes/widgets/posts-slider.php:307
+#: includes/widgets/posts-slider.php:342 includes/widgets/posts-slider.php:350
+#: includes/widgets/posts-slider.php:358 includes/widgets/posts-slider.php:366
+#: includes/widgets/posts-slider.php:375 includes/widgets/posts-slider.php:384
+#: includes/widgets/posts-slider.php:403 includes/widgets/pricing-table.php:175
+#: includes/widgets/services.php:272 includes/widgets/services.php:280
+#: includes/widgets/services.php:288 includes/widgets/services.php:296
+#: includes/widgets/services.php:305 includes/widgets/services.php:314
+#: includes/widgets/services.php:333 includes/widgets/tab-slider.php:186
+#: includes/widgets/tab-slider.php:195 includes/widgets/tab-slider.php:206
+#: includes/widgets/tab-slider.php:230 includes/widgets/tab-slider.php:238
+#: includes/widgets/team-members.php:323 includes/widgets/team-members.php:331
+#: includes/widgets/team-members.php:339 includes/widgets/team-members.php:347
+#: includes/widgets/team-members.php:356 includes/widgets/team-members.php:365
+#: includes/widgets/team-members.php:384
+#: includes/widgets/testimonials-slider.php:192
+#: includes/widgets/testimonials-slider.php:211
+#: includes/widgets/testimonials-slider.php:221
+#: includes/widgets/testimonials-slider.php:230
+#: includes/widgets/testimonials-slider.php:239
+#: includes/widgets/testimonials-slider.php:249
+#: includes/widgets/testimonials.php:256 includes/widgets/testimonials.php:264
+#: includes/widgets/testimonials.php:272 includes/widgets/testimonials.php:280
+#: includes/widgets/testimonials.php:289 includes/widgets/testimonials.php:298
+#: includes/widgets/testimonials.php:317 includes/widgets/timeline.php:250
+#: includes/widgets/timeline.php:264 includes/widgets/timeline.php:276
+#: includes/widgets/timeline.php:288
+msgid "No"
+msgstr "Non"
+
+#: includes/widgets/carousel.php:41 includes/widgets/carousel.php:96
+#: includes/widgets/carousel.php:334 includes/widgets/clients.php:158
+#: includes/widgets/services.php:235 includes/widgets/team-members.php:283
+#: includes/widgets/testimonials.php:211
+msgid "Carousel"
+msgstr "Carousel"
+
+#: includes/theme-builder/widgets/grid-item.php:84
+#: includes/widgets/portfolio.php:238 includes/widgets/posts-carousel.php:238
+msgid "Create/Edit the Item Skin Builder Templates"
+msgstr "Créer/modifier les modèles du constructeur d’aspect"
+
+#: includes/theme-builder/widgets/grid-item.php:79
+#: includes/widgets/portfolio.php:237
+msgid "Select the custom skin template for the grid item"
+msgstr "Choisir le modèle d’aspect personnalisé pour widget de grille"
+
+#: includes/theme-builder/widgets/grid-item.php:71
+#: includes/widgets/carousel.php:339
+msgid "Content"
+msgstr "Contenu"
+
+#: includes/theme-builder/widgets/grid-item.php:53
+#: includes/widgets/portfolio.php:766 includes/widgets/portfolio.php:786
+#: includes/widgets/posts-carousel.php:742
+msgid "No templates found. Elementor Pro is not installed/active"
+msgstr "Aucun modèle trouvé. Elementor PRO n’est pas installé/actif"
+
+#: includes/theme-builder/widgets/grid-item.php:20
+msgid "Grid Item"
+msgstr "Élément de grille"
+
+#: includes/theme-builder/documents/livemesh-item.php:61
+msgid "Single"
+msgstr "Individuel"
+
+#: i18n/wpml/modules/wpml-testimonials-slider.php:41
+msgid "Testimonial Slide: Content"
+msgstr "Contenu du témoignage"
+
+#: i18n/wpml/modules/wpml-testimonials-slider.php:38
+msgid "Testimonial Slide: Credentials"
+msgstr "Informations du témoignage"
+
+#: i18n/wpml/modules/wpml-testimonials-slider.php:35
+msgid "Testimonial Slide: Name"
+msgstr "Nom du témoignage"
+
+#: i18n/wpml/modules/wpml-team-members.php:41
+msgid "Team Member: Details"
+msgstr "Détail du membre d’équipe"
+
+#: i18n/wpml/modules/wpml-team-members.php:38
+msgid "Team Member: Position"
+msgstr "Poste du membre d’équipe"
+
+#: i18n/wpml/modules/wpml-stats-bars.php:35
+msgid "Stats Bar: Title"
+msgstr "Titre de la barre"
+
+#: i18n/wpml/modules/wpml-services.php:38
+msgid "Service: Description"
+msgstr "Description du service"
+
+#: i18n/wpml/modules/wpml-services.php:35
+msgid "Service: Title"
+msgstr "Titre du service"
+
+#: i18n/wpml/modules/wpml-pricing-table.php:50
+msgid "Pricing: Content"
+msgstr "Contenu du tarif"
+
+#: i18n/wpml/modules/wpml-pricing-table.php:47
+msgid "Pricing: Button URL"
+msgstr "URL du bouton"
+
+#: i18n/wpml/modules/wpml-pricing-table.php:44
+msgid "Pricing: Button Text"
+msgstr "Texte du bouton"
+
+#: i18n/wpml/modules/wpml-pricing-table.php:41
+msgid "Pricing: Price Tag"
+msgstr "Balise du prix"
+
+#: i18n/wpml/modules/wpml-pricing-table.php:38
+msgid "Pricing: Tagline"
+msgstr "Slogan"
+
+#: i18n/wpml/modules/wpml-pricing-table.php:35
+msgid "Pricing: Title"
+msgstr "Titre"
+
+#: i18n/wpml/modules/wpml-piecharts.php:35
+msgid "Piechart: Title"
+msgstr "Titre du graphique"
+
+#: i18n/wpml/modules/wpml-odometers.php:41
+msgid "Odometer: Suffix"
+msgstr "Suffixe"
+
+#: i18n/wpml/modules/wpml-odometers.php:38
+msgid "Odometer: Prefix"
+msgstr "Préfixe"
+
+#: i18n/wpml/modules/wpml-odometers.php:35
+msgid "Odometer: Title"
+msgstr "Titre du compteur"
+
+#: i18n/wpml/modules/wpml-clients.php:38
+msgid "Client: Website URL"
+msgstr "URL site client"
+
+#: i18n/wpml/modules/wpml-clients.php:35
+msgid "Client: Name"
+msgstr "Nom du client"
+
+#: i18n/wpml/modules/wpml-carousel.php:38
+msgid "Carousel: Content"
+msgstr "Contenu du carrousel"
+
+#: i18n/wpml/modules/wpml-carousel.php:35
+msgid "Carousel: Title"
+msgstr "Titre du carrousel"
+
+#: i18n/wpml-compatibility-init.php:145
+msgid "Posts Grid: Heading"
+msgstr "Titrage de la grille"
+
+#: i18n/wpml-compatibility-init.php:62
+msgid "Heading: Short Text"
+msgstr "Texte court du titrage"
+
+#: i18n/wpml-compatibility-init.php:58
+msgid "Heading: Subheading"
+msgstr "Sous-titre du titrage"
+
+#: i18n/wpml-compatibility-init.php:54
+msgid "Heading: Title"
+msgstr "Titre du titrage"
+
+#: admin/views/settings.php:975
+msgid "Know More"
+msgstr "En savoir plus"
+
+#: admin/views/settings.php:965
+msgid "Go Premium"
+msgstr "Passer à Premium"
+
+#: admin/views/settings.php:877
+msgid "Purchase Now"
+msgstr "Acheter maintenant"
+
+#: admin/views/settings.php:769
+msgid "Why upgrade to Premium Version of the plugin?!"
+msgstr "Pourquoi mettre à niveau vers la version PRO ?"
+
+#: admin/views/settings.php:732
+msgid "Server setup information useful for debugging purposes."
+msgstr "Informations de configuration du serveur utiles pour des fins de débogage."
+
+#: admin/views/settings.php:729
+msgid "System Information"
+msgstr "Informations système"
+
+#: admin/views/settings.php:721
+msgid "System Info"
+msgstr "Informations système"
+
+#: admin/views/settings.php:700
+msgid "Use unminified Javascript files instead of minified ones to help developers debug an issue"
+msgstr "Utilisez des fichiers Javascript non-minifiés au lieu des fichiers miniatures pour aider les développeurs à déboguer un problème"
+
+#: admin/views/settings.php:696
+msgid "Enable Script Debug Mode"
+msgstr "Activer le mode débogage"
+
+#: admin/views/settings.php:689
+msgid "Debug Mode"
+msgstr "Mode de développement"
+
+#: admin/views/settings.php:617
+msgid "Deactivate the tab slider element."
+msgstr "Désactiver le widget de tableau à onglets défilants."
+
+#: admin/views/settings.php:614
+msgid "Deactivate Tab Slider"
+msgstr "Désactiver le tableau à onglets défilants"
+
+#: admin/views/settings.php:596
+msgid "Deactivate the testimonials slider element."
+msgstr "Désactiver le widget carrousel de témoignages."
+
+#: admin/views/settings.php:593
+msgid "Deactivate Testimonials Slider"
+msgstr "Désactiver le diaporama de témoignages"
+
+#: admin/views/settings.php:575
+msgid "Deactivate the testimonials element."
+msgstr "Désactiver le widget témoignages."
+
+#: admin/views/settings.php:572
+msgid "Deactivate Testimonials"
+msgstr "Désactiver les témoignages"
+
+#: admin/views/settings.php:555
+msgid "Deactivate the team element."
+msgstr "Désactiver le widget membre d’équipe."
+
+#: admin/views/settings.php:552
+msgid "Deactivate Team"
+msgstr "Désactiver l’équipe"
+
+#: admin/views/settings.php:534
+msgid "Deactivate the stats bars element."
+msgstr "Désactiver le widget barre de progression."
+
+#: admin/views/settings.php:531
+msgid "Deactivate Stats Bars"
+msgstr "Désactiver les barres de progression"
+
+#: admin/views/settings.php:494
+msgid "Deactivate the services element."
+msgstr "Désactiver le widget services."
+
+#: admin/views/settings.php:491
+msgid "Deactivate Services"
+msgstr "Désactiver les services"
+
+#: admin/views/settings.php:473
+msgid "Deactivate the pricing table element."
+msgstr "Désactiver le widget table de tarification."
+
+#: admin/views/settings.php:470
+msgid "Deactivate Pricing Table"
+msgstr "Désactiver le tableau des prix"
+
+#: admin/views/settings.php:431
+msgid "Deactivate the Posts Multislider element."
+msgstr "Désactiver l’élément de diaporama multiple de publications."
+
+#: admin/views/settings.php:428
+msgid "Deactivate Posts Multislider"
+msgstr "Désactiver le diaporama multiple de publications"
+
+#: admin/views/settings.php:410
+msgid "Deactivate the Posts Grid Box Slider element."
+msgstr "Désactiver l’élément diaporama de grille de publications."
+
+#: admin/views/settings.php:407
+msgid "Deactivate Posts Grid Box Slider"
+msgstr "Désactiver le diaporama de grille de publications"
+
+#: admin/views/settings.php:389
+msgid "Deactivate the Posts Slider element."
+msgstr "Désactiver l’élément de diaporama de publications."
+
+#: admin/views/settings.php:386
+msgid "Deactivate Posts Slider"
+msgstr "Désactiver le diaporama de publications"
+
+#: admin/views/settings.php:368
+msgid "Deactivate the posts carousel element."
+msgstr "Désactiver le widget carrousel de publication."
+
+#: admin/views/settings.php:365
+msgid "Deactivate Posts Carousel"
+msgstr "Désactiver le carrousel de publications"
+
+#: admin/views/settings.php:347
+msgid "Deactivate the portfolio element."
+msgstr "Désactiver le widget portfolio."
+
+#: admin/views/settings.php:344
+msgid "Deactivate Portfolio"
+msgstr "Désactiver le portfolio"
+
+#: admin/views/settings.php:326
+msgid "Deactivate the piecharts element."
+msgstr "Désactiver le widget de graphiques."
+
+#: admin/views/settings.php:323
+msgid "Deactivate Piecharts"
+msgstr "Désactiver les camemberts"
+
+#: admin/views/settings.php:305
+msgid "Deactivate the odometers element."
+msgstr "Désactiver le widget compteur."
+
+#: admin/views/settings.php:302
+msgid "Deactivate Odometers"
+msgstr "Désactiver les odomètres"
+
+#: admin/views/settings.php:222
+msgid "Deactivate the heading element."
+msgstr "Désactiver le widget de titrage."
+
+#: admin/views/settings.php:219
+msgid "Deactivate Heading"
+msgstr "Désactiver le titrage"
+
+#: admin/views/settings.php:202
+msgid "Deactivate the clients element."
+msgstr "Désactiver le widget clients."
+
+#: admin/views/settings.php:199
+msgid "Deactivate Clients"
+msgstr "Désactiver les clients·tes"
+
+#: admin/views/settings.php:182
+msgid "Deactivate the carousel element."
+msgstr "Désactiver le widget carrousel."
+
+#: admin/views/settings.php:179
+msgid "Deactivate Carousel"
+msgstr "Désactiver le carrousel"
+
+#: admin/views/settings.php:169
+msgid "You can deactivate those elements that you do not intend to use to avoid loading scripts and files related to those elements."
+msgstr "Vous pouvez désactiver les widgets que vous n’utilisez pas pour ne pas charger les scripts/fichiers liés à ces widgets. Tous les widgets sont activés par défaut."
+
+#: admin/views/settings.php:165
+msgid "Deactivate elements for better performance"
+msgstr "Désactiver les widgets pour une meilleure performance"
+
+#: admin/views/settings.php:155
+msgid "Optimize Plugin"
+msgstr "Optimiser l’extension"
+
+#: admin/views/settings.php:126
+msgid "Select the default hover color for your theme."
+msgstr "Choisir la couleur de survol par défaut pour votre thème."
+
+#: admin/views/settings.php:123
+msgid "Theme Hover Color"
+msgstr "Couleur de survol de thème"
+
+#: admin/views/settings.php:108
+msgid "Select the default theme color."
+msgstr "Choisir la couleur du thème par défaut."
+
+#: admin/views/settings.php:105
+msgid "Theme Color"
+msgstr "Couleur du thème"
+
+#: admin/views/settings.php:93
+msgid "Theme Color Scheme"
+msgstr "Combinaison de couleur du site"
+
+#: admin/views/settings.php:86
+msgid "Theme Colors"
+msgstr "Couleurs du thème"
+
+#: admin/views/settings.php:74 admin/views/settings.php:755
+msgid "Premium Version"
+msgstr "Version PRO"
+
+#: admin/views/settings.php:69
+msgid "Debugging"
+msgstr "Débogage"
+
+#: admin/views/settings.php:64 admin/views/settings.php:654
+#: admin/views/settings.php:661
+msgid "Custom CSS"
+msgstr "CSS personnalisés"
+
+#: admin/views/settings.php:57
+msgid "Elements"
+msgstr "Widgets"
+
+#: admin/views/settings.php:52 includes/widgets/device-slider.php:345
+#: includes/widgets/portfolio.php:361 includes/widgets/team-members.php:582
+#: includes/widgets/timeline.php:212
+msgid "General"
+msgstr "Général"
+
+#: admin/views/admin-banner2.php:18
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: admin/views/admin-banner2.php:16
+msgid "Save Settings"
+msgstr "Enregistrer les réglages"
+
+#: admin/views/admin-banner2.php:13
+msgid "Plugin Settings"
+msgstr "Réglages de l’extension"
+
+#: admin/notices/templates/rate.php:14
+msgid "Dismiss"
+msgstr "Ignorer"
+
+#: admin/notices/templates/rate.php:13
+msgid "Remind me later"
+msgstr "Me le rappeler plus tard"
+
+#: admin/notices/templates/rate.php:12
+msgid "Rate plugin"
+msgstr "Évaluer L’extension"
+
+#: admin/notices/templates/rate.php:9
+msgid "Thank you!"
+msgstr "Merci !"
+
+#: admin/notices/templates/rate.php:8
+msgid "If you like this plugin, please write a few words about it at wordpress.org or social media. Your opinion will help others discover our plugin."
+msgstr "Si vous aimez cette extension, écrivez quelques mots à ce sujet sur wordpress.org ou sur les réseaux sociaux. Votre avis aidera les autres à découvrir notre extension."
+
+#: admin/notices/templates/rate.php:7
+msgid "I see that you have the plugin <strong>Livemesh Addons for Elementor</strong> installed for some time now."
+msgstr "Je vois que vous avez l’extension <strong>Livemesh Addons for Elementor</strong> installée depuis un certain temps maintenant."
+
+#: admin/notices/templates/rate.php:7
+msgid "Hello!"
+msgstr "Bienvenue !"
+
+#: admin/admin-init.php:112
+msgid "Documentation"
+msgstr "Documentation"
+
+#: admin/admin-init.php:111
+msgid "Widgets Documentation"
+msgstr "Documentation des widgets"
+
+#: admin/admin-init.php:102 includes/widgets/animated-text.php:156
+#: includes/widgets/heading.php:136 includes/widgets/marquee-text.php:193
+msgid "Settings"
+msgstr "Réglages"
+
+#: admin/admin-init.php:101
+msgid "Widgets Settings"
+msgstr "Réglages des widgets"
+
+#: admin/admin-init.php:91 plugin.php:217
+msgid "Livemesh Addons"
+msgstr "Livemesh Addons"
+
+#: admin/admin-ajax.php:130
+msgid "Sorry, an error occurred while resetting settings"
+msgstr "Désolé, une erreur s’est produite lors de la réinitialisation des paramètres"
+
+#: admin/admin-ajax.php:123
+msgid "Saving plugin settings"
+msgstr "Enregistrement des réglages de l’extension"
+
+#: admin/admin-ajax.php:56
+msgid "Sorry, an error occurred. Please refresh the page."
+msgstr "Désolé, une erreur s’est produite. Veuillez actualiser la page."
+
+#. Author of the plugin
+msgid "Livemesh"
+msgstr "AdDons Livemesh pour Elementer"
+
+#. Description of the plugin
+msgid "A collection of premium quality addons or widgets for use in Elementor page builder. Elementor must be installed and activated."
+msgstr "Une collection d’addons de qualité supérieure ou de widgets à utiliser dans Elementer Page Builder. L’Élémenteur doit être installé et activé."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://livemeshelementor.com"
+msgstr "https://livemeshelementor.com"
+
+#. Plugin Name of the plugin
+#: admin/admin-init.php:90 admin/views/admin-banner2.php:13
+msgid "Livemesh Addons for Elementor"
+msgstr "AdDons Livemesh pour Elementer"
+
+#: includes/theme-builder/documents/livemesh-item.php:64
+msgid "404"
+msgstr "404"

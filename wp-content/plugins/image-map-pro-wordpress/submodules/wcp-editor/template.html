@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="template.css" />
+
+    <link rel="stylesheet" href="../wcp-fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../wcp-fontawesome/css/wcp-fontawesome.css">
+</head>
+<body>
+    <div id="wcp-editor">
+        <div id="wcp-editor-main-buttons">
+            <div id="wcp-editor-button-new" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-file" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">New</div>
+            </div>
+            <div id="wcp-editor-button-save" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Save</div>
+            </div>
+            <div id="wcp-editor-button-load" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Load</div>
+            </div>
+            <div id="wcp-editor-button-settings" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Settings</div>
+            </div>
+            <div id="wcp-editor-button-undo" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Undo</div>
+            </div>
+            <div id="wcp-editor-button-redo" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-repeat" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Redo</div>
+            </div>
+            <div id="wcp-editor-button-preview" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-eye" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Preview</div>
+            </div>
+            <div id="wcp-editor-button-code" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-code" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Code</div>
+            </div>
+            <div id="wcp-editor-button-import" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Import</div>
+            </div>
+            <div id="wcp-editor-button-export" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Export</div>
+            </div>
+            <div id="wcp-editor-button-help" class="wcp-editor-main-button">
+                <div class="wcp-editor-main-button-icon"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+                <div class="wcp-editor-main-button-text">Help</div>
+            </div>
+        </div>
+
+        <div id="wcp-editor-toolbar-wrap">
+            <div class="wcp-editor-toolbar">
+                <div class="wcp-editor-toolbar-button wcp-active" data-wcp-editor-toolbar-button-name="select" data-wcp-tooltip="Select" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon"><i class="fa fa-mouse-pointer" aria-hidden="true"></i></div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="zoom-in" data-wcp-tooltip="Zoom In (CTRL +)" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="zoom-out" data-wcp-tooltip="Zoom Out (CTRL -)" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon"><i class="fa fa-search-minus" aria-hidden="true"></i></div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="drag" data-wcp-tooltip="Drag Canvas (Hold Spacebar and Drag)" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="reset" data-wcp-tooltip="Reset Canvas Zoom &amp; Pan (CTRL + 0)" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="button">
+                    <div class="wcp-editor-toolbar-button-icon">1:1</div>
+                </div>
+            </div>
+            <div class="wcp-editor-toolbar">
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="spot" data-wcp-tooltip="Icon" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="oval" data-wcp-tooltip="Ellipse" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon">
+                        <div style="width: 14px; height: 14px; border: 2px solid white; border-radius: 50px;"></div>
+                    </div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="rect" data-wcp-tooltip="Rectangle" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon">
+                        <div style="width: 20px; height: 14px; border: 2px solid white; border-radius: 5px;"></div>
+                    </div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="poly" data-wcp-tooltip="Polygon" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon">
+                        <svg width="24px" height="24px" viewport="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <polygon fill="none" style="stroke: white; stroke-width: 2px;" points="20,20 18,4 7,7 4,20"></polygon>
+                            <ellipse fill="white" cx="20" cy="20" rx="3" ry="3"></ellipse>
+                            <ellipse fill="white" cx="18" cy="4" rx="3" ry="3"></ellipse>
+                            <ellipse fill="white" cx="7" cy="7" rx="3" ry="3"></ellipse>
+                            <ellipse fill="white" cx="4" cy="20" rx="3" ry="3"></ellipse>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wcp-editor-toolbar-button" data-wcp-editor-toolbar-button-name="text" data-wcp-tooltip="Text" data-wcp-tooltip-position="right" data-wcp-editor-toolbar-button-kind="undefined">
+                    <div class="wcp-editor-toolbar-button-icon"><i class="fa fa-font" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="wcp-editor-center">
+            <div id="wcp-editor-canvas"></div>
+        </div>
+
+        <div id="wcp-editor-right">
+            <div id="wcp-editor-object-settings">
+                <div class="wcp-editor-object-settings-group">
+                    <div class="wcp-editor-object-settings-group-header">
+                        <div class="wcp-editor-object-settings-group-header-icon"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></div>
+                        <div class="wcp-editor-object-settings-group-header-text">General</div>
+                    </div>
+                    <div class="wcp-editor-object-settings-content">Some settings content</div>
+                </div>
+            </div>
+            <div id="wcp-editor-object-list-wrap">
+                <div id="wcp-editor-object-list-buttons">
+                    <div class="wcp-editor-object-list-button" data-wcp-editor-object-list-button-name="rename" data-wcp-tooltip="Rename" data-wcp-tooltip-position="bottom"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                    <div class="wcp-editor-object-list-button" data-wcp-editor-object-list-button-name="copy" data-wcp-tooltip="Copy Style" data-wcp-tooltip-position="bottom"><i class="fa fa-files-o" aria-hidden="true"></i></div>
+                    <div class="wcp-editor-object-list-button" data-wcp-editor-object-list-button-name="paste" data-wcp-tooltip="Paste Style" data-wcp-tooltip-position="bottom"><i class="fa fa-clipboard" aria-hidden="true"></i></div>
+                    <div class="wcp-editor-object-list-button" data-wcp-editor-object-list-button-name="duplicate" data-wcp-tooltip="Duplicate" data-wcp-tooltip-position="bottom"><i class="fa fa-clone" aria-hidden="true"></i></div>
+                    <div class="wcp-editor-object-list-button" data-wcp-editor-object-list-button-name="delete" data-wcp-tooltip="Delete" data-wcp-tooltip-position="bottom"><i class="fa fa-trash-o" aria-hidden="true"></i></div>
+                </div>
+                <div id="wcp-editor-object-list">
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-spot-8364" data-wcp-editor-object-list-item-index="0" data-wcp-editor-object-list-item-id="spot-8364">
+                        <div class="wcp-editor-object-list-item-title">Pin</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-5080" data-wcp-editor-object-list-item-index="1" data-wcp-editor-object-list-item-id="poly-5080">
+                        <div class="wcp-editor-object-list-item-title">Building 1</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-2893" data-wcp-editor-object-list-item-index="2" data-wcp-editor-object-list-item-id="poly-2893">
+                        <div class="wcp-editor-object-list-item-title">Building with Tooltip</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item wcp-active" id="wcp-editor-object-list-item-poly-3579" data-wcp-editor-object-list-item-index="3" data-wcp-editor-object-list-item-id="poly-3579">
+                        <div class="wcp-editor-object-list-item-title">Building 2</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-974" data-wcp-editor-object-list-item-index="4" data-wcp-editor-object-list-item-id="poly-974">
+                        <div class="wcp-editor-object-list-item-title">Building 3</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-919" data-wcp-editor-object-list-item-index="5" data-wcp-editor-object-list-item-id="poly-919">
+                        <div class="wcp-editor-object-list-item-title">Building 4</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-9983" data-wcp-editor-object-list-item-index="6" data-wcp-editor-object-list-item-id="poly-9983">
+                        <div class="wcp-editor-object-list-item-title">Building 5</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-225" data-wcp-editor-object-list-item-index="7" data-wcp-editor-object-list-item-id="poly-225">
+                        <div class="wcp-editor-object-list-item-title">Building 6</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-9416" data-wcp-editor-object-list-item-index="8" data-wcp-editor-object-list-item-id="poly-9416">
+                        <div class="wcp-editor-object-list-item-title">Building 7</div>
+                    </div>
+                    <div class="wcp-editor-object-list-item" id="wcp-editor-object-list-item-poly-1879" data-wcp-editor-object-list-item-index="9" data-wcp-editor-object-list-item-id="poly-1879">
+                        <div class="wcp-editor-object-list-item-title">Building 8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

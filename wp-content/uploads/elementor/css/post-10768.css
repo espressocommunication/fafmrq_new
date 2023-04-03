@@ -1,0 +1,24 @@
+.elementor-10768 .elementor-element.elementor-element-2b6bcce0{--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--background-transition:0.3s;border-style:solid;border-width:0px 0px 2px 0px;border-color:#EAEEF0;--margin-top:0px;--margin-right:0px;--margin-bottom:0px;--margin-left:0px;--padding-top:15px;--padding-right:0px;--padding-bottom:15px;--padding-left:0px;}.elementor-10768 .elementor-element.elementor-element-2b6bcce0:hover{background-color:#F6F8FA;}.elementor-10768 .elementor-element.elementor-element-2b6bcce0, .elementor-10768 .elementor-element.elementor-element-2b6bcce0::before{--border-transition:0.3s;}.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child){padding-bottom:calc(4px/2);}.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child){margin-top:calc(4px/2);}.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item{margin-right:calc(4px/2);margin-left:calc(4px/2);}.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-items.elementor-inline-items{margin-right:calc(-4px/2);margin-left:calc(-4px/2);}body.rtl .elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after{left:calc(-4px/2);}body:not(.rtl) .elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after{right:calc(-4px/2);}.elementor-10768 .elementor-element.elementor-element-183429e{--e-icon-list-icon-size:14px;}.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-text{color:#07799D;}.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-item > .elementor-icon-list-text, .elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-item > a{font-family:"aktiv-grotesk", Sans-serif;font-size:13px;font-weight:400;text-transform:uppercase;line-height:26px;}.elementor-10768 .elementor-element.elementor-element-183429e > .elementor-widget-container{padding:0px 0px 0px 5px;}.elementor-10768 .elementor-element.elementor-element-40fea2d .elementor-heading-title{color:#707070;font-family:"aktiv-grotesk", Sans-serif;font-size:16px;font-weight:400;line-height:20px;}.elementor-10768 .elementor-element.elementor-element-40fea2d > .elementor-widget-container{padding:0px 60px 0px 5px;}.elementor-10768 .elementor-element.elementor-element-40fea2d{width:100%;max-width:100%;}@media(max-width:767px){.elementor-10768 .elementor-element.elementor-element-40fea2d .elementor-heading-title{font-size:16px;line-height:22px;}.elementor-10768 .elementor-element.elementor-element-40fea2d > .elementor-widget-container{padding:0px 50px 0px 5px;}}/* Start custom CSS for icon-list, class: .elementor-element-183429e */.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-item a {
+    display: inline-block;
+    
+}
+
+.elementor-10768 .elementor-element.elementor-element-183429e .elementor-icon-list-text span:nth-child(1){
+    display: none;
+    
+}/* End custom CSS */
+/* Start custom CSS for heading, class: .elementor-element-40fea2d */.elementor-10768 .elementor-element.elementor-element-40fea2d {
+    /*content: "\e87a";*/
+    /*content: "\f30b";*/
+    /*font-size: 13px;*/
+    /*font-family: "Font Awesome 5 Free";*/
+    /*font-weight: 600;*/
+    /*position: absolute;*/
+    /*top: 1px;*/
+    /*float: right;*/
+    /*right: 44px;*/
+    /*color: #07799d;*/
+   background: url(/wp-content/uploads/2023/01/arrow_small.svg) 94%  0px no-repeat ;
+    background-size: 18px;
+
+}/* End custom CSS */

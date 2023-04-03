@@ -1,0 +1,288 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2022-09-22, 08:38:28
+    Author     : Christine
+*/
+
+body.login {
+    background-color: #1B4053;
+    font-family: "aktiv-grotesk", sans-serif;
+    
+    #login_error,
+    .message,
+    .success {
+        border-left: none;
+        padding: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        background-color: transparent;
+        box-shadow: none;
+        word-wrap: break-word;
+        text-align: center;
+        color: white;
+        
+        a {
+            color: #1B4053;
+            text-decoration: none;
+            
+            &:hover, &:active, &:focus {
+                color:#d60d1c;
+            }
+        }
+    }
+    
+    #login {
+        position: relative;
+        z-index: 9;
+        width: 435px;
+        max-width: 90%;
+        
+        h1 {
+            a {
+                background-image: url(../images/fafmrq-logo.png);
+                height: 93px;
+                width: 330px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+        
+        #loginform {
+            &:before {
+                font-family: "aktiv-grotesk-extended", sans-serif;
+                content: 'Se connecter';
+                text-transform: uppercase;
+                font-size: 30px;
+                font-weight: 400;
+                margin-bottom: 25px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                color:#1B4053;
+            }
+        }
+        
+        #loginform,
+        #lostpasswordform,
+        #resetpassform {
+            border:none;
+            box-shadow: none;
+            overflow:visible;
+                border-radius: 30px;
+
+            label {
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: 13px;
+                margin: 0 0 5px 0;
+                color:#9494a2;
+                text-align: center;
+                width: 100%;
+            }
+            
+            .button.wp-hide-pw {
+                min-height: 58px;
+                color:#9494a2;
+                
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+            
+            input[type=text],
+            input[type=password]{
+                color:#1B4053;
+                border:2px solid #EAEEF0;
+                padding:17px;
+                background-color: #ffffff;
+                border-radius: 30px;
+                font-weight: 400;
+                font-size:17px;
+                
+                &:focus {
+                    box-shadow:none;;
+                    outline:none;
+                }
+
+                &::placeholder { 
+                    color: #3c3c4e;
+                    opacity: 1;
+                }
+
+                &:-ms-input-placeholder {
+                    color: #3c3c4e;
+                }
+
+                &::-ms-input-placeholder { 
+                    color: #3c3c4e;
+                }
+            }
+            
+            input[type=submit] {
+                font-family: "aktiv-grotesk", Sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-decoration: none;
+                line-height: 20px;
+                letter-spacing: 0.14px;
+                background-color: #1B4053;
+                border-radius: 30px 30px 30px 30px;
+                padding: 20px 40px 20px 40px;
+
+                &:hover {
+                    background-color: #07799D;
+                }
+            }
+            
+            .reset-pass-submit {
+                button {
+                    color:white;
+                    display: inline-block;
+                    padding:12px 25px;
+                    border-radius: 10px;
+                    transition:all 400ms;
+                    position:relative;
+                    overflow: hidden;
+                    border:none;
+                    margin:0 2px;
+
+                    &:hover {
+                        background-color: #d60d1c;
+                    }
+                }
+            }
+            
+            .forgetmenot {
+                width: 100%;
+                display: block;
+                margin:0;
+                vertical-align: top;
+                float:none;
+
+                label {
+                    padding-left:30px;
+                    max-width: calc(100% - 110px);
+                    line-height: 1;
+                    vertical-align: middle;
+                    margin:0;
+                    text-transform: none;
+                    position:relative;
+                    text-align: left;
+
+                    &:before {
+                        content:'';
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 5px;
+                        margin-left: -52px;
+                        margin-right: 18px;
+                        vertical-align: middle;
+                        transition:all 400ms;
+                        border:2px solid #EAEEF0;
+                        background-color: #ffffff;
+                    }
+                    
+                    &:after {
+                        content:'';
+                        display: inline-block;
+                        width: 14px;
+                        height: 7px;
+                        background-color: transparent;
+                        border-left:3px solid #1B4053;
+                        border-bottom:3px solid #1B4053;
+                        transform: rotate(-45deg);
+                        margin-left: -20px;
+                        margin-right: 0;
+                        vertical-align: top;
+                        transition:all 400ms;
+                        position: absolute;
+                        top: 6px;
+                        left: 3px;
+                        opacity:0;
+                    }
+                }
+                input[type=checkbox]{
+                    visibility:hidden;
+
+                    &:hover {
+                        cursor:pointer;
+                    }
+
+                    &:checked + label {
+                        &:before {
+                            //border:10px solid #e4202e;
+                        }
+                        
+                        &:after {
+                            opacity:1;
+                        }
+                    }
+                }
+            }
+            p.submit{
+                display:block;
+                text-align: center;
+                float: none;
+                margin-top:25px;
+
+                input[type=submit]{
+                    float: none;
+                }
+            }
+
+        }
+        #backtoblog {
+            display:none;
+        }
+        
+        #nav {
+
+            a {
+                color: #9494a2;
+                transition:all 400ms;
+                
+                &:hover {
+                    color:white;
+                }
+            }
+        }
+        
+        .privacy-policy-page-link {
+            display:none;
+        }
+    }
+    
+    &.login-action-lostpassword {
+        #login {
+            #nav {
+                bottom:65px;
+            }
+        }
+    }
+    
+    .language-switcher {
+        display:none;
+    }
+}
+@media (max-width: 1024px) {
+    body.login:after {
+        padding:25px 0;
+    }
+    @media (max-width: 768px) {
+        body.login #login #nav {
+            position: relative;
+            padding: 0;
+            margin: 20px 0 0;
+            right: 0;
+            bottom: auto;
+            text-align: center;
+        }
+    }
+}

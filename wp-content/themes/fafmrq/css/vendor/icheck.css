@@ -1,0 +1,33 @@
+/* iCheck plugin Minimal skin, black
+----------------------------------- */
+.icheckbox_minimal,
+.iradio_minimal {
+	display: inline-block;
+	*display: inline;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	background: url("../../img/minimal.png") no-repeat;
+	border: none;
+	cursor: pointer;
+}
+
+.iradio_minimal {
+	background-position: -100px 0;
+}
+.iradio_minimal.hover {
+	background-position: -120px 0;
+}
+.iradio_minimal.checked {
+	background-position: -140px 0;
+}
+.iradio_minimal.disabled {
+	background-position: -160px 0;
+	cursor: default;
+}
+.iradio_minimal.checked.disabled {
+	background-position: -180px 0;
+}
+

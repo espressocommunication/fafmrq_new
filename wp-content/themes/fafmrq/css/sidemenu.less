@@ -1,0 +1,157 @@
+@import "module.support.less";
+
+.main-right{
+	width:291px;
+	min-height: 100%;
+	position: absolute;
+	right: 0;
+	background-color: #44403d;
+
+	h3{
+		color: #f88620;
+		font-family: 'Alegreya SC', serif;;
+		font-size: 22px;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 20px;
+		line-height: 16px;
+	}
+
+	p{
+		font-family: 'Abel', sans-serif;
+		font-size: 17px;
+		color: #ffffff;
+		line-height: 20px;
+		padding-bottom: 7px;
+	}
+
+	#recherche{
+		padding: 11px 12px 14px;
+
+		form{
+			position: relative;
+		}
+
+		input[type="text"]{
+			width: 269px;
+			height: 39px;
+			border: none;
+			.border-radius(20px);
+			padding: 5px 15px 5px 35px;
+		}
+
+		input[type="submit"]{
+			background: url('../img/loupe.png') transparent no-repeat;
+			border: none;
+			text-indent: -9999px;
+			width:16px;
+			height: 16px;
+			position: absolute;
+			top: 12px;
+			left: 12px;
+		}
+		label{
+			display:none;
+		}
+	}
+
+	#dossier{
+
+		ul{
+			float: left;
+			width: 48%;
+
+			li{
+				float: left;
+				margin-bottom: 10px;
+
+				a{
+					color: #ffffff;
+					text-decoration: none;
+					font-size: 14px;
+					line-height: 14px;
+					font-family: 'Abel', sans-serif;
+				}
+			}
+		}
+	}
+
+	.right-column-wrapper{
+		padding: 25px 16px;
+		&.odd{
+			background-color: #44403d;
+		}
+		&.even{
+			background-color: #4f4b47;
+		}
+	}
+
+	#social-networks{
+
+		.social-icon{
+			padding:5px 0 7px 30px;
+			background-repeat: no-repeat;
+			display: block;
+			text-decoration: none;
+			font-family: 'Abel', sans-serif;
+			font-size: 17px;
+			color: #ffffff;
+
+			&.facebook{
+				background-image: url("../img/facebook-icon.png");
+				margin-bottom: 5px;
+			}
+			&.twitter{
+				background-image: url("../img/twitter-icon.png");
+			}
+		}
+	}
+
+	#membres{
+		input{
+			font-family: 'Abel', sans-serif;
+			font-size: 17px;
+			line-height: 20px;
+			.box-sizing();
+			border: none;
+		}
+
+		.radio-holder{
+			margin-bottom: 15px;
+
+			.col{
+				float: left;
+
+				&:first-child{
+					margin-right: 30px;
+				}
+
+				label{
+					font-family: 'Abel', sans-serif;
+					font-size: 16px;
+					color: #ffffff;
+					text-transform: uppercase;
+					padding-left: 8px;
+					cursor: pointer;
+				}
+			}
+		}
+
+		input[type="text"], input[type="password"]{
+			width: 212px;
+			height: 34px;
+			background-color: #ffffff;
+			color: #000000;
+			padding: 0 8px;
+			margin-bottom: 8px;
+		}
+
+		input[type="submit"]{
+			background-color: #1c9ac8;
+			color: #ffffff;
+			text-transform: uppercase;
+			margin: 12px 0 5px;
+			padding: 6px 8px 4px;
+		}
+	}
+}
