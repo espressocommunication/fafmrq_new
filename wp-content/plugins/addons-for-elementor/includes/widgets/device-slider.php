@@ -98,6 +98,9 @@ class LAE_Device_Slider_Widget extends LAE_Widget_Base {
                 'type' => Controls_Manager::TEXT,
                 'label' => __('Container Class', 'livemesh-el-addons'),
                 'description' => __('The CSS class for the device slider container DIV element.', 'livemesh-el-addons'),
+                'ai' => [
+                    'active' => false,
+                ],
             ]
         );
 

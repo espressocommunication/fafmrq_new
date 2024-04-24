@@ -254,7 +254,9 @@ class ECS_Ajax_Load {
         \Elementor\Group_Control_Typography::get_type(),
         [
           'name' => 'loadmore_typography',
-          'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_4,
+          'global' => [
+        		'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Typography::TYPOGRAPHY_ACCENT,
+           ],
           'selector' => '{{WRAPPER}} .ecs-load-more-button .elementor-button',
         ]
       );
@@ -293,9 +295,8 @@ class ECS_Ajax_Load {
         [
           'label' => __( 'Background Color', 'ele-custom-skin' ),
           'type' => \Elementor\Controls_Manager::COLOR,
-          'scheme' => [
-            'type' => \Elementor\Core\Schemes\Color::get_type(),
-            'value' => \Elementor\Core\Schemes\Color::COLOR_4,
+          'global' => [
+          	'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_ACCENT,
           ],
           'selectors' => [
             '{{WRAPPER}} .ecs-load-more-button .elementor-button' => 'background-color: {{VALUE}};',

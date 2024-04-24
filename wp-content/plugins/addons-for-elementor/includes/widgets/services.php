@@ -216,12 +216,27 @@ class LAE_Services_Widget extends LAE_Widget_Base
             'tab'   => Controls_Manager::TAB_SETTINGS,
         ] );
         $style_options = [
-            'style1' => __( 'Style 1', 'livemesh-el-addons' ),
-            'style2' => __( 'Style 2', 'livemesh-el-addons' ),
-            'style3' => __( 'Style 3', 'livemesh-el-addons' ),
+            'style1' => [
+            'title'      => __( 'Style 1', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'services/style1.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'services/style1.jpg',
+            'width'      => '50%',
+        ],
+            'style2' => [
+            'title'      => __( 'Style 2', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'services/style2.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'services/style2.jpg',
+            'width'      => '50%',
+        ],
+            'style3' => [
+            'title'      => __( 'Style 3', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'services/style3.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'services/style3.jpg',
+            'width'      => '50%',
+        ],
         ];
         $this->add_control( 'style', [
-            'type'    => Controls_Manager::SELECT,
+            'type'    => 'lae-style-select',
             'label'   => __( 'Choose Style', 'livemesh-el-addons' ),
             'default' => 'style1',
             'options' => $style_options,

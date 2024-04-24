@@ -148,6 +148,9 @@ class LAE_Pricing_Table_Widget extends LAE_Widget_Base
             'dynamic'     => [
             'active' => true,
         ],
+            'ai'          => [
+            'active' => false,
+        ],
         ] );
         $repeater->add_control( 'button_text', [
             'type'    => Controls_Manager::TEXT,

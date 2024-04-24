@@ -8,11 +8,11 @@
  * Author URI: https://livemeshelementor.com
  * License: GPL3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Version: 7.5
+ * Version: 8.3.7
  * Text Domain: livemesh-el-addons
  * Domain Path: languages
- * Elementor tested up to: 3.11.0
- * Elementor Pro tested up to: 3.11.0
+ * Elementor tested up to: 3.20.0
+ * Elementor Pro tested up to: 3.20.0
  *
  * Livemesh Addons for Elementor is distributed under the terms of the GNU
  * General Public License as published by the Free Software Foundation,
@@ -37,7 +37,7 @@ if ( !defined( 'ABSPATH' ) ) {
 
 if ( !function_exists( 'lae_fs' ) ) {
     // Plugin version
-    define( 'LAE_VERSION', '7.5' );
+    define( 'LAE_VERSION', '8.3.7' );
     // Plugin Root File
     define( 'LAE_PLUGIN_FILE', __FILE__ );
     // Plugin Folder Path
@@ -53,6 +53,8 @@ if ( !function_exists( 'lae_fs' ) ) {
     define( 'LAE_ADDONS_URL', plugin_dir_url( __FILE__ ) . 'includes/widgets/' );
     // Plugin Folder URL
     define( 'LAE_PREMIUM_ADDONS_URL', plugin_dir_url( __FILE__ ) . 'includes/widgets/premium/' );
+    // Style Assets URL
+    define( 'LAE_STYLES_PREVIEW_URL', plugin_dir_url( __FILE__ ) . 'assets/images/style-select/' );
     // Plugin Help Page URL
     define( 'LAE_PLUGIN_HELP_URL', admin_url() . 'admin.php?page=livemesh_el_addons_documentation' );
     // Create a helper function for easy SDK access.

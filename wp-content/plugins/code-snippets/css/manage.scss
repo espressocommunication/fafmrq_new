@@ -5,23 +5,11 @@
 $active-color: #2196f3;
 $inactive-color: #ccc;
 
-@import 'type-badges';
+@import 'common/type-badges';
+@import 'manage/cloud';
 
-.wp-core-ui .button.nav-tab-button {
-	margin-left: 0.5em;
-	color: #50575e;
-	float: left;
-	border: 1px solid #c3c4c7;
-	background: #dcdcde;
-
-	&:hover {
-		background-color: #fff;
-		color: #3c434a;
-	}
-}
-
-.column-name {
-
+.column-name,
+.column-type {
 	.dashicons {
 		font-size: 16px;
 		width: 16px;
@@ -32,10 +20,10 @@ $inactive-color: #ccc;
 	.dashicons-clock {
 		vertical-align: middle;
 	}
+}
 
-	.active-snippet & > a {
-		font-weight: 600;
-	}
+.active-snippet .column-name > a {
+	font-weight: 600;
 }
 
 .column-priority input {
@@ -74,7 +62,7 @@ $inactive-color: #ccc;
 
 	&::before {
 		transition: all .4s;
-		content: "";
+		content: '';
 		height: 13px;
 		width: 13px;
 		display: inline-block;
@@ -307,4 +295,14 @@ $inactive-color: #ccc;
 
 .code-snippets-notice a.notice-dismiss {
 	text-decoration: none;
+}
+
+.go-pro-badge {
+	color: #ce0000;
+	margin-left: 3px;
+	border: 1px solid #ce0000;
+	border-radius: 5px;
+	font-size: 10px;
+	padding: 1px 2px;
+	text-transform: uppercase;
 }

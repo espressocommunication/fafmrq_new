@@ -264,7 +264,8 @@ class LAE_Heading_Widget extends LAE_Widget_Base
         $settings = apply_filters( 'lae_heading_' . $this->get_id() . '_settings', $settings );
         $args['settings'] = $settings;
         $args['widget_instance'] = $this;
-        lae_get_template_part( "addons/heading/{$settings['style']}", $args );
+        $widget_template = esc_attr( $settings['style'] );
+        lae_get_template_part( "addons/heading/{$widget_template}", $args );
     }
     
     /**

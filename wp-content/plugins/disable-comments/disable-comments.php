@@ -4,7 +4,7 @@
  * Plugin Name: Disable Comments
  * Plugin URI: https://wordpress.org/plugins/disable-comments/
  * Description: Allows administrators to globally disable comments on their site. Comments can be disabled according to post type. You could bulk delete comments using Tools.
- * Version: 2.4.3
+ * Version: 2.4.6
  * Author: WPDeveloper
  * Author URI: https://wpdeveloper.com
  * License: GPL-3.0+
@@ -41,7 +41,7 @@ class Disable_Comments
 
 	function __construct()
 	{
-		define('DC_VERSION', '2.4.3');
+		define('DC_VERSION', '2.4.6');
 		define('DC_PLUGIN_SLUG', 'disable_comments_settings');
 		define('DC_PLUGIN_ROOT_PATH', dirname(__FILE__));
 		define('DC_PLUGIN_VIEWS_PATH', DC_PLUGIN_ROOT_PATH . '/views/');
@@ -134,8 +134,9 @@ class Disable_Comments
 				return;
 			}
 			$current_screen = get_current_screen()->id;
-			$hascaps = $this->networkactive && is_network_admin() ? current_user_can('manage_network_plugins') : current_user_can('manage_options');
-			if( ! in_array( $current_screen, ['settings_page_disable_comments_settings', 'settings_page_disable_comments_settings-network']) && $hascaps ) {
+			$has_caps = $this->networkactive && is_network_admin() ? current_user_can('manage_network_plugins') : current_user_can('manage_options');
+			// if( ! in_array( $current_screen, ['settings_page_disable_comments_settings', 'settings_page_disable_comments_settings-network']) && $has_caps ) {
+			if ($has_caps && in_array($current_screen, ['dashboard-network', 'dashboard'])) {
 				$this->tracker->notice();
 			}
 		}
@@ -350,6 +351,7 @@ class Disable_Comments
 		}
 		// rest API Comment Block
 		if (isset($this->options['remove_rest_API_comments']) && intval($this->options['remove_rest_API_comments']) === 1) {
+			add_filter('rest_endpoints', array($this, 'filter_rest_endpoints'));
 			add_filter('rest_pre_insert_comment', array($this, 'disable_rest_API_comments'), 10, 2);
 		}
 
@@ -387,10 +389,6 @@ class Disable_Comments
 					remove_post_type_support($type, 'trackbacks');
 				}
 			}
-			add_filter('comments_array', array($this, 'filter_existing_comments'), 20, 2);
-			add_filter('comments_open', array($this, 'filter_comment_status'), 20, 2);
-			add_filter('pings_open', array($this, 'filter_comment_status'), 20, 2);
-			add_filter('get_comments_number', array($this, 'filter_comments_number'), 20, 2);
 		} elseif (is_admin() && !$this->is_configured()) {
 			/**
 			 * It is possible that $disabled_post_types is empty if other
@@ -399,6 +397,13 @@ class Disable_Comments
 			 * shouldn't be using this plugin.
 			 */
 			add_action('all_admin_notices', array($this, 'setup_notice'));
+		}
+
+		if ($this->is_remove_everywhere() || (!empty($disabled_post_types) && !$this->is_exclude_by_role())) {
+			add_filter('comments_array', array($this, 'filter_existing_comments'), 20, 2);
+			add_filter('comments_open', array($this, 'filter_comment_status'), 20, 2);
+			add_filter('pings_open', array($this, 'filter_comment_status'), 20, 2);
+			add_filter('get_comments_number', array($this, 'filter_comments_number'), 20, 2);
 		}
 
 		// Filters for the admin only.
@@ -535,7 +540,15 @@ class Disable_Comments
 	 */
 	public function filter_rest_endpoints($endpoints)
 	{
-		unset($endpoints['comments']);
+		if(isset($endpoints['comments'])){
+			unset($endpoints['comments']);
+		}
+		if(isset($endpoints['/wp/v2/comments'])){
+			unset($endpoints['/wp/v2/comments']);
+		}
+		if(isset($endpoints['/wp/v2/comments/(?P<id>[\d]+)'])){
+			unset($endpoints['/wp/v2/comments/(?P<id>[\d]+)']);
+		}
 		return $endpoints;
 	}
 
@@ -644,7 +657,8 @@ class Disable_Comments
 
 	public function setup_notice()
 	{
-		if (strpos(get_current_screen()->id, 'settings_page_disable_comments_settings') === 0) {
+		$current_screen = get_current_screen()->id;
+		if (!in_array($current_screen, ['dashboard-network', 'dashboard'])) {
 			return;
 		}
 		$hascaps = $this->networkactive && is_network_admin() ? current_user_can('manage_network_plugins') : current_user_can('manage_options');

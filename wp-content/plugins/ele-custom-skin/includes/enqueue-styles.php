@@ -17,11 +17,11 @@ class ECS_Enqueue_Style {
 							$wpdb->term_relationships.object_id=$wpdb->posts.ID
           WHERE  $wpdb->posts.post_status='publish'"
 				);
-				$options=false;
+				$options=array();
         foreach ( $templates as $template ) {
 					$options[ $template->ID ] = strtotime($template->post_modified);
 				}
-				return $options;
+				if(empty($options)) return false; return $options;
 	}
   public function frontend_styles() {
     //adding some css fixes

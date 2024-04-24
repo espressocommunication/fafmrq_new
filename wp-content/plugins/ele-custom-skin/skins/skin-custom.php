@@ -5,8 +5,6 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Image_Size;
 use Elementor\Group_Control_Typography;
-//use Elementor\Scheme_Color;
-use Elementor\Scheme_Typography;
 use Elementor\Widget_Base;
 use ElementorPro\Plugin;
 use ElementorPro\Modules\ThemeBuilder\Module as ThemeBuilderModule;
@@ -362,7 +360,7 @@ class Skin_Posts_ECS extends Skin_Base {
       $parent_settings[$this->get_id().'_post_slider'] = isset($parent_settings[$this->get_id().'_post_slider'])? $parent_settings[$this->get_id().'_post_slider'] : "";
 
       if($parent_settings[$this->get_id().'_post_slider'] == "yes") {
-        echo '<div class="elementor-main-swiper swiper-container">';
+        echo '<div class="elementor-main-swiper swiper-container swiper">';
         $this->grid_settings['allow'] = false;
       } else {// we don't use custom grid if slider is activated
         if($parent_settings[$this->get_id().'_use_custom_grid'] == "yes" && $parent_settings[$this->get_id().'_custom_grid'] ){

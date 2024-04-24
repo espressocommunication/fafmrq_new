@@ -14,9 +14,10 @@ use Google\Site_Kit\Context;
 use Google\Site_Kit\Core\Modules\Module_Sharing_Settings;
 use Google\Site_Kit\Core\Permissions\Permissions;
 use Google\Site_Kit\Core\Storage\Options;
-use Google\Site_Kit\Core\Util\BC_Functions;
 use Google\Site_Kit\Core\Util\Feature_Flags;
+use Google\Site_Kit\Core\Util\URL;
 use WP_Dependencies;
+use WP_Post_Type;
 
 /**
  * Class managing assets.
@@ -312,7 +313,7 @@ final class Assets {
 			array_push( $dependencies, 'googlesitekit-components' );
 		}
 
-		if ( 'dashboard-sharing' === $context && Feature_Flags::enabled( 'dashboardSharing' ) ) {
+		if ( 'dashboard-sharing' === $context ) {
 			array_push( $dependencies, 'googlesitekit-dashboard-sharing-data' );
 		}
 
@@ -333,8 +334,7 @@ final class Assets {
 			return $this->assets;
 		}
 
-		$base_url = $this->context->url( 'dist/assets/' );
-
+		$base_url     = $this->context->url( 'dist/assets/' );
 		$dependencies = $this->get_asset_dependencies();
 
 		// Register plugin scripts.
@@ -612,6 +612,13 @@ final class Assets {
 				'googlesitekit-settings',
 				array(
 					'src'          => $base_url . 'js/googlesitekit-settings.js',
+					'dependencies' => $this->get_asset_dependencies( 'dashboard-sharing' ),
+				)
+			),
+			new Script(
+				'googlesitekit-ad-blocking-recovery',
+				array(
+					'src'          => $base_url . 'js/googlesitekit-ad-blocking-recovery.js',
 					'dependencies' => $this->get_asset_dependencies( 'dashboard' ),
 				)
 			),
@@ -716,6 +723,8 @@ final class Assets {
 			'webStoriesActive' => defined( 'WEBSTORIES_VERSION' ),
 			'postTypes'        => $this->get_post_types(),
 			'storagePrefix'    => $this->get_storage_prefix(),
+			'referenceDate'    => apply_filters( 'googlesitekit_reference_date', null ),
+			'productPostType'  => $this->get_product_post_type(),
 		);
 
 		/**
@@ -946,7 +955,6 @@ final class Assets {
 		return apply_filters( 'googlesitekit_inline_modules_data', array() );
 	}
 
-
 	/**
 	 * Adds support for async and defer attributes to enqueued scripts.
 	 *
@@ -1055,4 +1063,30 @@ final class Assets {
 
 		return wp_hash( $current_user->user_login . '|' . $session_token . '|' . $blog_id );
 	}
+
+	/**
+	 * Gets the product post type.
+	 *
+	 * @since 1.116.0
+	 *
+	 * @return string|null The product post type name or null if not present on the website.
+	 */
+	protected function get_product_post_type() {
+		/**
+		 * Filters the product post type.
+		 *
+		 * @since 1.116.0
+		 *
+		 * @param string $product_post_type The product post type name.
+		 */
+		$product_post_type = apply_filters( 'googlesitekit_product_post_type', 'product' );
+		$product_type      = get_post_type_object( $product_post_type );
+
+		if ( $product_type instanceof WP_Post_Type && $product_type->public ) {
+			return $product_post_type;
+		}
+
+		return null;
+	}
+
 }

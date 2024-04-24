@@ -45,7 +45,7 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
         public function __clone()
         {
             // Cloning instances of the class is forbidden
-            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '7.5' );
+            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '8.3.7' );
         }
         
         /**
@@ -55,7 +55,7 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
         public function __wakeup()
         {
             // Unserializing instances of the class is forbidden
-            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '7.5' );
+            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '8.3.7' );
         }
         
         private function setup_debug_constants()
@@ -100,9 +100,7 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
                 require_once LAE_PLUGIN_DIR . 'i18n/wpml-compatibility-init.php';
             }
             /* Initialize the theme builder templates - Requires elementor pro plugin */
-            if ( is_plugin_active( 'elementor-pro/elementor-pro.php' ) ) {
-                require_once LAE_PLUGIN_DIR . 'includes/theme-builder/init.php';
-            }
+            require_once LAE_PLUGIN_DIR . 'includes/theme-builder/init.php';
         }
         
         /**
@@ -168,6 +166,7 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
             add_action( 'elementor/frontend/after_register_styles', array( $this, 'register_frontend_styles' ) );
             add_action( 'elementor/frontend/after_enqueue_styles', array( $this, 'enqueue_frontend_styles' ) );
             add_action( 'elementor/init', array( $this, 'add_elementor_category' ) );
+            add_action( 'elementor/controls/register', array( $this, 'register_controls' ) );
         }
         
         private function template_hooks()
@@ -250,6 +249,13 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
             wp_register_script(
                 'isotope.pkgd',
                 LAE_PLUGIN_URL . 'assets/js/isotope.pkgd' . $suffix . '.js',
+                array( 'jquery' ),
+                LAE_VERSION,
+                true
+            );
+            wp_register_script(
+                'jquery-magnific-popup',
+                LAE_PLUGIN_URL . 'assets/js/jquery.magnific-popup' . $suffix . '.js',
                 array( 'jquery' ),
                 LAE_VERSION,
                 true
@@ -497,6 +503,15 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
             wp_enqueue_style( 'lae-frontend-styles' );
             wp_enqueue_style( 'lae-grid-styles' );
             wp_enqueue_style( 'lae-widgets-styles' );
+        }
+        
+        /**
+         * Register custom Elementor controls.
+         */
+        public function register_controls( $controls_manager )
+        {
+            require_once LAE_PLUGIN_DIR . 'includes/controls/style-select.php';
+            $controls_manager->register( new \LivemeshAddons\Controls\LAE_Style_Select() );
         }
         
         /**

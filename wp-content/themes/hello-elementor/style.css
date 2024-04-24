@@ -1,32 +1,25 @@
 /*
 	Theme Name: Hello Elementor
 	Theme URI: https://elementor.com/hello-theme/?utm_source=wp-themes&utm_campaign=theme-uri&utm_medium=wp-dash
-	Description: A plain-vanilla & lightweight theme for Elementor page builder
+	Description: Hello Elementor is a lightweight and minimalist WordPress theme that was built specifically to work seamlessly with the Elementor site builder plugin. The theme is free, open-source, and designed for users who want a flexible, easy-to-use, and customizable website. The theme, which is optimized for performance, provides a solid foundation for users to build their own unique designs using the Elementor drag-and-drop site builder. Its simplicity and flexibility make it a great choice for both beginners and experienced Web Creators.
 	Author: Elementor Team
 	Author URI: https://elementor.com/?utm_source=wp-themes&utm_campaign=author-uri&utm_medium=wp-dash
-	Version: 2.7.1
-	Stable tag: 2.7.1
-	Requires at least: 5.9
-	Tested up to: 6.2
-	Requires PHP: 5.6
+	Version: 3.0.1
+	Stable tag: 3.0.1
+	Requires at least: 6.0
+	Tested up to: 6.4
+	Requires PHP: 7.3
 	License: GNU General Public License v3 or later.
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	Text Domain: hello-elementor
-	Description: A lightweight, plain-vanilla, best suited for building your site using Elementor website builder. Visit https://elementor.com/hello-theme/ to learn more.
 	Tags: accessibility-ready, flexible-header, custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready,
 */
 /**
- * DO NOT CHANGE THIS FILE!
- * To override any of the settings in this section, add your styling code in the custom directory.
  * Loading first in the style.scss & classic-editor.scss
  */
-/*
- * Inspired by Normalize.css, HTML5 Boilerplate & Bootstrap Reboot Projects under MIT License
-*/
 /**
- * Document basic styling
- * DO NOT CHANGE THIS FILE!
- * To override any of the settings in this section, add your styling code in the custom directory.
+* Document basic styling
+* Inspired by Normalize.css, HTML5 Boilerplate & Bootstrap Reboot Projects under MIT License
  */
 /**
  * 1. Correct the line height in all browsers.
@@ -63,8 +56,8 @@ body {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-block-start: 0.5rem;
+  margin-block-end: 1rem;
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
@@ -96,8 +89,8 @@ h6 {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 0.9rem;
+  margin-block-start: 0;
+  margin-block-end: 0.9rem;
 }
 
 /* Grouping content
@@ -149,7 +142,7 @@ a:not([href]):not([tabindex]):focus {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none; /* 1 */
+  border-block-end: none; /* 1 */
   text-decoration: underline dotted; /* 2 */
 }
 
@@ -250,17 +243,6 @@ template {
   display: none;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* Print
  */
 @media print {
@@ -292,7 +274,7 @@ template {
   }
   pre,
   blockquote {
-    page-break-inside: avoid;
+    break-inside: avoid;
     border: 1px solid #cccccc;
   }
   thead {
@@ -300,7 +282,7 @@ template {
   }
   tr,
   img {
-    page-break-inside: avoid;
+    break-inside: avoid;
   }
   p,
   h2,
@@ -310,13 +292,11 @@ template {
   }
   h2,
   h3 {
-    page-break-after: avoid;
+    break-after: avoid;
   }
 }
 /**
  * Form styling
- * DO NOT CHANGE THIS FILE!
- * To override any of the settings in this section, add your styling code in the custom directory.
  */
 label {
   display: inline-block;
@@ -540,13 +520,11 @@ select {
 
 /**
  * Table styling
- * DO NOT CHANGE THIS FILE!
- * To override any of the settings in this section, add your styling code in the custom directory.
  */
 table {
   background-color: transparent;
   width: 100%;
-  margin-bottom: 15px;
+  margin-block-end: 15px;
   font-size: 0.9em;
   border-spacing: 0;
   border-collapse: collapse;
@@ -577,7 +555,7 @@ table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td,
 table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
-  border-top: 1px solid rgba(128, 128, 128, 0.5019607843);
+  border-block-start: 1px solid rgba(128, 128, 128, 0.5019607843);
 }
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
@@ -588,7 +566,7 @@ table tbody tr:hover > th {
   background-color: rgba(128, 128, 128, 0.1019607843);
 }
 table tbody + tbody {
-  border-top: 2px solid rgba(128, 128, 128, 0.5019607843);
+  border-block-start: 2px solid rgba(128, 128, 128, 0.5019607843);
 }
 @media (max-width: 767px) {
   table table {
@@ -606,8 +584,6 @@ table tbody + tbody {
 
 /**
  * List styling
- * DO NOT CHANGE THIS FILE!
- * To override any of the settings in this section, add your styling code in the custom directory.
  */
 dl,
 dt,
@@ -615,8 +591,8 @@ dd,
 ol,
 ul,
 li {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   border: 0;
   outline: 0;
   font-size: 100%;

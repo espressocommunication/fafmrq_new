@@ -3,45 +3,45 @@
 namespace Code_Snippets;
 
 /**
- * Functions used to manage the database tables
+ * Functions used to manage the database tables.
  *
  * @package Code_Snippets
  */
 class DB {
 
 	/**
-	 * Unprefixed site-wide table name
+	 * Unprefixed site-wide table name.
 	 */
 	const TABLE_NAME = 'snippets';
 
 	/**
-	 * Unprefixed network-wide table name
+	 * Unprefixed network-wide table name.
 	 */
 	const MS_TABLE_NAME = 'ms_snippets';
 
 	/**
-	 * Side-wide table name
+	 * Side-wide table name.
 	 *
 	 * @var string
 	 */
 	public $table;
 
 	/**
-	 * Network-wide table name
+	 * Network-wide table name.
 	 *
 	 * @var string
 	 */
 	public $ms_table;
 
 	/**
-	 * Class constructor
+	 * Class constructor.
 	 */
 	public function __construct() {
 		$this->set_table_vars();
 	}
 
 	/**
-	 * Register the snippet table names with WordPress
+	 * Register the snippet table names with WordPress.
 	 *
 	 * @since 2.0
 	 */
@@ -51,7 +51,7 @@ class DB {
 		$this->table = $wpdb->prefix . self::TABLE_NAME;
 		$this->ms_table = $wpdb->base_prefix . self::MS_TABLE_NAME;
 
-		/* Register the snippet table names with WordPress */
+		// Register the snippet table names with WordPress.
 		$wpdb->snippets = $this->table;
 		$wpdb->ms_snippets = $this->ms_table;
 
@@ -60,47 +60,38 @@ class DB {
 	}
 
 	/**
-	 * Validate the multisite parameter of the get_table_name() function
+	 * Validate a provided 'network' or 'multisite' param, converting it to a boolean.
 	 *
-	 * @param bool|null $network Value of multisite parameter – true for multisite, false for single-site.
+	 * @param bool|null $network Network argument value.
 	 *
-	 * @return bool Validated value of multisite parameter.
+	 * @return bool Sanitized value.
 	 */
-	public static function validate_network_param( $network ) {
+	public static function validate_network_param( ?bool $network = null ): bool {
 
-		/* If multisite is not active, then the parameter should always be false */
+		// If multisite is not active, then assume the value is false.
 		if ( ! is_multisite() ) {
 			return false;
 		}
 
-		/* If $multisite is null, try to base it on the current admin page */
+		// If $multisite is null, try to base it on the current admin page.
 		if ( is_null( $network ) && function_exists( 'is_network_admin' ) ) {
-			$network = is_network_admin();
+			return is_network_admin();
 		}
 
-		return $network;
+		return (bool) $network;
 	}
 
 	/**
 	 * Return the appropriate snippet table name
 	 *
-	 * @param string|bool|null $multisite Whether retrieve the multisite table name (true) or the site table name (false).
+	 * @param bool|null $is_network Whether retrieve the multisite table name (true) or the site table name (false).
 	 *
 	 * @return string The snippet table name
 	 * @since 2.0
 	 */
-	public function get_table_name( $multisite = null ) {
-
-		/* If the first parameter is a string, assume it is a table name */
-		if ( is_string( $multisite ) ) {
-			return $multisite;
-		}
-
-		/* Validate the multisite parameter */
-		$multisite = $this->validate_network_param( $multisite );
-
-		/* return the correct table name depending on the value of $multisite */
-		return $multisite ? $this->ms_table : $this->table;
+	public function get_table_name( ?bool $is_network = null ): string {
+		$is_network = is_bool( $is_network ) ? $is_network : self::validate_network_param( $is_network );
+		return $is_network ? $this->ms_table : $this->table;
 	}
 
 	/**
@@ -111,12 +102,14 @@ class DB {
 	 *
 	 * @return bool Whether the database table exists.
 	 */
-	public static function table_exists( $table_name, $refresh = false ) {
+	public static function table_exists( string $table_name, bool $refresh = false ): bool {
 		global $wpdb;
 		static $checked = array();
 
 		if ( $refresh || ! isset( $checked[ $table_name ] ) ) {
-			$checked[ $table_name ] = $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) === $table_name; // cache pass, db call ok.
+			// phpcs:disable WordPress.DB.DirectDatabaseQuery.NoCaching, caching is handled through $checked variable.
+			$result = $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $table_name ) ) );
+			$checked[ $table_name ] = $result === $table_name;
 		}
 
 		return $checked[ $table_name ];
@@ -127,12 +120,12 @@ class DB {
 	 */
 	public function create_missing_tables() {
 
-		/* Create the network snippets table if it doesn't exist */
+		// Create the network snippets table if it doesn't exist.
 		if ( is_multisite() && ! self::table_exists( $this->ms_table ) ) {
 			$this->create_table( $this->ms_table );
 		}
 
-		/* Create the table if it doesn't exist */
+		// Create the table if it doesn't exist.
 		if ( ! self::table_exists( $this->table ) ) {
 			$this->create_table( $this->table );
 		}
@@ -154,13 +147,10 @@ class DB {
 	 *
 	 * @param string $table_name Name of database table.
 	 */
-	public static function create_missing_table( $table_name ) {
-
-		if ( self::table_exists( $table_name ) ) {
-			return;
+	public static function create_missing_table( string $table_name ) {
+		if ( ! self::table_exists( $table_name ) ) {
+			self::create_table( $table_name );
 		}
-
-		self::create_table( $table_name );
 	}
 
 	/**
@@ -172,21 +162,23 @@ class DB {
 	 * @since 1.6
 	 * @uses  dbDelta() to apply the SQL code
 	 */
-	public static function create_table( $table_name ) {
+	public static function create_table( string $table_name ): bool {
 		global $wpdb;
 		$charset_collate = $wpdb->get_charset_collate();
 
 		/* Create the database table */
 		$sql = "CREATE TABLE $table_name (
-				id          BIGINT(20)  NOT NULL AUTO_INCREMENT,
-				name        TINYTEXT    NOT NULL,
-				description TEXT        NOT NULL,
-				code        LONGTEXT    NOT NULL,
-				tags        LONGTEXT    NOT NULL,
-				scope       VARCHAR(15) NOT NULL DEFAULT 'global',
-				priority    SMALLINT    NOT NULL DEFAULT 10,
-				active      TINYINT(1)  NOT NULL DEFAULT 0,
-				modified    DATETIME    NOT NULL DEFAULT '0000-00-00 00:00:00',
+				id          BIGINT(20)   NOT NULL AUTO_INCREMENT,
+				name        TINYTEXT     NOT NULL,
+				description TEXT         NOT NULL,
+				code        LONGTEXT     NOT NULL,
+				tags        LONGTEXT     NOT NULL,
+				scope       VARCHAR(15)  NOT NULL DEFAULT 'global',
+				priority    SMALLINT     NOT NULL DEFAULT 10,
+				active      TINYINT(1)   NOT NULL DEFAULT 0,
+				modified    DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+				revision    BIGINT(20)   NOT NULL DEFAULT 1,
+				cloud_id    VARCHAR(255) NULL,
 				PRIMARY KEY  (id),
 				KEY scope (scope),
 				KEY active (active)
@@ -215,7 +207,7 @@ class DB {
 	 *
 	 * @phpcs:disable WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare
 	 */
-	private static function fetch_snippets_from_table( $table_name, array $scopes, $active_only = true ) {
+	private static function fetch_snippets_from_table( string $table_name, array $scopes, bool $active_only = true ) {
 		global $wpdb;
 
 		$cache_key = sprintf( 'active_snippets_%s_%s', sanitize_key( join( '_', $scopes ) ), $table_name );
@@ -242,7 +234,7 @@ class DB {
 				$scopes
 			),
 			'ARRAY_A'
-		); // db call ok.
+		);
 
 		// Cache the full list of snippets.
 		if ( is_array( $snippets ) ) {
@@ -260,7 +252,7 @@ class DB {
 	 *
 	 * @return array<string, array<string, mixed>> List of active snippets, indexed by table.
 	 */
-	public function fetch_active_snippets( $scopes ) {
+	public function fetch_active_snippets( $scopes ): array {
 		$active_snippets = array();
 
 		// Ensure that the list of scopes is an array.

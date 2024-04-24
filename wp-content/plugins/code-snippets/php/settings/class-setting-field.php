@@ -62,7 +62,7 @@ class Setting_Field {
 	 * @param string               $field_id   Setting field identifier.
 	 * @param array<string, mixed> $args       The setting field attributes.
 	 */
-	public function __construct( $section_id, $field_id, array $args ) {
+	public function __construct( string $section_id, string $field_id, array $args ) {
 		$this->field_id = $field_id;
 		$this->section = $section_id;
 		$this->args = array_merge( $this->args, $args );
@@ -75,10 +75,10 @@ class Setting_Field {
 	 *
 	 * @return mixed Attribute value.
 	 */
-	public function __get( $argument ) {
+	public function __get( string $argument ) {
 
 		if ( 'input_name' === $argument ) {
-			return sprintf( 'code_snippets_settings[%s][%s]', $this->section, $this->field_id );
+			return sprintf( '%s[%s][%s]', OPTION_NAME, $this->section, $this->field_id );
 		}
 
 		return $this->args[ $argument ];
@@ -126,7 +126,7 @@ class Setting_Field {
 	 * @param string  $label      Input label.
 	 * @param boolean $checked    Whether the checkbox should be checked.
 	 */
-	private static function render_checkbox( $input_name, $label, $checked ) {
+	private static function render_checkbox( string $input_name, string $label, bool $checked ) {
 
 		$checkbox = sprintf(
 			'<input type="checkbox" name="%s"%s>',
@@ -156,15 +156,17 @@ class Setting_Field {
 	/**
 	 * Render a checkbox field for a setting
 	 *
+	 * @return void
 	 * @since 2.0.0
 	 */
 	public function render_checkbox_field() {
-		$this->render_checkbox( $this->input_name, $this->label, $this->get_saved_value() );
+		$this->render_checkbox( $this->input_name, $this->label, $this->get_saved_value() ?? false );
 	}
 
 	/**
 	 * Render a checkbox field for a setting
 	 *
+	 * @return void
 	 * @since 2.0.0
 	 */
 	public function render_checkboxes_field() {
@@ -184,9 +186,10 @@ class Setting_Field {
 
 	/**
 	 * Render a basic text field for an editor setting.
+	 *
+	 * @return void
 	 */
 	private function render_text_field() {
-
 		printf(
 			'<input type="text" name="%s" value="%s" class="regular-text">',
 			esc_attr( $this->input_name ),
@@ -204,7 +207,6 @@ class Setting_Field {
 	 * @since 2.0.0
 	 */
 	private function render_number_field() {
-
 		printf(
 			'<input type="number" name="%s" value="%s"',
 			esc_attr( $this->input_name ),
@@ -227,7 +229,7 @@ class Setting_Field {
 	}
 
 	/**
-	 * Render a number select field for an editor setting
+	 * Render a number select field for an editor setting.
 	 *
 	 * @since 3.0.0
 	 */
@@ -245,5 +247,18 @@ class Setting_Field {
 		}
 
 		echo '</select>';
+	}
+
+	/**
+	 * Render a button link.
+	 *
+	 * @since 3.5.1
+	 */
+	private function render_action_field() {
+		printf(
+			'<button type="submit" name="%s" class="button">%s</button>',
+			esc_attr( $this->input_name ),
+			esc_html( $this->label ? $this->label : $this->name )
+		);
 	}
 }

@@ -3,14 +3,14 @@ Contributors: CodeAmp
 Donate link:
 Tags: elementor, posts, woocommerce, products, portfolio, archive
 Requires at least: 5.2
-Tested up to: 6.1
-Stable tag: 1.2.1
+Tested up to: 6.4
+Stable tag: 1.2.4
 
-Adds Search & Filter integration for Elementor - filter your Posts, Posts Archive, Portfolio, Products & Products Archive widgets
+Adds Search & Filter integration for Elementor - filter your Loop Grid, Posts, Portfolio, Products and Archives widgets.
 
 == Description ==
 
-Adds Search & Filter integration for Elementor - filter your Posts, Posts Archive, Portfolio, Products & Products Archive widgets
+Adds Search & Filter integration for Elementor - filter your Loop Grid, Posts, Portfolio, Products and Archives widgets
 
 = Features: =
 
@@ -45,6 +45,16 @@ Adds Search & Filter integration for Elementor - filter your Posts, Posts Archiv
 
 
 == Changelog ==
+
+= 1.2.4 =
+* Tested upto Elementor version 3.19
+
+= 1.2.3 = 
+* Fix - issues with pagination & infinite scroll on the loop grid.
+* Fix - PHP warnings with the loop grid.
+
+= 1.2.2 = 
+* New - add support for product loop grid.
 
 = 1.2.1 =
 * Fix - an issue with our search forms not working in popups since Elementor 3.9.0.

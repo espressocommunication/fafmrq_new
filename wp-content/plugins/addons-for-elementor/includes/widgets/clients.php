@@ -107,6 +107,9 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'dynamic'     => [
             'active' => true,
         ],
+            'ai'          => [
+            'active' => false,
+        ],
         ] );
         $repeater->add_control( 'client_link', [
             'label'       => __( 'Client URL', 'livemesh-el-addons' ),

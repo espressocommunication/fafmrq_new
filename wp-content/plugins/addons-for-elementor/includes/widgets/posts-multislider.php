@@ -145,6 +145,9 @@ class LAE_Posts_Multislider_Widget extends LAE_Widget_Base
             'condition'   => [
             'query_type' => 'custom_query',
         ],
+            'ai'          => [
+            'active' => false,
+        ],
         ] );
         $this->add_control( 'posts_per_page', [
             'label'     => __( 'Posts Per Page', 'livemesh-el-addons' ),
@@ -203,6 +206,9 @@ class LAE_Posts_Multislider_Widget extends LAE_Widget_Base
             'type'        => Controls_Manager::TEXT,
             'condition'   => [
             'query_type' => [ 'custom_query', 'related' ],
+        ],
+            'ai'          => [
+            'active' => false,
         ],
         ] );
         $this->add_control( 'offset', [
@@ -333,20 +339,40 @@ class LAE_Posts_Multislider_Widget extends LAE_Widget_Base
         ],
         ] );
         $this->end_controls_section();
+        $this->start_controls_section( 'section_templates', [
+            'label' => __( 'Templates', 'livemesh-el-addons' ),
+            'tab'   => Controls_Manager::TAB_LAYOUT,
+        ] );
+        $style_options = [
+            'style-1' => [
+            'title'      => __( 'Style 1', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'posts-multislider/style1.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'posts-multislider/style1.jpg',
+            'width'      => '100%',
+        ],
+            'style-2' => [
+            'title'      => __( 'Style 2', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'posts-multislider/style2.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'posts-multislider/style2.jpg',
+            'width'      => '100%',
+        ],
+            'style-3' => [
+            'title'      => __( 'Style 3', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'posts-multislider/style3.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'posts-multislider/style3.jpg',
+            'width'      => '100%',
+        ],
+        ];
+        $this->add_control( 'slider_style', [
+            'type'    => 'lae-style-select',
+            'label'   => __( 'Choose Slider Style', 'livemesh-el-addons' ),
+            'default' => 'style-1',
+            'options' => $style_options,
+        ] );
+        $this->end_controls_section();
         $this->start_controls_section( 'section_slider_settings', [
             'label' => __( 'Multislider Settings', 'livemesh-el-addons' ),
             'tab'   => Controls_Manager::TAB_SETTINGS,
-        ] );
-        $slider_styles = array(
-            'style-1' => __( 'Slider Style 1', 'livemesh-el-addons' ),
-            'style-2' => __( 'Slider Style 2', 'livemesh-el-addons' ),
-            'style-3' => __( 'Slider Style 3', 'livemesh-el-addons' ),
-        );
-        $this->add_control( 'slider_style', [
-            'type'    => Controls_Manager::SELECT,
-            'label'   => __( 'Choose Slider Style', 'livemesh-el-addons' ),
-            'options' => $slider_styles,
-            'default' => 'style-1',
         ] );
         $this->add_control( 'text_alignment', [
             'type'      => Controls_Manager::SELECT,

@@ -144,6 +144,9 @@ class LAE_Portfolio_Widget extends LAE_Widget_Base
             'condition'   => [
             'query_type' => 'custom_query',
         ],
+            'ai'          => [
+            'active' => false,
+        ],
         ] );
         $this->add_control( 'posts_per_page', [
             'label'     => __( 'Posts Per Page', 'livemesh-el-addons' ),
@@ -202,6 +205,9 @@ class LAE_Portfolio_Widget extends LAE_Widget_Base
             'type'        => Controls_Manager::TEXT,
             'condition'   => [
             'query_type' => [ 'custom_query', 'related' ],
+        ],
+            'ai'          => [
+            'active' => false,
         ],
         ] );
         $this->add_control( 'offset', [
