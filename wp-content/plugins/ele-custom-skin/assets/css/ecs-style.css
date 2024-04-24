@@ -1,5 +1,8 @@
 /*  Elementor Custom Skin    */
 /*  https://www.dudaster.com */
+.swiper-container.swiper-initialized .ecs-posts{
+   overflow:visible; 
+}
 .ecs-post-loop .elementor-page-title{
   display:block;
 }

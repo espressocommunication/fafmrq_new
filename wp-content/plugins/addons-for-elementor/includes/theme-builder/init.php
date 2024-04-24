@@ -42,20 +42,15 @@ if (!class_exists('LAE_Theme_Builder_Init')):
 
         private function hooks() {
 
-            add_action('plugins_loaded', array($this, 'enhancement_hooks'));
+            add_action('elementor_pro/init', array($this, 'init'));
         }
 
         /**
          * @return void
          */
-        public function enhancement_hooks() {
+        public function init() {
 
-            // If plugin Elementor Pro is not active, then return.
-            if (!class_exists('ElementorPro\Plugin')) {
-                return;
-            }
-
-            add_action('elementor_pro/init', array($this, 'initialize_documents'));
+            $this->initialize_documents();
 
             add_action('elementor/theme/register_locations', array($this, 'register_locations'));
 
@@ -74,12 +69,6 @@ if (!class_exists('LAE_Theme_Builder_Init')):
         }
 
         public function register_documents(Documents_Manager $documents_manager) {
-
-            /* TODO: Look for a different hook to initialize documents - elementor_pro/init hook is not being called for maintenance tasks */
-            if (!class_exists('\LivemeshAddons\ThemeBuilder\Livemesh_Item') || !class_exists('\LivemeshAddons\ThemeBuilder\Livemesh_Grid')) {
-
-                $this->initialize_documents();
-            }
 
             $documents_manager->register_document_type('livemesh_item', Livemesh_Item::get_class_full_name());
 

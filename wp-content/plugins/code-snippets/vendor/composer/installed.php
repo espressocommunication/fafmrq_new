@@ -3,7 +3,7 @@
         'name' => 'codesnippetspro/code-snippets',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'f0c5b8d4601f669eb0ad5ba7bc306dbf3ae7ada6',
+        'reference' => '86cc03f2ffd5646d4b0cebc5dd6e1928415371d0',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'codesnippetspro/code-snippets' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'f0c5b8d4601f669eb0ad5ba7bc306dbf3ae7ada6',
+            'reference' => '86cc03f2ffd5646d4b0cebc5dd6e1928415371d0',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,26 +1,28 @@
-=== Livemesh Addons for Elementor ===
+=== Elementor Addons by Livemesh ===
 Author URI: https://livemeshelementor.com
 Plugin URI: https://livemeshelementor.com
 Donate link: https://livemeshelementor.com/
 Contributors: livemesh, elementoraddons, freemius
-Tags: elementor, elementor addons, elementor extensions, elementor widgets, page builder, woocommerce elementor
-Requires at least: 5.4
-Tested up to: 6.1
-Requires PHP: 5.6
-Stable Tag: 7.5
+Tags: elementor, elementor addons, elementor extensions, elementor widgets, page builder, woocommerce elementor, elementor ui kit
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 5.8
+Stable Tag: 8.3.7
 License: GPLv3
 License URI: https://opensource.org/licenses/GPL-3.0
 
-A collection of premium quality addons or modules for use in Elementor page builder. Elementor must be installed and activated.
+Elementor Addons saves time with multiple ready-to-use drag and drop styles for 30+ essential widgets built for Elementor page builder.
 
 == Description ==
 
-**The Oldest, Best Rated and Most Versatile Posts Addons Plugin For Elementor**
+**Elementor Addons that is beginner friendly and only Addons Plugin that comes with plenty of ready-to-use styles of essential addons you need to build a professional looking website.**
 ★★★★★<br>
 
-**Livemesh Addons for Elementor features a huge collection of premium, easy-to-use yet highly functional extensions that can be used in Elementor page builder.** This is really a premium plugin that you can get for free.
+**Livemesh Addons for Elementor features a great collection of premium, easy-to-use yet highly functional extensions that can be used in Elementor page builder.** This is really a premium plugin that you can get for free.
 
-This plugin comes with widgets for just about everything you need to build a professional website without switching to a premium theme - services, team profiles, counters, bar charts, piecharts, testimonials, clients list, portfolio/posts grid, posts carousels, pricing plan and much more in the <a href="https://livemeshelementor.com" title="Livemesh Addons for Elementor Premium Version">PRO version</a>. All the addons that help turn your free theme into a premium one with just a few clicks. Every premium page builder element you need is available for easy drag and drop into your page by just activating this plugin.
+This plugin comes with widgets for just about everything you need to build a professional website - services, team profiles, counters, bar charts, piecharts, testimonials, clients list, portfolio/posts grid, posts carousels, pricing plan and many more in the <a href="https://livemeshelementor.com" title="Livemesh Addons for Elementor Premium Version">PRO version</a>. Every premium page builder element you need is available for easy drag and drop into your page by just activating this plugin.
+
+**Our focus is to build plenty of drag and drop ready styles for most essential widgets you need to build any website.** Each of the styles look very professional and require little to no customization from you, saving tons of time. **We are adding more elegant styles everyday for most useful widgets instead of bloating our plugin with new widgets that you rarely need or never need.**
 
 <a href="https://wordpress.org/plugins/elementor/" rel="nofollow">Elementor</a> plugin must be activated to use this plugin. After you activate the required plugins, the addons should be available for use in Elementor.
 
@@ -30,7 +32,7 @@ See all of the elements in action here -
 
 ### Why Livemesh Addons for Elementor? ###
 * **Beautiful Design** - First thing you notice when you try our addons - focus on details and unmatched design for a product of this kind. Our work has been featured on leading sites for web design - AWWWARDS, Dribbble, TheBestDesigns, Envato, and Colorlib.
-* **Ease of Use** - We don't overwhelm you with plain-looking elements forcing you to customize endlessly to achieve the desired look. Instead, we bundle elegant styles with each addon for you to pick and choose, styles that don't require extensive customization.
+* **Ease of Use - We don't overwhelm you with loads of plain-looking widgets that expect you to customize endlessly to achieve the desired look. Instead, we bundle multiple elegant styles for most commonly used addons for you to pick and choose; styles that don't require extensive customization.**
 * **Fast Loading** - Along with a focus on design and usability, performance is core to the success of this addons plugin. We try to avoid features bloat by bundling essential styles and widgets.
 * **Quality Code** - With over 8 experience with WordPress development, we care to deliver a quality product.
 * **Mobile Optimized** - All Elementor extensions are well tested on devices of all sizes. Usability and ease of use are important to us.
@@ -259,6 +261,81 @@ Email us at support[at]livemeshthemes.com and we will be happy to assist you.
 
 
 
+
+= 8.3.7 =
+* Added - Escaping the data output for posts grid, posts gridbox slider, posts multislider, posts slider, heading, marquee text, tab slider widgets for enhanced validation of user input.
+
+= 8.3.6 =
+* Added - Escaping the style and template settings for sliders, posts grid, posts block, gallery, testimonials, services, team widgets for enhanced validation of user input.
+
+= 8.3.4 =
+* Added - The decoding sync attribute on images so that isotope filters work well
+
+= 8.3.3 =
+* Added - Validation for custom classes for timeline, device slider and marquee text widgets
+* Freemius SDK update to 2.6.2
+
+= 8.3.2 =
+* Added - Validation of links for team member, services and social URLs
+
+= 8.3.1 =
+* Added - Validation of class attributes for animated text widget
+
+= 8.3 =
+* Freemius SDK update to 2.6.1
+
+= 8.2.2 =
+* Added - A new template for the testimonials slider widget
+
+= 8.2.1 =
+* Added - Three new styles for the testimonials slider widget
+* Added - Dark version for testimonials slider widget styles
+
+= 8.2 =
+* Fixed - On rare occasions, not having Elementor PRO activated breaks the plugin.
+* Fixed - Styling issues on the team member profiles when the image size is too small to occupy the grid width
+* Fixed - The flipbox team member style can get cut when the carousel option is chosen
+
+= 8.1.1 =
+* Added - 4 more exciting new styles to team members widget. One of these based on flipbox effect and another invokes modal window to display team member details.
+
+= 8.1 =
+* Added - 3 new elegant styles to team members widget
+
+= 8.0 =
+* Added - Added intuitive image based style selector for posts gridbox slider, posts slider, posts multislider, testimonials, services, team members widgets.
+* Added - Image based style select control to help choose styles visually. Will replace text based select styles dropdown in many widgets in future versions of the plugin.
+* Updated - Compatibility with Elementor 3.17
+
+= 7.9.3 =
+* Added - New icons for few widgets
+* Updated - Minor code refactoring and improvements
+
+= 7.9.2 =
+* Freemius SDK update to 2.5.12
+* Updated - Compatibility with Elementor 3.16
+
+= 7.9.1 =
+* Added - Subtext option to the Marquee widget
+* Added - Ability to output HTML for the text of the Marquee widget
+* Updated - Compatibility with Elementor 3.14
+
+= 7.9 =
+* Freemius SDK update to 2.5.10
+
+= 7.8 =
+* Fixed - The Livemesh Item and Livemesh Grid do not show up in the list of template types in theme builder
+* Fixed - The current query option in posts widgets - posts grid, posts carousel, posts block broken
+
+= 7.7.1 =
+* Fixed - Issue with query construction
+
+= 7.7 =
+* Updated - Disabled/Enabled Elementor AI for relevant controls on several widgets
+
+= 7.6 =
+* Updated - Freemius SDK 2.5.8 update
+* Updated - Compatibility with Elementor 3.13
 
 = 7.5 =
 * Added - New elegant Timeline widget. Presently only supports horizontal timeline with touch swipe functions for navigation.
@@ -667,4 +744,3 @@ Email us at support[at]livemeshthemes.com and we will be happy to assist you.
 
 = 1.0 =
 * Initial release.
-

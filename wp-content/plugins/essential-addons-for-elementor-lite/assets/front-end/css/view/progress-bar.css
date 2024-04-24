@@ -72,7 +72,6 @@
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: width 1500ms linear;
-  -o-transition: width 1500ms linear;
   transition: width 1500ms linear;
   overflow: hidden;
 }
@@ -101,8 +100,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: inset(0 0 0 50%);
-          clip-path: inset(0 0 0 50%);
+  clip-path: inset(0 0 0 50%);
 }
 .eael-progressbar-circle-inner {
   height: 100%;
@@ -122,8 +120,7 @@
   border-style: solid;
   border-color: #000000;
   border-radius: 50%;
-  -webkit-clip-path: inset(0 50% 0 0);
-          clip-path: inset(0 50% 0 0);
+  clip-path: inset(0 50% 0 0);
 }
 .eael-progressbar-circle-half-left {
   -webkit-transform: rotate(0deg);
@@ -152,18 +149,15 @@
   overflow: hidden;
 }
 .eael-progressbar-half-circle .eael-progressbar-circle-pie {
-  -webkit-clip-path: inset(0 0 50% 0);
-          clip-path: inset(0 0 50% 0);
+  clip-path: inset(0 0 50% 0);
 }
 .eael-progressbar-half-circle .eael-progressbar-circle-half {
-  -webkit-clip-path: inset(50% 0 0 0);
-          clip-path: inset(50% 0 0 0);
+  clip-path: inset(50% 0 0 0);
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: -webkit-transform 1500ms linear;
   transition: -webkit-transform 1500ms linear;
-  -o-transition: transform 1500ms linear;
   transition: transform 1500ms linear;
   transition: transform 1500ms linear, -webkit-transform 1500ms linear;
 }
@@ -198,7 +192,6 @@
   left: -35px;
   width: calc(100% + 70px);
   height: 100%;
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 35px 35px;
 }
@@ -241,12 +234,10 @@
   right: 0;
 }
 .rtl .eael-progressbar.eael-progressbar-circle .eael-progressbar-circle-pie {
-  -webkit-clip-path: inset(0 50% 0 0);
-          clip-path: inset(0 50% 0 0);
+  clip-path: inset(0 50% 0 0);
 }
 .rtl .eael-progressbar.eael-progressbar-circle .eael-progressbar-circle-half {
-  -webkit-clip-path: inset(0 0 0 50%);
-          clip-path: inset(0 0 0 50%);
+  clip-path: inset(0 0 0 50%);
 }
 .rtl .eael-progressbar-circle-container .eael-progressbar-half-circle-after .eael-progressbar-prefix-label {
   float: left;

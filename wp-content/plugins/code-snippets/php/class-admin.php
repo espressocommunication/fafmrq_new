@@ -2,6 +2,8 @@
 
 namespace Code_Snippets;
 
+use DateTime;
+
 /**
  * Functions specific to the administration interface
  *
@@ -49,14 +51,10 @@ class Admin {
 		add_action( 'init', array( $this, 'load_classes' ), 11 );
 
 		add_filter( 'mu_menu_items', array( $this, 'mu_menu_items' ) );
-		add_filter( 'plugin_action_links_' . plugin_basename( PLUGIN_FILE ), array( $this, 'plugin_settings_link' ) );
-		add_filter( 'plugin_row_meta', array( $this, 'plugin_meta_links' ), 10, 2 );
+		add_filter( 'plugin_action_links_' . plugin_basename( PLUGIN_FILE ), array( $this, 'plugin_action_links' ), 10, 2 );
+		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 		add_filter( 'debug_information', array( $this, 'debug_information' ) );
 		add_action( 'code_snippets/admin/manage', array( $this, 'print_notices' ) );
-
-		if ( ! empty( $_POST['save_snippet'] ) ) {
-			add_action( 'code_snippets/allow_execute_snippet', array( $this, 'prevent_exec_on_save' ), 10, 3 );
-		}
 	}
 
 	/**
@@ -72,7 +70,7 @@ class Admin {
 	 *
 	 * @since 1.7.1
 	 */
-	public function mu_menu_items( $menu_items ) {
+	public function mu_menu_items( array $menu_items ): array {
 		$menu_items['snippets'] = __( 'Snippets', 'code-snippets' );
 		$menu_items['snippets_settings'] = __( 'Snippets &raquo; Settings', 'code-snippets' );
 
@@ -80,114 +78,78 @@ class Admin {
 	}
 
 	/**
-	 * Prevent the snippet currently being saved from being executed
-	 * so that it is not run twice (once normally, once when validated)
+	 * Modify the action links for this plugin.
 	 *
-	 * @param bool   $exec       Whether the snippet will be executed.
-	 * @param int    $exec_id    ID of the snippet being executed.
-	 * @param string $table_name Name of the database table the snippet is stored in.
+	 * @param array<string> $actions     Existing plugin action links.
+	 * @param string        $plugin_file The plugin the links are for.
 	 *
-	 * @return bool Whether the snippet will be executed.
-	 */
-	public function prevent_exec_on_save( $exec, $exec_id, $table_name ) {
-
-		if ( ! isset( $_POST['save_snippet'], $_POST['snippet_id'] ) ) {
-			return $exec;
-		}
-
-		if ( code_snippets()->db->get_table_name() !== $table_name ) {
-			return $exec;
-		}
-
-		$id = intval( $_POST['snippet_id'] );
-
-		if ( $id === $exec_id ) {
-			return false;
-		}
-
-		return $exec;
-	}
-
-	/**
-	 * Adds a link pointing to the Manage Snippets page
-	 *
-	 * @param array<string> $links Existing plugin action links.
-	 *
-	 * @return array<string> Modified plugin action links
+	 * @return array<string> Modified plugin action links.
 	 * @since 2.0.0
 	 */
-	public function plugin_settings_link( $links ) {
+	public function plugin_action_links( array $actions, string $plugin_file ): array {
+		if ( plugin_basename( PLUGIN_FILE ) !== $plugin_file ) {
+			return $actions;
+		}
+
 		$format = '<a href="%1$s" title="%2$s">%3$s</a>';
 
-		array_unshift(
-			$links,
-			sprintf(
-				$format,
-				esc_url( code_snippets()->get_menu_url( 'settings' ) ),
-				esc_html__( 'Change plugin settings', 'code-snippets' ),
-				esc_html__( 'Settings', 'code-snippets' )
-			)
+		return array_merge(
+			[
+				sprintf(
+					$format,
+					esc_url( code_snippets()->get_menu_url( 'settings' ) ),
+					esc_html__( 'Change plugin settings', 'code-snippets' ),
+					esc_html__( 'Settings', 'code-snippets' )
+				),
+				sprintf(
+					$format,
+					esc_url( code_snippets()->get_menu_url() ),
+					esc_html__( 'Manage your existing snippets', 'code-snippets' ),
+					esc_html__( 'Snippets', 'code-snippets' )
+				),
+			],
+			$actions,
+			[
+				sprintf(
+					'<a href="%1$s" title="%2$s" style="color: #d46f4d; font-weight: bold;" target="_blank">%3$s</a>',
+					'https://snipco.de/JE2i',
+					esc_attr__( 'Upgrade to Code Snippets Pro', 'code-snippets' ),
+					esc_html__( 'Go Pro', 'code-snippets' )
+				),
+			]
 		);
-
-		array_unshift(
-			$links,
-			sprintf(
-				$format,
-				esc_url( code_snippets()->get_menu_url() ),
-				esc_html__( 'Manage your existing snippets', 'code-snippets' ),
-				esc_html__( 'Snippets', 'code-snippets' )
-			)
-		);
-
-		return $links;
 	}
 
 	/**
 	 * Adds extra links related to the plugin
 	 *
-	 * @param array<string> $links Existing plugin info links.
-	 * @param string        $file  The plugin the links are for.
+	 * @param array<string> $plugin_meta Existing plugin info links.
+	 * @param string        $plugin_file The plugin the links are for.
 	 *
-	 * @return array<string> The modified plugin info links.
+	 * @return array<string> Modified plugin info links.
 	 * @since 2.0.0
 	 */
-	public function plugin_meta_links( $links, $file ) {
-
-		/* We only want to affect the Code Snippets plugin listing */
-		if ( plugin_basename( PLUGIN_FILE ) !== $file ) {
-			return $links;
+	public function plugin_row_meta( array $plugin_meta, string $plugin_file ): array {
+		if ( plugin_basename( PLUGIN_FILE ) !== $plugin_file ) {
+			return $plugin_meta;
 		}
 
 		$format = '<a href="%1$s" title="%2$s" target="_blank">%3$s</a>';
 
-		/* array_merge appends the links to the end */
-
 		return array_merge(
-			$links,
+			$plugin_meta,
 			array(
-				sprintf(
-					$format,
-					'https://codesnippets.pro/about/',
-					esc_attr__( 'Find out more about Code Snippets', 'code-snippets' ),
-					esc_html__( 'About', 'code-snippets' )
-				),
 				sprintf(
 					$format,
 					'https://help.codesnippets.pro/',
 					esc_attr__( 'Find out how to get support with Code Snippets', 'code-snippets' ),
-					esc_html__( 'Support', 'code-snippets' )
+					esc_html__( 'Docs and Support', 'code-snippets' )
 				),
 				sprintf(
 					$format,
 					'https://www.facebook.com/groups/codesnippetsplugin/',
 					esc_attr__( 'Join our community on Facebook', 'code-snippets' ),
-					esc_html__( 'FB Community', 'code-snippets' )
-				),
-				sprintf(
-					'<a href="%1$s" title="%2$s" style="color: #d46f4d;">%3$s</a>',
-					'https://codesnippets.pro/pricing/',
-					esc_attr__( 'Upgrade to Code Snippets Pro', 'code-snippets' ),
-					esc_html__( 'Upgrade to Pro', 'code-snippets' )
+					esc_html__( 'Community', 'code-snippets' )
 				),
 			)
 		);
@@ -201,7 +163,7 @@ class Admin {
 	 * @return array<string, array<string, mixed>> Updated Site Health information.
 	 * @author sc0ttkclark
 	 */
-	public function debug_information( $info ) {
+	public function debug_information( array $info ): array {
 		$fields = array();
 
 		// build the debug information from snippet data.
@@ -275,11 +237,21 @@ class Admin {
 			return;
 		}
 
-		if ( ! in_array( 'pro', $dismissed, true ) ) {
+		$now = new DateTime();
+		$period_start = new DateTime( '2023-11-19 00:00:00' );
+		$period_end = new DateTime( '2023-12-01 00:00:00' );
+
+		if ( ! in_array( 'bf23', $dismissed, true ) && $now > $period_start && $now < $period_end ) {
+			$notice = 'bf23';
+			$action_url = 'https://snipco.de/I_iW';
+			$action_label = __( 'Learn more', 'code-snippets' );
+			$text = __( "Don't miss out on our biggest Black Friday sale ever! Get 50% off on our plans.", 'code-snippets' );
+
+		} elseif ( ! in_array( 'pro', $dismissed, true ) ) {
 			$notice = 'pro';
 			$action_url = 'https://codesnippets.pro/pricing/';
 			$action_label = __( 'Upgrade now', 'code-snippets' );
-			$text = __( '<strong>Code Snippets Pro is here!</strong> Find more about the new features in Pro and our introductory launch offers.', 'code-snippets' );
+			$text = __( '<strong>Code Snippets Pro is here!</strong> Find more about the features in Pro and our current offers.', 'code-snippets' );
 
 		} elseif ( ! in_array( 'survey', $dismissed, true ) && ! in_array( 'true', $dismissed, true ) ) {
 			$notice = 'survey';
@@ -290,11 +262,15 @@ class Admin {
 			return;
 		}
 
-		printf( '<div class="notice notice-info code-snippets-notice code-snippets-%s-notice is-dismissible"><p>', esc_attr( sanitize_key( $notice ) ) );
+		printf(
+			'<div class="notice notice-info code-snippets-notice code-snippets-%s-notice is-dismissible"><p>',
+			esc_attr( sanitize_key( $notice ) )
+		);
+
 		echo wp_kses( $text, [ 'strong' => [] ] );
 
 		printf(
-			'<a href="%s" class="button secondary" target="_blank" style="margin: auto .5em;">%s</a>',
+			'<a href="%s" class="button button-secondary" target="_blank" style="margin: auto .5em;">%s</a>',
 			esc_url( $action_url ),
 			esc_html( $action_label )
 		);
@@ -317,25 +293,49 @@ class Admin {
 	 *
 	 * @return void
 	 */
-	public static function render_snippet_type_tab( $type_name, $label, $current_type = '' ) {
+	public static function render_snippet_type_tab( string $type_name, string $label, string $current_type = '' ) {
 		if ( $type_name === $current_type ) {
-			printf( '<a class="nav-tab nav-tab-active" data-type="%s">', esc_attr( $type_name ) );
+			printf( '<a class="nav-tab nav-tab-active" data-snippet-type="%s">', esc_attr( $type_name ) );
 
 		} elseif ( Plugin::is_pro_type( $type_name ) ) {
 			printf(
-				'<a class="nav-tab nav-tab-inactive" data-type="%s" title="%s" href="https://codesnippets.pro/pricing/" target="_blank">',
+				'<a class="nav-tab nav-tab-inactive" data-snippet-type="%s" title="%s" href="https://codesnippets.pro/pricing/" target="_blank">',
 				esc_attr( $type_name ),
 				esc_attr__( 'Available in Code Snippets Pro (external link)', 'code-snippets' )
 			);
 
 		} else {
+			$current_url = remove_query_arg( [ 'cloud_select', 'cloud_search' ] );
+
 			printf(
-				'<a class="nav-tab" href="%s" data-type="%s">',
-				esc_url( add_query_arg( 'type', $type_name ) ),
+				'<a class="nav-tab" href="%s" data-snippet-type="%s">',
+				esc_url( add_query_arg( 'type', $type_name, $current_url ) ),
 				esc_attr( $type_name )
 			);
 		}
 
-		echo esc_html( $label ), 'all' === $type_name ? '' : ' <span class="badge">' . esc_html( $type_name ) . '</span>', '</a>';
+		echo esc_html( $label );
+
+		switch ( $type_name ) {
+			case 'all':
+				break;
+			case 'cloud':
+				echo '<span class="cloud-badge dashicons dashicons-cloud cloud-icon cloud-synced"></span>';
+				break;
+			case 'cloud_search':
+				echo '<span class="cloud-badge dashicons dashicons-search cloud-icon cloud-downloaded"></span>';
+				break;
+			case 'bundles':
+				echo '<span class="cloud-badge dashicons dashicons-screenoptions cloud-icon cloud-bundle"></span>';
+				break;
+			case 'ai':
+				echo '<span class="cloud-badge ai-icon">', esc_html__( 'AI', 'code-snippets' ), '</span>';
+				break;
+			default:
+				echo '<span class="badge">' . esc_html( $type_name ) . '</span>';
+				break;
+		}
+
+		echo '</a>';
 	}
 }

@@ -104,6 +104,9 @@ class LAE_Testimonials_Slider_Widget extends LAE_Widget_Base
             'dynamic'     => [
             'active' => true,
         ],
+            'ai'          => [
+            'active' => false,
+        ],
         ] );
         $repeater->add_control( 'credentials', [
             'label'       => __( 'Client Details', 'livemesh-el-addons' ),
@@ -172,6 +175,54 @@ class LAE_Testimonials_Slider_Widget extends LAE_Widget_Base
             'type'      => Controls_Manager::RAW_HTML,
             'separator' => 'before',
             'raw'       => '<div style="text-align:center;line-height:1.6;"><p>' . __( 'Unlock new possibilities with premium widgets and styles of <strong>Livemesh Addons for Elementor <i>Premium</i></strong>. ', 'livemesh-el-addons' ) . '</p><p style="padding-top:15px;"><a class="elementor-button elementor-button-default elementor-button-go-pro" href="https://livemeshelementor.com/pricing/#pricing-plans" target="_blank"><i class="fa fa-hand-o-right" aria-hidden="true"></i>' . __( 'Go Pro', 'livemesh-el-addons' ) . '</a></p></div>',
+        ] );
+        $this->end_controls_section();
+        $this->start_controls_section( 'section_templates', [
+            'label' => __( 'Templates', 'livemesh-el-addons' ),
+            'tab'   => Controls_Manager::TAB_LAYOUT,
+        ] );
+        $style_options = [
+            'style1' => [
+            'title'      => __( 'Style 1', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style1.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style1.jpg',
+            'width'      => '100%',
+        ],
+            'style2' => [
+            'title'      => __( 'Style 2', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style2.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style2.jpg',
+            'width'      => '100%',
+        ],
+            'style3' => [
+            'title'      => __( 'Style 3', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style3.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style3.jpg',
+            'width'      => '100%',
+        ],
+            'style4' => [
+            'title'      => __( 'Style 4', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style4.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style4.jpg',
+            'width'      => '100%',
+        ],
+            'style5' => [
+            'title'      => __( 'Style 5', 'livemesh-el-addons' ),
+            'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style5.jpg',
+            'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials-slider/style5.jpg',
+            'width'      => '100%',
+        ],
+        ];
+        $this->add_control( 'slider_style', [
+            'type'    => 'lae-style-select',
+            'label'   => __( 'Choose Slider Style', 'livemesh-el-addons' ),
+            'default' => 'style1',
+            'options' => $style_options,
+        ] );
+        $this->add_control( 'customize_styles', [
+            'type'      => Controls_Manager::RAW_HTML,
+            'separator' => 'before',
+            'raw'       => '<div style="line-height:1.6;"><p>' . __( 'The slider styles are easy to customize with the powerful yet free <strong><a href="https://wordpress.org/plugins/so-css/" title="Siteorigin CSS" target="_blank">SiteOrigin CSS</a></strong> plugin. ', 'livemesh-el-addons' ) . '</p></div>',
         ] );
         $this->end_controls_section();
         $this->start_controls_section( 'section_settings', [

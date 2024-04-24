@@ -47,7 +47,7 @@ class LAE_Animated_Text_Widget extends LAE_Widget_Base
      */
     public function get_icon()
     {
-        return 'eicon-animated-headline';
+        return 'lae-icon-spell-check';
     }
     
     /**
@@ -94,6 +94,9 @@ class LAE_Animated_Text_Widget extends LAE_Widget_Base
             'type'        => Controls_Manager::TEXT,
             'label'       => __( 'Container Class', 'livemesh-el-addons' ),
             'description' => __( 'The CSS class for the animated text container DIV element.', 'livemesh-el-addons' ),
+            'ai'          => [
+            'active' => false,
+        ],
         ] );
         $this->add_control( 'before_text', [
             'type'        => Controls_Manager::TEXT,

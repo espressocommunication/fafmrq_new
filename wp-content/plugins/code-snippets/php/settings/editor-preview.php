@@ -41,6 +41,8 @@ function enqueue_editor_preview_assets() {
 		true
 	);
 
+	wp_set_script_translations( 'code-snippets-settings-menu', 'code-snippets' );
+
 	// Extract the CodeMirror-specific editor settings.
 	$setting_fields = get_settings_fields();
 	$editor_fields = array();
@@ -68,7 +70,7 @@ function enqueue_editor_preview_assets() {
  *
  * @return array<string, string> List of editor themes.
  */
-function get_editor_theme_list() {
+function get_editor_theme_list(): array {
 	$themes = [
 		'default' => __( 'Default', 'code-snippets' ),
 	];

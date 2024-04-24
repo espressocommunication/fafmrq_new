@@ -49,7 +49,7 @@ class LAE_Message_Box_Widget extends LAE_Widget_Base
      */
     public function get_icon()
     {
-        return 'eicon-alert';
+        return 'lae-icon-sign';
     }
     
     /**

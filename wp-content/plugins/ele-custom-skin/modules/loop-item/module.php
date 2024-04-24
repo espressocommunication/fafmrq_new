@@ -82,8 +82,8 @@ final class Ele_Custom_Loop_Item{
 
 		// Add Plugin actions
 		add_action( 'elementor/widgets/register', [ $this, 'init_widgets' ] );
-		add_action( 'elementor/controls/controls_registered', [ $this, 'init_controls' ] );
-    $this->init_includes();
+		add_action( 'elementor/controls/register', [ $this, 'init_controls' ] );
+        $this->init_includes();
  
 	}
 

@@ -230,11 +230,11 @@ function lae_get_grid_classes( $settings, $columns_field = 'per_line' )
         $grid_classes = ' lae-grid-auto-column-layout';
     } else {
         $grid_classes = ' lae-grid-desktop-';
-        $grid_classes .= $settings[$columns_field];
+        $grid_classes .= esc_attr( $settings[$columns_field] );
         $grid_classes .= ' lae-grid-tablet-';
-        $grid_classes .= $settings[$columns_field . '_tablet'];
+        $grid_classes .= esc_attr( $settings[$columns_field . '_tablet'] );
         $grid_classes .= ' lae-grid-mobile-';
-        $grid_classes .= $settings[$columns_field . '_mobile'];
+        $grid_classes .= esc_attr( $settings[$columns_field . '_mobile'] );
     }
     
     return apply_filters(
@@ -506,6 +506,7 @@ function lae_get_image_html(
             $image_attrs = array_merge( $image_attrs, array(
                 'data-no-lazy' => 1,
                 'loading'      => 'eager',
+                'decoding'     => 'sync',
             ) );
         }
         $image_html .= wp_get_attachment_image(
@@ -525,7 +526,7 @@ function lae_get_image_html(
         if ( !empty($image_src) ) {
             $lazy_load_attr = '';
             if ( $disable_lazy_load ) {
-                $lazy_load_attr = 'loading=eager data-no-lazy=1';
+                $lazy_load_attr = 'decoding="sync" loading="eager" data-no-lazy=1';
             }
             $image_class_html = ( !empty($image_class) ? ' class="' . $image_class . '"' : '' );
             

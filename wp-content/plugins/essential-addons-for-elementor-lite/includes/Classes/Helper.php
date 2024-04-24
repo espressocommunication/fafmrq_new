@@ -109,11 +109,11 @@ class Helper
             'single',
             'post',
             'page',
-            'archive',
+            // 'archive',
             'search-results',
             'error-404',
-            'product',
-            'product-archive',
+            // 'product',
+            // 'product-archive',
             'section',
         ];
 
@@ -169,60 +169,66 @@ class Helper
 
     public static function get_query_args($settings = [], $post_type = 'post')
     {
-        $settings = wp_parse_args($settings, [
-            'post_type' => $post_type,
-            'posts_ids' => [],
-            'orderby' => 'date',
-            'order' => 'desc',
-            'posts_per_page' => 3,
-            'offset' => 0,
-            'post__not_in' => [],
-        ]);
+	    $settings = wp_parse_args( $settings, [
+		    'post_type'      => $post_type,
+		    'posts_ids'      => [],
+		    'orderby'        => 'date',
+		    'order'          => 'desc',
+		    'posts_per_page' => 3,
+		    'offset'         => 0,
+		    'post__not_in'   => [],
+	    ] );
 
-        $args = [
-            'orderby' => $settings['orderby'],
-            'order' => $settings['order'],
-            'ignore_sticky_posts' => 1,
-            'post_status' => 'publish',
-            'posts_per_page' => $settings['posts_per_page'],
-            'offset' => $settings['offset'],
-        ];
+	    $args = [
+		    'orderby'             => $settings['orderby'],
+		    'order'               => $settings['order'],
+		    'ignore_sticky_posts' => 1,
+		    'post_status'         => 'publish',
+		    'posts_per_page'      => $settings['posts_per_page'],
+		    'offset'              => $settings['offset'],
+	    ];
 
-        if ('by_id' === $settings['post_type']) {
-            $args['post_type'] = 'any';
-            $args['post__in'] = empty($settings['posts_ids']) ? [0] : $settings['posts_ids'];
-        } else {
-            $args['post_type'] = $settings['post_type'];
+	    if ( 'by_id' === $settings['post_type'] ) {
+		    $args['post_type'] = 'any';
+		    $args['post__in']  = empty( $settings['posts_ids'] ) ? [ 0 ] : $settings['posts_ids'];
+	    } else {
+		    $args['post_type'] = $settings['post_type'];
+		    $args['tax_query'] = [];
 
-            //if ($args['post_type'] !== 'page') {
-                $args['tax_query'] = [];
+		    $taxonomies = get_object_taxonomies( $settings['post_type'], 'objects' );
 
-                $taxonomies = get_object_taxonomies($settings['post_type'], 'objects');
+		    foreach ( $taxonomies as $object ) {
+			    $setting_key = $object->name . '_ids';
 
-                foreach ($taxonomies as $object) {
-                    $setting_key = $object->name . '_ids';
+			    if ( ! empty( $settings[ $setting_key ] ) ) {
+				    $args['tax_query'][] = [
+					    'taxonomy' => $object->name,
+					    'field'    => 'term_id',
+					    'terms'    => $settings[ $setting_key ],
+				    ];
+			    }
+		    }
 
-                    if (!empty($settings[$setting_key])) {
-                        $args['tax_query'][] = [
-                            'taxonomy' => $object->name,
-                            'field' => 'term_id',
-                            'terms' => $settings[$setting_key],
-                        ];
-                    }
-                }
+		    if ( ! empty( $args['tax_query'] ) ) {
+			    $args['tax_query']['relation'] = 'AND';
+		    }
+	    }
 
-                if (!empty($args['tax_query'])) {
-                    $args['tax_query']['relation'] = 'AND';
-                }
-            //}
-        }
+	    if ( $args['orderby'] === 'most_viewed' ) {
+		    $args['orderby']  = 'meta_value_num';
+		    $args['meta_key'] = '_eael_post_view_count';
+	    }
 
-        if (!empty($settings['authors'])) {
-            $args['author__in'] = $settings['authors'];
-        }
+	    if ( ! empty( $settings['authors'] ) ) {
+		    $args['author__in'] = $settings['authors'];
+	    }
 
-        if (!empty($settings['post__not_in'])) {
-            $args['post__not_in'] = $settings['post__not_in'];
+	    if ( ! empty( $settings['post__not_in'] ) ) {
+		    $args['post__not_in'] = $settings['post__not_in'];
+	    }
+
+        if( 'product' === $post_type && function_exists('whols_lite') ){
+            $args['meta_query'] = array_filter( apply_filters( 'woocommerce_product_query_meta_query', $args['meta_query'], new \WC_Query() ) );
         }
 
         return $args;
@@ -291,17 +297,18 @@ class Helper
      */
     public static function get_post_orderby_options()
     {
-        $orderby = array(
-            'ID' => 'Post ID',
-            'author' => 'Post Author',
-            'title' => 'Title',
-            'date' => 'Date',
-            'modified' => 'Last Modified Date',
-            'parent' => 'Parent Id',
-            'rand' => 'Random',
-            'comment_count' => 'Comment Count',
-            'menu_order' => 'Menu Order',
-        );
+	    $orderby = array(
+		    'ID'            => __( 'Post ID', 'essential-addons-for-elementor-lite' ),
+		    'author'        => __( 'Post Author', 'essential-addons-for-elementor-lite' ),
+		    'title'         => __( 'Title', 'essential-addons-for-elementor-lite' ),
+		    'date'          => __( 'Date', 'essential-addons-for-elementor-lite' ),
+		    'modified'      => __( 'Last Modified Date', 'essential-addons-for-elementor-lite' ),
+		    'parent'        => __( 'Parent Id', 'essential-addons-for-elementor-lite' ),
+		    'rand'          => __( 'Random', 'essential-addons-for-elementor-lite' ),
+		    'comment_count' => __( 'Comment Count', 'essential-addons-for-elementor-lite' ),
+		    'most_viewed'   => __( 'Most Viewed', 'essential-addons-for-elementor-lite' ),
+		    'menu_order'    => __( 'Menu Order', 'essential-addons-for-elementor-lite' )
+	    );
 
         return $orderby;
     }
@@ -678,7 +685,7 @@ class Helper
 		global $product;
 
 		if ( ! is_a( $product, 'WC_Product' ) ) {
-			return;
+			return ''; 
 		}
 
 		$separator = '';
@@ -757,6 +764,19 @@ class Helper
 
             if (!empty($args['tax_query'])) {
                 $args['tax_query']['relation'] = 'AND';
+            }
+
+            $args[ 'meta_query' ] = [ 'relation' => 'AND' ];
+            $show_stock_out_products = isset( $settings['eael_product_out_of_stock_show'] ) ? $settings['eael_product_out_of_stock_show'] : 'yes';
+
+            if ( get_option( 'woocommerce_hide_out_of_stock_items' ) == 'yes' || 'yes' !== $show_stock_out_products  ) {
+                $args[ 'meta_query' ][] = [
+                    'key'   => '_stock_status',
+                    'value' => 'instock'
+                ];
+            }
+            if( 'product' === $args['post_type'] && function_exists('whols_lite') ){
+                $args['meta_query'] = array_filter( apply_filters( 'woocommerce_product_query_meta_query', $args['meta_query'], new \WC_Query() ) );
             }
         }
 
@@ -895,7 +915,7 @@ class Helper
 	 */
 	public static function eael_pagination ($args, $settings) {
 
-		$pagination_Count          = intval( $args['total_post'] );
+		$pagination_Count          = intval( $args['total_post'] ?? 0 );
 		$paginationLimit           = intval( $settings['eael_product_grid_products_count'] ) ?: 4;
 		$pagination_Paginationlist = ceil( $pagination_Count / $paginationLimit );
 		$widget_id                 = sanitize_key( $settings['eael_widget_id'] );
@@ -945,9 +965,9 @@ class Helper
 
 		$sale_badge_align  = isset( $settings['eael_product_sale_badge_alignment'] ) ? $settings['eael_product_sale_badge_alignment'] : '';
 		$sale_badge_preset = isset( $settings['eael_product_sale_badge_preset'] ) ? $settings['eael_product_sale_badge_preset'] : '';
-		$sale_text         = ! empty( $settings['eael_product_carousel_sale_text'] ) ? $settings['eael_product_carousel_sale_text'] : (! empty( $settings['eael_product_sale_text'] ) ? $settings['eael_product_sale_text'] :'Sale!');
-		$stockout_text     = ! empty( $settings['eael_product_carousel_stockout_text'] ) ? $settings['eael_product_carousel_stockout_text'] : (! empty( $settings['eael_product_stockout_text'] ) ? $settings['eael_product_stockout_text'] :'Stock Out');
-		$tag               = ! empty( $settings['eael_product_quick_view_title_tag'] ) ? self::eael_validate_html_tag( $settings['eael_product_quick_view_title_tag'] ) : 'h1';
+		$sale_text         = ! empty( $settings['eael_product_carousel_sale_text'] ) ? $settings['eael_product_carousel_sale_text'] : (! empty( $settings['eael_product_sale_text'] ) ? $settings['eael_product_sale_text'] :( !empty( $settings['eael_product_gallery_sale_text'] ) ? $settings['eael_product_gallery_sale_text'] : 'Sale!' ));
+		$stockout_text     = ! empty( $settings['eael_product_carousel_stockout_text'] ) ? $settings['eael_product_carousel_stockout_text'] : (! empty( $settings['eael_product_stockout_text'] ) ? $settings['eael_product_stockout_text'] : ( !empty($settings['eael_product_gallery_stockout_text']) ? $settings['eael_product_gallery_stockout_text'] : 'Stock Out' ));
+        $tag               = ! empty( $settings['eael_product_quick_view_title_tag'] ) ? self::eael_validate_html_tag( $settings['eael_product_quick_view_title_tag'] ) : 'h1';
         
         remove_action( 'eael_woo_single_product_summary', 'woocommerce_template_single_title', 5 );
         add_action( 'eael_woo_single_product_summary', function () use ( $tag ) {
@@ -963,7 +983,7 @@ class Helper
 				<div id="product-<?php esc_attr( get_the_ID() ); ?>" <?php post_class( 'product' ); ?>>
 					<div class="eael-product-image-wrap">
 						<?php
-						echo ( ! $product->is_in_stock() ? '<span class="eael-onsale outofstock '.esc_attr( $sale_badge_preset ).' '.esc_attr( $sale_badge_align ).'">'. esc_html( $stockout_text ) .'</span>' : ($product->is_on_sale() ? '<span class="eael-onsale '.esc_attr( $sale_badge_preset ).' '.esc_attr( $sale_badge_align ).'">' . esc_html( $sale_text ) . '</span>' : '') );
+						echo ( ! $product->is_in_stock() ? '<span class="eael-onsale outofstock '.esc_attr( $sale_badge_preset ).' '.esc_attr( $sale_badge_align ).'">'. Helper::eael_wp_kses( $stockout_text ) .'</span>' : ($product->is_on_sale() ? '<span class="eael-onsale '.esc_attr( $sale_badge_preset ).' '.esc_attr( $sale_badge_align ).'">' . Helper::eael_wp_kses( $sale_text ) . '</span>' : '') );
 						do_action( 'eael_woo_single_product_image' );
 						?>
 					</div>
@@ -1023,9 +1043,12 @@ class Helper
 	 * @param $text
 	 * @return string
 	 */
-    public static function eael_wp_kses($text){
-        return wp_kses($text,self::eael_allowed_tags());
-    }
+	public static function eael_wp_kses( $text ) {
+        if ( empty( $text ) ) {
+            return '';
+        }
+		return wp_kses( $text, self::eael_allowed_tags(), array_merge( wp_allowed_protocols(), [ 'data' ] ) );
+	}
 
 	/**
      * List of allowed html tag for wp_kses
@@ -1033,243 +1056,295 @@ class Helper
 	 * eael_allowed_tags
 	 * @return array
 	 */
-    public static function eael_allowed_tags(){
+	public static function eael_allowed_tags() {
+		return [
+			'a'       => [
+				'href'   => [],
+				'title'  => [],
+				'class'  => [],
+				'rel'    => [],
+				'id'     => [],
+				'style'  => [],
+				'target' => [],
+				'data-elementor-open-lightbox' => [],
+			],
+			'q'       => [
+				'cite'  => [],
+				'class' => [],
+				'id'    => [],
+			],
+			'img'     => [
+				'src'    => [],
+				'alt'    => [],
+				'height' => [],
+				'width'  => [],
+				'class'  => [],
+				'id'     => [],
+				'style'  => []
+			],
+			'span'    => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'dfn'     => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'time'    => [
+				'datetime' => [],
+				'class'    => [],
+				'id'       => [],
+				'style'    => [],
+			],
+			'cite'    => [
+				'title' => [],
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'hr'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'b'       => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'p'       => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'i'       => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'u'       => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			's'       => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'br'      => [],
+			'em'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'code'    => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'mark'    => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'small'   => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'abbr'    => [
+				'title' => [],
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'strong'  => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'del'     => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'ins'     => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'sub'     => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'sup'     => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'div'     => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+			'strike'  => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'acronym' => [],
+			'h1'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'h2'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'h3'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'h4'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'h5'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'h6'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'button'  => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'center'  => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'ul'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'ol'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'li'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+			],
+			'table'   => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+				'dir'   => [],
+				'align' => [],
+			],
+			'thead'   => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+				'align' => [],
+			],
+			'tbody'   => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+				'align' => [],
+			],
+			'tfoot'   => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+				'align' => [],
+			],
+			'th'      => [
+				'class'   => [],
+				'id'      => [],
+				'style'   => [],
+				'align'   => [],
+				'colspan' => [],
+				'rowspan' => [],
+			],
+			'tr'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => [],
+				'align' => [],
+			],
+			'td'      => [
+				'class'   => [],
+				'id'      => [],
+				'style'   => [],
+				'align'   => [],
+				'colspan' => [],
+				'rowspan' => [],
+			],
+			'header'      => [
+				'class'   => [],
+				'id'      => [],
+				'style'   => [],
+			],
+		];
+	}
+
+    /**
+     * List of allowed icon/svg tags for wp_kses
+     *
+	 * eael_allowed_icon_tags
+	 * @return array
+	 */
+    public static function eael_allowed_icon_tags(){
         return [
-            'a' => [
-                'href' => [],
-                'title' => [],
-                'class' => [],
-                'rel' => [],
-                'id' => [],
-                'style' => []
+            'svg'   => [
+                'class'           => [],
+                'aria-hidden'     => [],
+                'aria-labelledby' => [],
+                'role'            => [],
+                'xmlns'           => [],
+                'width'           => [],
+                'height'          => [],
+                'viewbox'         => []
             ],
-            'q' => [
-                'cite' => [],
-                'class' => [],
-                'id' => [],
+            'g'     => [ 'fill'  => [] ],
+            'title' => [ 'title' => [] ],
+            'path'     => [
+                'd'    => [], 
+                'fill' => [] 
             ],
-            'img' => [
-                'src' => [],
-                'alt' => [],
-                'height' => [],
-                'width' => [],
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'span' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'dfn' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'time' => [
-                'datetime' => [],
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'cite' => [
-                'title' => [],
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'hr' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'b' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'p' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'i' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'u' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            's' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'br' => [],
-            'em' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'code' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'mark' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'small' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'abbr' => [
-                'title' => [],
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'strong' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'del' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'ins' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'sub' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'sup' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'div' => [
-                'class' => [],
-                'id' => [],
-                'style' => []
-            ],
-            'strike' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'acronym' => [],
-            'h1' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'h2' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'h3' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'h4' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'h5' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'h6' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'button' => [
-                'class' => [],
-                'id' => [],
-                'style' => [],
-            ],
-            'center' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-            ],
-            'ul' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-            ],
-            'ol' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-            ],
-            'li' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-            ],
-            'table' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-                'dir'   => [],
-                'align' => [],
-            ],
-            'thead' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-                'align' => [],
-            ],
-            'tbody' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-                'align' => [],
-            ],
-            'tfoot' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-                'align' => [],
-            ],
-            'th' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-                'align' => [],
-            ],
-            'tr' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-                'align' => [],
-            ],
-            'td' => [
-	            'class' => [],
-	            'id'    => [],
-	            'style' => [],
-                'align' => [],
-            ],
+			'i'      => [
+				'class' => [],
+				'id'    => [],
+				'style' => []
+			],
+            'img'     => [
+				'src'    => [],
+				'alt'    => [],
+				'height' => [],
+				'width'  => [],
+				'class'  => [],
+				'id'     => [],
+				'style'  => []
+			],
         ];
     }
 
@@ -1322,6 +1397,36 @@ class Helper
 
 		return $output;
 	}
+
+    /**
+     * Get SVG html by Icon
+     *
+     * Used to get svg attributes from Icon class for SVG Drawing widget
+     * @param string $icon             Icon
+     *
+     * @return string
+     */
+    public static function get_svg_by_icon( $icon ) {
+        if ( empty( $icon ) || empty( $icon['value'] ) || empty( $icon['library'] ) ) return '';
+
+        $svg_html = "";
+
+        $icon_name  = str_replace( [ 'fas fa-', 'fab fa-', 'far fa-' ], '', $icon['value'] );
+        $library    = str_replace( 'fa-', '', $icon['library'] );
+        $svg_object = file_get_contents( EAEL_PLUGIN_PATH . "assets/front-end/js/lib-view/icons/{$library}.json" );
+        $svg_object = json_decode( $svg_object, true );
+        $i_class    = str_replace(' ', '-', $icon['value']);
+
+        if ( empty( $svg_object['icons'][$icon_name] ) ) return $svg_html;
+
+        $icon       = $svg_object['icons'][$icon_name];
+        $view_box   = "0 0 {$icon[0]} {$icon[1]}";
+        $svg_html  .= "<svg class='svg-inline--". $i_class ."  eael-svg-icon' aria-hidden='true' data-icon='store' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='{$view_box}' >";
+        $svg_html  .= "<path d='{$icon[4]}'></path>";
+        $svg_html  .= "</svg>";
+
+        return $svg_html;
+    }
     
     /**
      * Get product image src and Product gallery's first image src
@@ -1364,5 +1469,49 @@ class Helper
 		} else {
 			return 'AND';
 		}
+	}
+
+	/**
+	 * Get current device by screen size
+	 *
+	 *
+	 * @return string device name.
+	 * @since 5.9.1
+	 *
+	 */
+	public static function eael_get_current_device_by_screen() {
+		if ( ! session_id() ) {
+			session_start( [
+				'read_and_close' => true,
+			] );
+		}
+
+		if ( isset( $_SESSION['eael_screen'] ) && ! empty( $breakpoints = Plugin::$instance->breakpoints->get_breakpoints_config() ) ) {
+			$breakpoints = array_filter( $breakpoints, function ( $breakpoint ) {
+				return $breakpoint['is_enabled'];
+			} );
+
+			if ( isset( $breakpoints['widescreen'] ) ) {
+				$widescreen = $breakpoints['widescreen'];
+				unset( $breakpoints['widescreen'] );
+				$breakpoints['desktop'] = $widescreen;
+			}else{
+                $breakpoints['desktop'] = [
+                    'value' => 2400
+                ];
+            }
+            
+			$current_screen = intval( $_SESSION['eael_screen'] );
+			foreach ( $breakpoints as $device => $screen ) {
+				if ( $current_screen <= $screen['value'] ) {
+					return $device;
+				}
+			}
+
+			return "widescreen";
+		}
+
+		// If no match is found, you can return a default value or handle it as needed.
+		return "unknown";
 	}
 }
