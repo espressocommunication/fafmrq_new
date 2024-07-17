@@ -365,6 +365,7 @@ class Product_Grid extends Widget_Base
                 'options' => [
                     'product'        => esc_html__( 'Products', 'essential-addons-for-elementor-lite' ),
                     'source_dynamic' => esc_html__( 'Dynamic', 'essential-addons-for-elementor-lite' ),
+                    'source_archive' => esc_html__( 'Archive', 'essential-addons-for-elementor-lite' ),
                 ],
             ]
         );
@@ -376,7 +377,7 @@ class Product_Grid extends Widget_Base
                 'raw'             => __( 'This option will only affect in <strong>Archive page of Elementor Theme Builder</strong> dynamically.', 'essential-addons-for-elementor-lite' ),
                 'content_classes' => 'eael-warning',
                 'condition'       => [
-                    'post_type' => 'source_dynamic',
+                    'post_type' => [ 'source_dynamic', 'source_archive' ],
                 ],
             ]
         );
@@ -398,7 +399,7 @@ class Product_Grid extends Widget_Base
             'default' => 'recent-products',
             'options' => $this->eael_get_product_filterby_options(),
             'condition' => [
-              'post_type!' => 'source_dynamic',
+              'post_type' => 'product',
             ],
         ]);
 
@@ -421,6 +422,7 @@ class Product_Grid extends Widget_Base
             'default' => 'date',
             'condition' => [
                 'eael_product_grid_product_filter!' => [ 'best-selling-products', 'top-products' ],
+                'post_type!' => 'source_archive',
             ]
 
         ]);
@@ -433,6 +435,9 @@ class Product_Grid extends Widget_Base
                 'desc' => 'Descending',
             ],
             'default' => 'desc',
+            'condition' => [
+                'post_type!' => 'source_archive',
+            ]
 
         ]);
 
@@ -443,6 +448,9 @@ class Product_Grid extends Widget_Base
             'min' => 1,
             'max' => 1000,
             'step' => 1,
+            'condition' => [
+                'post_type!' => 'source_archive',
+            ]
         ]);
 
         $this->add_control('product_offset', [
@@ -450,7 +458,8 @@ class Product_Grid extends Widget_Base
             'type' => Controls_Manager::NUMBER,
             'default' => 0,
             'condition' => [
-                'eael_product_grid_product_filter!' => 'manual'
+                'eael_product_grid_product_filter!' => 'manual',
+                'post_type!' => 'source_archive',
             ]
         ]);
 
@@ -465,7 +474,8 @@ class Product_Grid extends Widget_Base
 				    'default'     => [ 'publish', 'pending', 'future' ],
 				    'options'     => $this->eael_get_product_statuses(),
 				    'condition'   => [
-					    'eael_product_grid_product_filter!' => 'manual'
+					    'eael_product_grid_product_filter!' => 'manual',
+                        'post_type!' => 'source_archive',
 				    ]
 			    ]
 		    );
@@ -478,9 +488,20 @@ class Product_Grid extends Widget_Base
             'multiple' => true,
             'options' => HelperClass::get_terms_list('product_cat', 'slug'),
             'condition'   => [
+              'post_type' => 'product',
+              'eael_product_grid_product_filter!' => [ 'manual' , 'related-products' ],
+            ],
+        ]);
+
+        $this->add_control('eael_product_grid_tags', [
+            'label'       => esc_html__('Product Tags', 'essential-addons-for-elementor-lite'),
+            'type'        => Controls_Manager::SELECT2,
+            'label_block' => true,
+            'multiple'    => true,
+            'options'     => HelperClass::get_terms_list('product_tag', 'slug'),
+            'condition'   => [
               'post_type!' => 'source_dynamic',
-              'eael_product_grid_product_filter!' => 'manual',
-              'eael_product_grid_product_filter!' => 'related-products'
+              'eael_product_grid_product_filter!' => [ 'manual' , 'related-products' ],
             ],
         ]);
 
@@ -495,6 +516,19 @@ class Product_Grid extends Widget_Base
                 'post_type!' => 'source_dynamic',
                 'eael_product_grid_product_filter' => 'manual'
             ],
+        ]);
+
+        $this->add_control('product_type_logged_users', [
+            'label' => __('Product Type', 'essential-addons-for-elementor-lite'),
+            'type' => Controls_Manager::SELECT,
+            'description' => __('For logged in users only!', 'essential-addons-for-elementor-lite'),
+            'options' => [
+                '' => __('Select', 'essential-addons-for-elementor-lite'),
+                'purchased' => __('Purchased Only', 'essential-addons-for-elementor-lite'),
+                'not-purchased' => __('Not Purchased Only', 'essential-addons-for-elementor-lite'),
+            ],
+            'default' => '',
+
         ]);
 
         $this->add_control(
@@ -743,22 +777,30 @@ class Product_Grid extends Widget_Base
     protected function init_content_load_more_controls()
     {
         $this->start_controls_section('eael_product_grid_load_more_section', [
-            'label' => esc_html__('Load More', 'essential-addons-for-elementor-lite'),
+            'label'      => esc_html__('Load More', 'essential-addons-for-elementor-lite'),
             'conditions' => [
-                'relation' => 'or',
                 'terms' => [
                     [
-                        'name' => 'eael_product_grid_layout',
-                        'operator' => 'in',
-                        'value' => [
-                            'masonry',
-                        ],
+                        'relation' => 'or',
+                        'terms'    => [
+                            [
+                                'name'     => 'eael_product_grid_layout',
+                                'operator' => 'in',
+                                'value'    => [ 'masonry' ],
+                            ],
+                            [
+                                'name'     => 'show_pagination',
+                                'operator' => '!=',
+                                'value'    => 'true'
+                            ],
+                        ]
                     ],
                     [
-                        'name' => 'show_pagination',
-                        'operator' => '!=',
-                        'value' => 'true'
-                    ],
+                        'name'     => 'post_type',
+                        'operator' => '!==',
+                        'value'    => 'source_archive'
+                    ]
+
                 ],
             ],
         ]);
@@ -2246,7 +2288,8 @@ class Product_Grid extends Widget_Base
                 'tab' => Controls_Manager::TAB_CONTENT,
                 'condition' => [
                     'eael_product_grid_layout' => ['grid', 'list'],
-                    'show_load_more!' => 'true'
+                    'show_load_more!'          => 'true',
+                    'post_type!'               => 'source_archive',
                 ],
             ]
         );
@@ -2294,10 +2337,31 @@ class Product_Grid extends Widget_Base
             'eael_section_product_pagination_style',
             [
                 'label' => __('Pagination', 'essential-addons-for-elementor-lite'),
-                'tab' => Controls_Manager::TAB_STYLE,
-                'condition' => [
-                    'show_pagination' => 'true',
-                    'eael_product_grid_layout' => ['grid', 'list'],
+                'tab'   => Controls_Manager::TAB_STYLE,
+                'conditions' => [
+                    'relation' => 'or',
+                    'terms'    => [
+                        [
+                            'terms'    => [
+                                [
+                                    'name'     => 'show_pagination',
+                                    'operator' => ' === ',
+                                    'value'    => 'true'
+                                ],
+                                [
+                                    'name'     => 'eael_product_grid_layout',
+                                    'operator' => 'in',
+                                    'value'    => ['grid', 'list']
+                                ]
+                            ]
+                        ],
+                        [
+                            'name'     => 'post_type',
+                            'operator' => ' === ',
+                            'value'    => 'source_archive'
+                        ]
+
+                    ]
                 ],
             ]
         );
@@ -2324,6 +2388,7 @@ class Product_Grid extends Widget_Base
                 'default' => 'center',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -2343,6 +2408,7 @@ class Product_Grid extends Widget_Base
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination' => 'margin-top: {{SIZE}}px;',
+                    '{{WRAPPER}} {{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination' => 'margin-top: {{SIZE}}px;',
                 ],
             ]
         );
@@ -2351,7 +2417,8 @@ class Product_Grid extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'eael_product_grid_pagination_typography',
-                'selector' => '{{WRAPPER}} .eael-woo-pagination',
+                'selector' => '{{WRAPPER}} .eael-woo-pagination,
+                                {{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination',
             ]
         );
 
@@ -2368,6 +2435,7 @@ class Product_Grid extends Widget_Base
                 'default' => '#2F436C',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination a' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -2380,6 +2448,7 @@ class Product_Grid extends Widget_Base
                 'default' => '#fff',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination a' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination a' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -2389,7 +2458,8 @@ class Product_Grid extends Widget_Base
             [
                 'name' => 'eael_product_grid_pagination_normal_border',
                 'label' => esc_html__('Border', 'essential-addons-for-elementor-lite'),
-                'selector' => '{{WRAPPER}} .eael-woo-pagination a, {{WRAPPER}} .eael-woo-pagination span',
+                'selector' => '{{WRAPPER}} .eael-woo-pagination a, {{WRAPPER}} .eael-woo-pagination span, 
+                {{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination a',
             ]
         );
 
@@ -2406,6 +2476,7 @@ class Product_Grid extends Widget_Base
                 'default' => '#fff',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination a:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination a:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -2418,6 +2489,7 @@ class Product_Grid extends Widget_Base
                 'default' => '#8040FF',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination a:hover' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination a:hover' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -2430,6 +2502,7 @@ class Product_Grid extends Widget_Base
                 'default' => '',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination a:hover' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination a:hover' => 'border-color: {{VALUE}};',
                 ],
                 'condition' => [
                     'eael_product_grid_pagination_normal_border_border!' => '',
@@ -2450,6 +2523,7 @@ class Product_Grid extends Widget_Base
                 'default' => '#fff',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination .current' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination .current' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -2462,6 +2536,7 @@ class Product_Grid extends Widget_Base
                 'default' => '#8040FF',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination .current' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination .current' => 'background: {{VALUE}};',
                 ],
             ]
         );
@@ -2474,6 +2549,7 @@ class Product_Grid extends Widget_Base
                 'default' => '',
                 'selectors' => [
                     '{{WRAPPER}} .eael-woo-pagination .current' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .eael-product-grid-pagination .woocommerce-pagination .current' => 'border-color: {{VALUE}};',
                 ],
                 'condition' => [
                     'eael_product_grid_pagination_normal_border_border!' => '',
@@ -3110,8 +3186,9 @@ class Product_Grid extends Widget_Base
 
         // normalize for load more fix
 	    $settings['layout_mode']    = $settings["eael_product_grid_layout"];
-	    $widget_id                  = $this->get_id();
+	    $widget_id                  = esc_attr( $this->get_id() );
 	    $settings['eael_widget_id'] = $widget_id;
+        $is_product_archive         = is_product_tag() || is_product_category() || is_shop() || is_product_taxonomy();
 
 	    if ( $settings['post_type'] === 'source_dynamic' && is_archive() || ! empty( $_REQUEST['post_type'] ) ) {
 		    $settings['posts_per_page'] = $settings['eael_product_grid_products_count'] ?: 4;
@@ -3121,6 +3198,25 @@ class Product_Grid extends Widget_Base
 	    } else {
 		    $args = $this->build_product_query( $settings );
 	    }
+
+        $no_products_found = 0;
+
+        if ( is_user_logged_in() ) {
+            $product_purchase_type = ! empty( $settings['product_type_logged_users'] ) ? sanitize_text_field( $settings['product_type_logged_users'] ) : '';
+
+            if (  in_array( $product_purchase_type, ['purchased', 'not-purchased'] ) ) {
+                $user_ordered_products = HelperClass::eael_get_all_user_ordered_products();
+                $no_products_found = empty( $user_ordered_products ) && 'purchased' === $product_purchase_type ? 1 : 0;
+ 
+                if ( ! empty( $user_ordered_products ) && 'purchased' === $product_purchase_type ){
+                    $args['post__in'] = $user_ordered_products;
+                }
+
+                if ( ! empty( $user_ordered_products ) && 'not-purchased' === $product_purchase_type ){
+                    $args['post__not_in'] = $user_ordered_products;
+                }
+            }
+        }
 
 	    $this->is_show_custom_add_to_cart       = boolval( $settings['show_add_to_cart_custom_text'] );
 	    $this->simple_add_to_cart_button_text   = $settings['add_to_cart_simple_product_button_text'];
@@ -3163,8 +3259,16 @@ class Product_Grid extends Widget_Base
 
                 if ( file_exists( $template ) ) {
 	                $settings['eael_page_id'] = $this->page_id ? $this->page_id : get_the_ID();
-	                $query                    = new \WP_Query( $args );
-	                if ( $query->have_posts() ) {
+
+                    if( $settings['post_type'] === 'source_archive' && is_archive() && $is_product_archive ){
+                        global $wp_query;
+                        $query = $wp_query;
+                        $args  = $wp_query->query_vars;
+                    } else {
+	                    $query = new \WP_Query( $args );
+                    }
+
+	                if ( $query->have_posts() && ! $no_products_found ) {
 		                $found_posts        = $query->found_posts;
 		                $max_page           = ceil( $found_posts / absint( $args['posts_per_page'] ) );
 		                $args['max_page']   = $max_page;
@@ -3179,6 +3283,7 @@ class Product_Grid extends Widget_Base
                             wp_reset_postdata();
 
 		                echo '</ul>';
+                        do_action( 'eael_woo_after_product_loop' );
 
 	                } else {
 		                _e( '<p class="no-posts-found">No posts found!</p>', 'essential-addons-for-elementor-lite' );
@@ -3188,12 +3293,18 @@ class Product_Grid extends Widget_Base
 	                _e( '<p class="no-posts-found">No layout found!</p>', 'essential-addons-for-elementor-lite' );
                 }
 
-                if ( 'true' == $settings['show_pagination'] ) {
+                if ( 'true' == $settings['show_pagination'] && 'source_archive' !== $settings['post_type'] ) {
 	                $settings['eael_widget_name'] = $this->get_name();
 	                echo HelperClass::eael_pagination( $args, $settings );
                 }
 
-                if ( $found_posts > $args['posts_per_page'] ) {
+                if( 'source_archive' === $settings['post_type'] ){
+                    echo "<div class='eael-product-grid-pagination' >";
+                        woocommerce_pagination();
+                    echo "</div>";
+                }
+
+                if ( $found_posts > $args['posts_per_page'] && 'source_archive' !== $settings['post_type'] ) {
 	                $this->print_load_more_button( $settings, $args, $dir_name );
                 }
                 
@@ -3204,7 +3315,7 @@ class Product_Grid extends Widget_Base
 
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                var $scope = jQuery(".elementor-element-<?php echo $this->get_id(); ?>");
+                var $scope = jQuery(".elementor-element-<?php echo esc_js( $this->get_id() ); ?>");
                 var $products = $('.products', $scope);
                 var $layout_mode = $products.data('layout-mode');
                 
@@ -3268,14 +3379,21 @@ class Product_Grid extends Widget_Base
             $args['orderby'] = (isset($settings['orderby']) ? $settings['orderby'] : 'date');
         }
 
-        if (!empty($settings['eael_product_grid_categories'])) {
-            $args['tax_query'] = [
-                [
-                    'taxonomy' => 'product_cat',
-                    'field' => 'slug',
-                    'terms' => $settings['eael_product_grid_categories'],
-                    'operator' => 'IN',
-                ],
+        if ( ! empty( $settings['eael_product_grid_categories'] ) ) {
+            $args['tax_query'][] = [
+                'taxonomy' => 'product_cat',
+                'field'    => 'slug',
+                'terms'    => $settings['eael_product_grid_categories'],
+                'operator' => 'IN',
+            ];
+        }
+
+        if ( ! empty( $settings['eael_product_grid_tags'] ) ) {
+            $args['tax_query'][] = [
+                'taxonomy' => 'product_tag',
+                'field'    => 'slug',
+                'terms'    => $settings['eael_product_grid_tags'],
+                'operator' => 'IN',
             ];
         }
 

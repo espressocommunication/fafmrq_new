@@ -100,6 +100,8 @@ class Settings extends Module_Settings implements Setting_With_Owned_Keys_Interf
 			'adsConversionIDMigratedAtMs'      => 0,
 			'adsLinked'                        => false,
 			'adsLinkedLastSyncedAt'            => 0,
+			'availableAudiences'               => null,
+			'availableAudiencesLastSyncedAt'   => 0,
 		);
 	}
 
@@ -111,7 +113,7 @@ class Settings extends Module_Settings implements Setting_With_Owned_Keys_Interf
 	 * @return callable|null
 	 */
 	protected function get_sanitize_callback() {
-		return function( $option ) {
+		return function ( $option ) {
 			if ( is_array( $option ) ) {
 				if ( isset( $option['useSnippet'] ) ) {
 					$option['useSnippet'] = (bool) $option['useSnippet'];
@@ -149,7 +151,7 @@ class Settings extends Module_Settings implements Setting_With_Owned_Keys_Interf
 					if ( is_array( $option['availableCustomDimensions'] ) ) {
 						$valid_dimensions = array_filter(
 							$option['availableCustomDimensions'],
-							function( $dimension ) {
+							function ( $dimension ) {
 								return is_string( $dimension ) && strpos( $dimension, 'googlesitekit_' ) === 0;
 							}
 						);
@@ -183,6 +185,18 @@ class Settings extends Module_Settings implements Setting_With_Owned_Keys_Interf
 				if ( isset( $option['adsLinkedLastSyncedAt'] ) ) {
 					if ( ! is_int( $option['adsLinkedLastSyncedAt'] ) ) {
 						$option['adsLinkedLastSyncedAt'] = 0;
+					}
+				}
+
+				if ( isset( $option['availableAudiences'] ) ) {
+					if ( ! is_array( $option['availableAudiences'] ) ) {
+						$option['availableAudiences'] = null;
+					}
+				}
+
+				if ( isset( $option['availableAudiencesLastSyncedAt'] ) ) {
+					if ( ! is_int( $option['availableAudiencesLastSyncedAt'] ) ) {
+						$option['availableAudiencesLastSyncedAt'] = 0;
 					}
 				}
 			}
