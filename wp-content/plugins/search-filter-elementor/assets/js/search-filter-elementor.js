@@ -4,21 +4,21 @@
 		// re init layout after ajax request
 		$( document ).on( "sf:ajaxfinish", ".searchandfilter", function( e, data ) {
 			if ( window.elementorFrontend && window.elementorFrontend.elementsHandler && window.elementorFrontend.elementsHandler.runReadyTrigger) {
-				var runReadyTrigger = window.elementorFrontend.elementsHandler.runReadyTrigger;
-
-				runReadyTrigger( data.targetSelector );
-				var ajaxTarget = $( data.targetSelector );
-				if ( ajaxTarget.length > 0 ) {
-					// re-init the accordion js - elementor-widget-accordion
-					ajaxTarget.find( '.elementor-widget' ).each( function () {
-						runReadyTrigger( $( this ) );
-					} );
-				}
+				setTimeout( function() {
+					var runReadyTrigger = window.elementorFrontend.elementsHandler.runReadyTrigger;
+					runReadyTrigger(  $( data.targetSelector ) );
+					var ajaxTarget = $( data.targetSelector );
+					if ( ajaxTarget.length > 0 ) {
+						ajaxTarget.find( '.elementor-widget' ).each( function () {
+							runReadyTrigger( $( this ) );
+						} );
+					}
+				}, 100 );
 			}
 		});
 	});
 
-	//Detects the end of an ajax request being made
+	// Detects the end of an ajax request being made.
 	var forms = [];
 	$(document).on("sf:ajaxfinish", ".searchandfilter", function( e, form ){
 		var $form = $( '.searchandfilter[data-sf-form-id=' + form.sfid  + ']' )

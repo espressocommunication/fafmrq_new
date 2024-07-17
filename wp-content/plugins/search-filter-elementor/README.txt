@@ -4,7 +4,7 @@ Donate link:
 Tags: elementor, posts, woocommerce, products, portfolio, archive
 Requires at least: 5.2
 Tested up to: 6.4
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 
 Adds Search & Filter integration for Elementor - filter your Loop Grid, Posts, Portfolio, Products and Archives widgets.
 
@@ -45,6 +45,12 @@ Adds Search & Filter integration for Elementor - filter your Loop Grid, Posts, P
 
 
 == Changelog ==
+
+= 1.2.5 =
+* Fix - CSS issues when navigating from a page with no results.
+* Fix - an issue with the results class not being added to archive elementor widgets.
+* Fix - new JS errors after performing an ajax search.
+* Tested upto Elementor version 3.22
 
 = 1.2.4 =
 * Tested upto Elementor version 3.19

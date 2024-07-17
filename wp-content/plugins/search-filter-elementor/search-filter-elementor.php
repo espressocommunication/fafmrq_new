@@ -3,13 +3,13 @@
  * Plugin Name: Search & Filter - Elementor Extension
  * Description: Adds Search & Filter integration for Elementor -  filter your Loop Grid, Posts, Portfolio, Product and Archives widgets.
  * Plugin URI:  https://searchandfilter.com
- * Version:     1.2.4
+ * Version:     1.2.5
  * Author:      Code Amp
  * Author URI:  https://codeamp.com
  * Text Domain: search-filter-elementor
  *
- * Elementor tested up to: 3.19.0
- * Elementor Pro tested up to: 3.19.0
+ * Elementor tested up to: 3.22
+ * Elementor Pro tested up to: 3.22
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -33,7 +33,7 @@ final class Search_Filter_Elementor_Extension {
 	 *
 	 * @var string The plugin version.
 	 */
-	const VERSION = '1.2.4';
+	const VERSION = '1.2.5';
 
 	/**
 	 * Minimum Elementor Version
@@ -167,7 +167,6 @@ final class Search_Filter_Elementor_Extension {
 		add_action( 'elementor/editor/before_enqueue_styles', array( $this, 'enqueue_editor_styles' ), 10 );
 
 		// Porfolio + Posts element.
-
 		// Modify controls.
 		// Posts.
 		add_action( 'elementor/element/posts/section_query/before_section_end', array( $this, 'modify_posts_controls' ), 10, 2 );
@@ -892,6 +891,12 @@ final class Search_Filter_Elementor_Extension {
 
 	}
 
+	public function is_post_type_archive() {
+		if ( is_post_type_archive() || is_home() || is_tag() || is_tax() || is_category() ) {
+			return true;
+		}
+		return false;
+	}
 	/**
 	 * Add S&F results class to posts + porfolio widgets
 	 *
@@ -910,16 +915,33 @@ final class Search_Filter_Elementor_Extension {
 			$element_data     = $element->get_data();
 			$element_settings = $element_data['settings'];
 
-			if ( ! isset( $element_settings['search_filter_query'] ) ) {
-				return;
-			}
-
 			$control_prefix = $this->supported_element_prefix_map[ $element->get_name() ];
 
+			
 			if ( ! isset( $element_settings[ $control_prefix . '_post_type' ] ) ) {
 				return;
 			}
 
+
+			// Check to see if we are on an archive, and the post or loop grid is set to current query... 
+			// Then we might need to add our class...
+			if ( ( $element_settings[ $control_prefix . '_post_type' ] === 'current_query' ) && $this->is_post_type_archive() ) {
+				// Then we might need to add our class if search_filter_id is attached to the query.
+				global $wp_query;
+				if ( isset( $wp_query->query_vars['search_filter_id'] ) ) {
+					$element_class = 'search-filter-results-' . $wp_query->query_vars['search_filter_id'];
+					$args = array(
+						'class' => array( $element_class ),
+					);
+					$element->add_render_attribute( '_wrapper', $args );
+					return;
+				}
+			}
+
+			if ( ! isset( $element_settings['search_filter_query'] ) ) {
+				return;
+			}
+			
 			if ( 'search_filter_query' !== $element_settings[ $control_prefix . '_post_type' ] ) {
 				return;
 			}
@@ -1047,7 +1069,6 @@ final class Search_Filter_Elementor_Extension {
 	 * @access public
 	 */
 	public function filter_archives_before_render( $element ) {
-		// $sf_widget_types = array('posts', 'portfolio', 'products');
 
 		$sf_archive_element_types = array( 'archive-posts', 'wc-archive-products' );
 
@@ -1127,7 +1148,6 @@ final class Search_Filter_Elementor_Extension {
 		}
 
 		if ( in_array( $element->get_name(), $sf_element_types ) ) {
-
 			$control_prefix = $this->supported_element_prefix_map[ $element->get_name() ];
 
 			if ( ! isset( $element_settings[ $control_prefix . '_post_type' ] ) ) {

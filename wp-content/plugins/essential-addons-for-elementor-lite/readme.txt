@@ -2,9 +2,9 @@
 Contributors: wpdevteam, Codetic, re_enter_rupok, Asif2BD, priyomukul, sumaiyasiddika, rudlinkon, robinwpdeveloper, jakariaistauk, himadree12
 Tags: elementor, elements, addons, elementor addons, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 5.0
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 7.0
-Stable tag: 5.9.16
+Stable tag: 5.9.27
 License: GPLv3
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -297,55 +297,97 @@ Your existing elements/content will work with premium version. So you won't lose
 
 == Changelog ==
 
-= 5.9.16 - 23/04/2024 =
+= 5.9.27 - 11/07/2024 =
 
-- Improved: Security Enhancement
-- Fixed: EA Event Calendar | Table layout shows +6 hours ahead of events time in manual source 
-- Fixed: EA Woo Product Grid | not compatible with Whols plugin
-- Fixed: EA Woo Cart | Style-2 layout in mobile devices the "close" button style broken
-- Fixed: EA Interactive Circle | not allowing to click on icons sometimes
-- Fixed: EA Filterable Gallery | Images are not getting opened in lightbox
-- Improved: EA Table of Contents | Exclude the page title and the comment/review options
+- Updated: Custom Attributes inside EA Event Calendar
 - Few minor bug fixes & improvements
 
-= 5.9.15 - 09/04/2024 =
 
-- Fixed: EA Content Ticker | Navigation arrow styling is not working
-- Fixed: EA Content Ticker | Not working with Slide animation effect
-- Fixed: EA Woo Product Grid | Default layout doesn't show customized "sale/stock out" badge
-- Fixed: EA Event Calendar | Layout calendar and table showing different times for google calendar
-- Fixed: EA Event Calendar | Old event is not showing for Event Calendar as a source
-- Fixed: EA Login Register Form | Remember me checkbox is not working in the form
+= 5.9.26 - 11/07/2024 =
+
+- Improved: Security Enhancement
+- Fixed: EA Login / Register Form | Password form shows error when hit on "Forgot Password"
+- Fixed: Cannot redeclare control with same name "eael_global_warning_text"
+- Few minor bug fixes & improvements
+
+
+= 5.9.25 - 02/07/2024 =
+
+- Fixed: EA Simple Menu | Active menu not showing for archive pages
+- Fixed: Missing translatable strings for EA Woo Product List & EA NFT Gallery
+- Fixed: EA Call to action | Margin not being applied uniformly
+- Updated: WPML Config file in some widgets
+- Improved: EA Event Calendar for Security Enhancement
+- Improved: EA Post Grid | Added option to show user's first & last name instead of just username
+- Improved: EA Advanced Data Table | CSV Data import/export mechanism
+- Few minor bug fixes & improvements
+
+
+= 5.9.24 - 09/06/2024 =
+
+- Improved: User role permissions to add/edit custom JS
+- Few minor bug fixes & improvements
+
+= 5.9.23 - 05/06/2024 =
+
+- Improved: Security Enhancement
+- Improved: EA Login/Register Form | Added Score Threshold option for reCAPTCHA & option to remove the branding
+- Improved: EA Woo product Grid | Added option to filter by tags
+- Improved: EA Login/Register Form | Added support for register_form action hook
+- Improved: EA Login/Register Form | Added field for honeypot
+- Improved: EA Interactive Circle | Added option to rotate the Interactive Circle around the middle and pause on hover
+- Improved: EA Feature List | Added Horizontal layout option
+- Improved: EA Filterable Gallery | Added support for vertical 9:16 video
+- Fixed: EA Simple Menu | Using a hash link (#) on a sub-menu item within a hamburger menu will not open the dropdown item on mobile/tablet view
+- Fixed: EA Woo Product Grid | Not working properly with WordPress and WooCommerce Filter
+- Fixed: EA Filterable Gallery | Image Tag being changed from <a> tag to <img> tag after Version 5.9.15
+- Fixed: EA Advanced Data Table | Header text reverting to Black if the Sort option in the advanced Features is turned off
+- Fixed: EA Post Grid | Conflict with Ultimate Member plugin
+- Fixed: EA Post Grid | On Style 3 Terms on Hover is not showing after clicking on the Load More button
+- Fixed: EA WP Forms | EA WP Forms Widget Width Restriction in Latest Update
+- Fixed: EA Woo Product Gallery | Error in code — data-template and data-terms attributes
+- Fixed: EA Woo Product Grid | "Out of stock" badge showing on top of "Sale" badge
+- Fixed: EA Login/Register Form | Spinner is not visible on the front-end
+- Few minor bug fixes & improvements
+
+= 5.9.22 - 22/05/2024 =
+
 - Improved: Security Enhancement
 - Few minor bug fixes & improvements
 
-= 5.9.14 - 28/03/2024 =
+= 5.9.21 - 13/05/2024 =
+
+- Revamped: NFT Gallery | OpenSea API version
+- Fixed: Filterable Gallery | iframe not working issue
+- Improved: Security Enhancement
+- Few minor bug fixes & improvements
+
+= 5.9.20 - 08/05/2024 =
 
 - Improved: Security Enhancement
 - Few minor bug fixes & improvements
 
-= 5.9.13 - 25/03/2024 =
+= 5.9.19 - 05/05/2024 =
 
-- Fixed: EA Table of Contents | Throwing PHP Fatal error if the Display on option is set to Custom Post Types
-- Few minor bug fixes & improvements
-
-= 5.9.12 - 25/03/2024 =
-
-- Fixed: EA Pricing Table | HTML tag is not working for period separator
-- Fixed: EA Advanced Accordion | Accordion is not working properly with anchor tag
-- Fixed: EA Advanced Tabs | YouTube video is not showing inside the tabs
-- Fixed: EA Login Register Form | Redirect based on user role not working
-- Fixed: EA Login Register Form | Showing invalid in password reset link
-- Fixed: EA Login Register Form | Redirect issue with cross-Domain links without AJAX submission
-- Fixed: EA Filterable Gallery | Navigation icon distorts with Salient theme enabled
-- Fixed: EA Filterable Gallery | Not working on Elementor nested tab
-- Fixed: EA Interactive Circle | Animation is not working with scroll snap
-- Fixed: EA Feature List | Conflict with Global Controls
-- Fixed: EA Pricing Table | Regular price and on sale price is overlapping each other
-- Fixed: EA Advanced Data Table | Import csv file returns to old data on immediately click on style tab
-- Improved: EA Table of Contents | Display option available for all the Custom Post Types
-- Improved: EA Gravity Forms | Added progress bar styling options for multi-pages
-- Improved: Security Enhancement
+- Fixed: EA Sticky Video | Conflicts with the Blocksy theme
+- Fixed: EA Login Register Form | Validation message doesn't show up while using the form in the popup
+- Fixed: EA Login Register Form | Showing error message for not required field
+- Fixed: EA Simple Menu | Dropdown icon is not showing on the desktop mode
+- Fixed: EA Tooltip | Displaying the content after the hover is complete
+- Fixed: EA Feature list | Icons don't show when the shape view is set to Framed
+- Fixed: EA Contact Form 7 | Alignment of the container, title & description is not working
+- Fixed: EA Advanced Accordion | Conflicts with the Specia Standard theme
+- Fixed: EA Advanced Data Table | Checkbox is not showing when using TablePress
+- Fixed: EA Advanced Tabs| Switching tabs causes the page to scroll up or down
+- Fixed: EA Woo Checkout | 'User Account' & 'Coupon Percentage' icons are broken on checkout page
+- Fixed: EA Advanced Data Table | Data sorting icons' colors don't change while using table as a template
+- Fixed: EA Simple Menu | Menu item doesn't activate when scrolling the page
+- Fixed: EA Advanced Data Table | Clearing the search values, all table contents appear when the rows per page is left blank
+- Fixed: EA Woo Product Carousel | 'Add to Cart' button disappears from default shop page if EA Woo Carousel widget is present on the same page
+- Improved: EA Event Calendar | Date format change option for week view
+- Improved: EA Advanced Accordion | Stop auto-scrolling while anchoring tab
+- Improved: EA Login Register Form | File max size description
+- Improved: EA Facebook Feed | Graph API Upgrade
 - Few minor bug fixes & improvements
 
 [See changelog for all versions](https://essential-addons.com/changelog).

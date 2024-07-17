@@ -47,6 +47,7 @@ class ComposerStaticInita20c06c1b12fdd2d2a5c608da266cb70
         'Code_Snippets\\Snippet' => __DIR__ . '/../..' . '/php/class-snippet.php',
         'Code_Snippets\\Upgrade' => __DIR__ . '/../..' . '/php/class-upgrade.php',
         'Code_Snippets\\Validator' => __DIR__ . '/../..' . '/php/class-validator.php',
+        'Code_Snippets\\Welcome_Menu' => __DIR__ . '/../..' . '/php/admin-menus/class-welcome-menu.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

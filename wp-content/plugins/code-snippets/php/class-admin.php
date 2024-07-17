@@ -39,6 +39,8 @@ class Admin {
 			$this->menus['settings'] = new Settings_Menu();
 		}
 
+		$this->menus['welcome'] = new Welcome_Menu();
+
 		foreach ( $this->menus as $menu ) {
 			$menu->run();
 		}
@@ -237,21 +239,11 @@ class Admin {
 			return;
 		}
 
-		$now = new DateTime();
-		$period_start = new DateTime( '2023-11-19 00:00:00' );
-		$period_end = new DateTime( '2023-12-01 00:00:00' );
-
-		if ( ! in_array( 'bf23', $dismissed, true ) && $now > $period_start && $now < $period_end ) {
-			$notice = 'bf23';
-			$action_url = 'https://snipco.de/I_iW';
-			$action_label = __( 'Learn more', 'code-snippets' );
-			$text = __( "Don't miss out on our biggest Black Friday sale ever! Get 50% off on our plans.", 'code-snippets' );
-
-		} elseif ( ! in_array( 'pro', $dismissed, true ) ) {
+		if ( ! in_array( 'pro', $dismissed, true ) ) {
 			$notice = 'pro';
-			$action_url = 'https://codesnippets.pro/pricing/';
+			$action_url = 'https://snipco.de/Mlll';
 			$action_label = __( 'Upgrade now', 'code-snippets' );
-			$text = __( '<strong>Code Snippets Pro is here!</strong> Find more about the features in Pro and our current offers.', 'code-snippets' );
+			$text = __( '<strong>Lifetime plans return!</strong> Enjoy Code Snippets Pro with new pricing choices, including lifetime, monthly and yearly subscriptions.', 'code-snippets' );
 
 		} elseif ( ! in_array( 'survey', $dismissed, true ) && ! in_array( 'true', $dismissed, true ) ) {
 			$notice = 'survey';
